@@ -1,0 +1,67 @@
+{
+    "name": "Estrutura",
+    "path": "/images/estrutura",
+    "images": [
+        {
+            "name": "Biblioteca",
+            "src": "biblioteca.png"
+        },
+        {
+            "name": "Lousa Digital",
+            "src": "lousa_digital.png"
+        },
+        {
+            "name": "Parque",
+            "src": "parque_1.png"
+        },
+        {
+            "name": "Parque",
+            "src": "parque_2.png"
+        },
+        {
+            "name": "Parque",
+            "src": "parque_3.png"
+        },
+        {
+            "name": "Quadra Poliesportiva",
+            "src": "quadra_poliesportiva.png"
+        },
+        {
+            "name": "Recepção",
+            "src": "recepcao.png"
+        },
+        {
+            "name": "Refeitório",
+            "src": "refeitorio.png"
+        },
+        {
+            "name": "Sala de Recreação",
+            "src": "sala_de_recreacao.png"
+        },
+        {
+            "name": "Sala de Recreação",
+            "src": "sala_de_recreacao2.png"
+        },
+        {
+            "name": "Salas Climatizadas",
+            "src": "salas_climatizadas.png"
+        },
+        {
+            "name": "Salas Climatizadas",
+            "src": "salas_climatizadas2.png"
+        },
+        {
+            "name": "Salas Climatizadas",
+            "src": "salas_climatizadas3.png"
+        },
+        {
+            "name": "Salas Climatizadas",
+            "src": "salas_climatizadas4.png"
+        },
+        {
+            "name": "Salas Climatizadas",
+            "src": "salas_climatizadas5.png"
+        }
+    ]
+}
+
