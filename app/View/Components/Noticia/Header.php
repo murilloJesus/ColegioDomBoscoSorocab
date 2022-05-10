@@ -2,18 +2,34 @@
 
 namespace App\View\Components\Noticia;
 
+use DOMDocument;
 use Illuminate\View\Component;
 
 class Header extends Component
 {
+
+    public $header = [];
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($cabecalho)
     {
-        //
+        $this->getBigAndSmall($cabecalho->title);
+        $this->header['subtitle'] = $cabecalho->subtitle;
+        $this->header['image'] = $cabecalho->image;
+    }
+
+    private function getBigAndSmall($title)
+    {
+        $exp_header = explode(' ', $title);
+        $this->header['big'] = [$exp_header[0], $exp_header[1], $exp_header[2]];
+
+        unset($exp_header[0], $exp_header[1], $exp_header[2]);
+
+        $this->header['small'] = implode(' ', $exp_header);
     }
 
     /**

@@ -82,6 +82,12 @@ class NewsController extends Controller
     }
 
 
+    /**
+     * home
+     *
+     * @param  Request $request
+     * @return View
+     */
     public function home(Request $request)
     {
         if($request->get('pesquisa')){
@@ -92,16 +98,24 @@ class NewsController extends Controller
                                     ->orWhere('content', 'LIKE', '%'.$pesquisa.'%')->get();
 
             return view('pages.noticias.lista', ['noticias' => $encontrados, 'search' => ["PESQUISA", $pesquisa] ]);
-
         }else if($request->get('categoria')){
             $categoria = $request->get('categoria');
 
             return view('pages.noticias.lista', ['noticias' => News::where('categories', $categoria)->get(), 'search' => ["CATEGORIA", $categoria] ]);
         }else{
-            return view('pages.noticias.index', ['noticias' => News::orderBy('created_at')->get()]);
+            $cabecalho = News::where('spotlight', 1)->orderBy('created_at', 'desc')->first();
+            $exclude_id = $cabecalho ? $cabecalho->id : 0;
+
+            $noticias = News::where('id', '!=', $exclude_id)->orderBy('created_at', 'desc')->get();
+
+            return view('pages.noticias.index', compact(['cabecalho', 'noticias']));
         }
     }
 
+    public function ver($noticia)
+    {
+        return view('pages.noticias.noticia');
+    }
 
     /**
      * Upload Image for api editing news

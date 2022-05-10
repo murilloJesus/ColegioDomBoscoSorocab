@@ -12,8 +12,10 @@ class Noticia extends Api {
         return {
             id: instance.id ? instance.id : false,
             status: instance.status ? instance.status : 1,
+            spotlight: instance.spotlight ? instance.spotlight : 0,
             title: instance.title ? instance.title : '',
             subtitle: instance.subtitle ? instance.subtitle : '',
+            alias: instance.alias ? instance.alias : '/',
             image: instance.image ? instance.image : '',
             content: instance.content ? instance.content : '',
             times_accessed: instance.times_accessed ? instance.times_accessed : 0,

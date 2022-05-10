@@ -2,24 +2,27 @@
 <template>
     <div class="toggle-select-act fm-cmp-mg">
         <div class="nk-toggle-switch">
-            <input id="ts1" type="checkbox"  ref="switch" hidden="hidden">
-            <label for="ts1" class="ts-helper"></label>
+            <input :id="`switch-${uuid}`" type="checkbox"  ref="switch" hidden="hidden">
+            <label :for="`switch-${uuid}`" class="ts-helper"></label>
         </div>
     </div>
 </template>
 
 <script>
+
+import { v4 as uuid } from 'uuid';
+
 export default {
     data(){
         return {
-            lista: []
+            uuid: uuid()
         }
     },
     props: {
         fieldset: Object,
         field: {
             type: String,
-            default: "content"
+            default: "status"
         },
         entries: {
             type: Array,

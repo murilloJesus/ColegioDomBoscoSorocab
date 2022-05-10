@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <x-noticia.header />
+    <x-noticia.header :cabecalho="$cabecalho" />
 
 <!-- Section -->
 <section>

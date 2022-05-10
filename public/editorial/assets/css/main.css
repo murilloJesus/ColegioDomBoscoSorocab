@@ -3673,3 +3673,11 @@ button:disabled,
     margin-top: 0;
     padding-top: 0;
 }
+
+
+/* ALTERAÇÕES */
+
+posts article p {
+    height: 88px;
+    overflow-x: hidden;
+  }

@@ -23172,23 +23172,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/dist/esm-browser/v4.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      lista: []
+      uuid: (0,uuid__WEBPACK_IMPORTED_MODULE_1__["default"])()
     };
   },
   props: {
     fieldset: Object,
     field: {
       type: String,
-      "default": "content"
+      "default": "status"
     },
     entries: {
       type: Array,
@@ -24300,24 +24302,22 @@ var _hoisted_1 = {
 var _hoisted_2 = {
   "class": "nk-toggle-switch"
 };
-var _hoisted_3 = {
-  id: "ts1",
-  type: "checkbox",
-  ref: "switch",
-  hidden: "hidden"
-};
-
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "ts1",
-  "class": "ts-helper"
-}, null, -1
-/* HOISTED */
-);
-
+var _hoisted_3 = ["id"];
+var _hoisted_4 = ["for"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", _hoisted_3, null, 512
-  /* NEED_PATCH */
-  ), _hoisted_4])]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    id: "switch-".concat($data.uuid),
+    type: "checkbox",
+    ref: "switch",
+    hidden: "hidden"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_3), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+    "for": "switch-".concat($data.uuid),
+    "class": "ts-helper"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_4)])]);
 }
 
 /***/ }),
@@ -25055,78 +25055,108 @@ var _hoisted_1 = {
 var _hoisted_2 = {
   "class": "basic-tb-hd"
 };
-var _hoisted_3 = {
+var _hoisted_3 = ["href"];
+var _hoisted_4 = {
   "class": "row"
 };
-var _hoisted_4 = {
-  "class": "col-lg-10 col-md-8 col-sm-12 col-xs-12"
-};
 var _hoisted_5 = {
-  "class": "form-group"
+  "class": "col-lg-8 col-md-6 col-sm-12 col-xs-12"
 };
 var _hoisted_6 = {
+  "class": "form-group"
+};
+var _hoisted_7 = {
   "class": "nk-int-st"
 };
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name"
 }, "Nome", -1
 /* HOISTED */
 );
 
-var _hoisted_8 = {
-  "class": "col-lg-2 col-md-4 col-sm-12 col-xs-12"
+var _hoisted_9 = {
+  "class": "col-lg-2 col-md-3 col-sm-12 col-xs-12"
 };
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "nk-int-mk sl-dp-mn"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", null, "Status")], -1
 /* HOISTED */
 );
 
-var _hoisted_10 = {
+var _hoisted_11 = {
+  "class": "col-lg-2 col-md-3 col-sm-12 col-xs-12"
+};
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "nk-int-mk sl-dp-mn"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", null, "Destaque")], -1
+/* HOISTED */
+);
+
+var _hoisted_13 = {
   "class": "row"
 };
-var _hoisted_11 = {
+var _hoisted_14 = {
   "class": "col-lg-8 col-md-8 col-sm-12 col-xs-12"
 };
-var _hoisted_12 = {
+var _hoisted_15 = {
   "class": "form-group"
 };
-var _hoisted_13 = {
+var _hoisted_16 = {
   "class": "nk-int-st"
 };
 
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name"
 }, "Subtítulo", -1
 /* HOISTED */
 );
 
-var _hoisted_15 = {
+var _hoisted_18 = {
   "class": "col-lg-4 col-md-4 col-sm-12 col-xs-12"
 };
 
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "nk-int-mk sl-dp-mn"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", null, "Categoria")], -1
 /* HOISTED */
 );
 
-var _hoisted_17 = {
+var _hoisted_20 = {
   "class": "row"
 };
-var _hoisted_18 = {
+var _hoisted_21 = {
+  "class": "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+};
+var _hoisted_22 = {
+  "class": "form-group"
+};
+var _hoisted_23 = {
+  "class": "nk-int-st"
+};
+
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "name"
+}, "Link", -1
+/* HOISTED */
+);
+
+var _hoisted_25 = {
+  "class": "row"
+};
+var _hoisted_26 = {
   "class": "col-lg-12 col-md-12 col-sm-12 col-xs-12"
 };
-var _hoisted_19 = {
+var _hoisted_27 = {
   "class": "row"
 };
-var _hoisted_20 = {
+var _hoisted_28 = {
   "class": "col-lg-12 col-md-12 col-sm-12 col-xs-12"
 };
 
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "cmp-tb-hd"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", null, "Conteudo")], -1
 /* HOISTED */
@@ -25138,6 +25168,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_switcher = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("switcher");
 
   var _component_categorias = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("categorias");
+
+  var _component_alias = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("alias");
 
   var _component_uploader = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("uploader");
 
@@ -25155,9 +25187,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.fieldset.id ? 'Editar Noticia: ' + $options.fieldset.title : 'Nova Notícia'), 1
       /* TEXT */
-      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.fieldset.id ? 'Vezes acessada: ' + $options.fieldset.times_accessed : ''), 1
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+        href: $options.fieldset.alias,
+        target: "_blank"
+      }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.url), 9
+      /* TEXT, PROPS */
+      , _hoisted_3)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.fieldset.id ? 'Vezes acessada: ' + $options.fieldset.times_accessed : ''), 1
       /* TEXT */
-      )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
         type: "text",
         "class": "form-control",
         name: "name",
@@ -25167,12 +25204,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         placeholder: "Título"
       }, null, 512
       /* NEED_PATCH */
-      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $options.fieldset.title]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_switcher, {
+      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $options.fieldset.title]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_switcher, {
         fieldset: $options.fieldset,
         field: "status"
       }, null, 8
       /* PROPS */
-      , ["fieldset"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      , ["fieldset"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_switcher, {
+        fieldset: $options.fieldset,
+        field: "spotlight"
+      }, null, 8
+      /* PROPS */
+      , ["fieldset"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
         type: "text",
         "class": "form-control",
         name: "name",
@@ -25182,19 +25224,25 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         placeholder: "Subtítulo"
       }, null, 512
       /* NEED_PATCH */
-      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $options.fieldset.subtitle]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_categorias, {
+      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $options.fieldset.subtitle]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_categorias, {
         fieldset: $options.fieldset,
         field: "categories",
         "for": "news"
       }, null, 8
       /* PROPS */
-      , ["fieldset"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_uploader, {
+      , ["fieldset"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [_hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_alias, {
+        fieldset: $options.fieldset,
+        name: $options.fieldset.name,
+        page_id: $options.fieldset.page_id
+      }, null, 8
+      /* PROPS */
+      , ["fieldset", "name", "page_id"])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_uploader, {
         path_to: "noticias",
         fieldset: $options.fieldset,
         header: "Banner da noticia"
       }, null, 8
       /* PROPS */
-      , ["fieldset"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_editor, {
+      , ["fieldset"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [_hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_editor, {
         fieldset: $options.fieldset,
         value: $options.fieldset.content
       }, null, 8
@@ -26217,8 +26265,10 @@ var Noticia = /*#__PURE__*/function (_Api) {
       return {
         id: instance.id ? instance.id : false,
         status: instance.status ? instance.status : 1,
+        spotlight: instance.spotlight ? instance.spotlight : 0,
         title: instance.title ? instance.title : '',
         subtitle: instance.subtitle ? instance.subtitle : '',
+        alias: instance.alias ? instance.alias : '/',
         image: instance.image ? instance.image : '',
         content: instance.content ? instance.content : '',
         times_accessed: instance.times_accessed ? instance.times_accessed : 0,
