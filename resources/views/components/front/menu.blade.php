@@ -1,14 +1,14 @@
 			<!-- Nav -->
             <nav id="nav">
                 <ul>
-                    <li class="current"><a href="/">Home</a></li>
-                    <li>
-                        <a href="/colegio" class="active">Colégio</a>
+                    <li {{ $page === 'home' ? 'class=current' : '' }}><a href="/">Home</a></li>
+                    <li {{ $page === 'colegio' ? 'class=current' : '' }}>
+                        <a href="/colegio" >Colégio</a>
                         <ul>
                             <li><a href="/colegio#historia">História</a></li>
                             <li><a href="/colegio#missao-visao-valores">Missão, Visão e Valores</a></li>
                             <li>
-                                <a href="/proposta-pedagogica" class="active">Proposta Pedagógica</a>
+                                <a href="/proposta-pedagogica" >Proposta Pedagógica</a>
                                 <ul>
                                     <li><a href="/proposta-pedagogica#infantil">Infantil</a></li>
                                     <li><a href="/proposta-pedagogica#fundamental">Fundamental</a></li>
@@ -19,7 +19,7 @@
                             <li><a href="/colegio#estrutura">Estrutura</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li {{ $page === 'segmentos' ? 'class=current' : '' }}>
                         <a href="/segmentos">Segmentos</a>
                         <ul>
                             <li><a href="/segmentos#infantil">Ensino Infantil</a></li>
@@ -36,8 +36,8 @@
                             </li>
                         </ul>
                     </li>
-                    {{-- <li><a href="#">Notícias</a></li> --}}
-                    <li><a href="/galerias">Galerias</a></li>
-                    <li><a href="/contato">Contato</a></li>
+                    <li><a href="/noticias">Notícias</a></li>
+                    <li {{ $page === 'galerias' ? 'class=current' : '' }}><a href="/galerias">Galerias</a></li>
+                    <li {{ $page === 'contato' ? 'class=current' : '' }}><a href="/contato">Contato</a></li>
                 </ul>
             </nav>

@@ -17,7 +17,7 @@ class Noticia extends Api {
             image: instance.image ? instance.image : '',
             content: instance.content ? instance.content : '',
             times_accessed: instance.times_accessed ? instance.times_accessed : 0,
-            category: instance.category ? instance.category : 0,
+            categories: instance.categories ? instance.categories : '',
             created: instance.created_at ? instance.created_at : '',
             updated: instance.updated_at ? instance.updated_at : ''
         }
@@ -33,9 +33,13 @@ class Noticia extends Api {
                 name: 'Subtitulo',
                 component: 'text'
             },
+            categories: {
+                name: 'Categoria',
+                component: 'text'
+            },
             image: {
                 name: 'Imagem',
-                component: 'imagem'
+                component: 'image'
             },
             times_accessed: {
                 name: 'Acessos',

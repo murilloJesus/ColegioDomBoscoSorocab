@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div v-if="!forModal" class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="form-actions button-icon-btn button-icon-btn-cl sm-res-mg-t-30">
@@ -25,12 +25,21 @@
             </div>
         </div>
     </div>
+    <div v-else>
+        <slot></slot>
+    </div>
 </template>
 
 <script>
 
     export default {
-        props: ['controller'],
+        props: {
+            controller: Object,
+            forModal: {
+                type: Boolean,
+                defaut: false
+            }
+        },
         inject: ['save', 'reset', 'finish'],
         mounted(){
             window.$('[data-toggle="tooltip"]').tooltip();

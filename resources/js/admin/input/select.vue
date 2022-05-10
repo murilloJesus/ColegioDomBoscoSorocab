@@ -2,8 +2,8 @@
     <div class="chosen-select-act fm-cmp-mg">
         <select ref="select" class="chosen" data-placeholder="Escolha..." v-model="fieldset[field]">
             <option value="">Selecione...</option>
-            <option v-if="hasAdd" value="___ADD___">Adicionar</option>
-            <option v-for="(item, index) in filteredList" :value="item.id" :key="index">{{item.name}}</option>
+            <option v-for="(item, index) in filteredList" :value="item[insertField]" :key="index">{{item.name}}</option>
+            <option v-if="hasAdd" value="___ADD___"><b>Adicionar</b></option>
         </select>
     </div>
 </template>
@@ -40,6 +40,10 @@ export default {
         controller: {
             type: Object,
             default: {}
+        },
+        insertField: {
+            type: String,
+            default: 'id'
         }
     },
     async mounted(){
@@ -65,6 +69,10 @@ export default {
         }
     },
     updated(){
+        if(this.list){
+            this.lista = this.list
+        }
+
         window.$(this.$refs.select).trigger("chosen:updated");
     },
     computed: {

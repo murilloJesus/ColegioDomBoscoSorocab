@@ -1,25 +1,19 @@
 <?php
 
-namespace App\View\Components\front;
+namespace App\View\Components\Noticia;
 
 use Illuminate\View\Component;
 
-class menu extends Component
+class Header extends Component
 {
-    public $page;
-
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($page = '')
+    public function __construct()
     {
-        $this->page = $page;
-    }
-
-    public function isPage($page){
-        return $page === $this->page;
+        //
     }
 
     /**
@@ -29,6 +23,6 @@ class menu extends Component
      */
     public function render()
     {
-        return view('components.front.menu');
+        return view('components.noticia.header');
     }
 }

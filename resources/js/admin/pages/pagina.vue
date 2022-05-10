@@ -50,7 +50,6 @@ import Pagina from './../classes/pagina.js'
 import Base from './base'
 
 export default {
-    props: ['component'],
     extends: Base,
     data: () => {
         return {

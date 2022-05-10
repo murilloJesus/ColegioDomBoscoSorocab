@@ -37,7 +37,7 @@
                     <div class="nk-int-mk sl-dp-mn">
                         <h2>Categoria</h2>
                     </div>
-                    <categorias :fieldset="fieldset" field="category" for="news" />
+                    <categorias :fieldset="fieldset" field="categories" for="news" />
                 </div>
             </div>
             <div class="row">
@@ -61,8 +61,12 @@
     import Noticia from './../classes/noticia.js'
     import Base from './base'
 
+    import Categorias from './categorias.vue'
+
     export default {
-        props: ['component'],
+        components: {
+            Categorias
+        },
         extends: Base,
         data: () => {
             return {

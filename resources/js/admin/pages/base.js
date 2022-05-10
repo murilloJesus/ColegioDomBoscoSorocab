@@ -6,6 +6,12 @@ import * as Inputs from '../input/index.js'
 import $ from 'jquery'
 
 export default {
+    props: {
+        component: {
+            type: String,
+            default: 'tabela'
+        }
+    },
     components: {
         Tabela,
         Formulario,
@@ -21,8 +27,10 @@ export default {
             save: async  () => {
                 let res = await this.controller.saveData()
                 if( res ){
-                    swal("Salvo com Sucesso!", null, "success")
+                    notificar("success", "Salvo com Sucesso!")
                     this.controller.getData()
+                    window.app.component = 'tabela'
+                    return res.data
                 } else {
                     swal("Erro!", "Nao foi possivel concluir a solicitação.", "error")
                 }

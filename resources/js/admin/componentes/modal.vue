@@ -1,10 +1,10 @@
 <template>
-    <button id="MyModalOpen" ref="open" class="btn btn-info" data-toggle="modal" :data-target="`#modal-${uniqueId}`">Modal Default</button>
+    <button id="btnModalOpen" ref="open" class="btn btn-info" data-toggle="modal" :data-target="`#modal-${uniqueId}`">Modal Default</button>
     <div class="modal fade" :id="`modal-${uniqueId}`" role="dialog">
         <div class="modal-dialog modals-default">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button ref="close" type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <slot name="header"></slot>
@@ -29,13 +29,21 @@
           return {
               uniqueId: uuid()
           }
+        },
+        methods: {
+            open(){
+                $(this.$refs.open).click()
+            },
+            close(){
+                $(this.$refs.close).click()
+            }
         }
 
     }
 </script>
 
 <style>
-    #MyModalOpen {
+    #btnModalOpen {
         display: none;
     }
 </style>

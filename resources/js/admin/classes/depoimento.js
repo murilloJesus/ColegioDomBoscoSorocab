@@ -27,7 +27,7 @@ class Depoimento extends Api {
             },
             image: {
                 name: 'Imagem',
-                component: 'imagem'
+                component: 'image'
             }
         })
     }

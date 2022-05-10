@@ -3,13 +3,13 @@
 
 @section('content')
 
-    <x-noticia.header />
+<header id="header">
+    <a href="index.html" class="logo"><strong>{{$search[0]}}</strong> {{$search[1]}}</a>
+    <x-noticia.social />
+</header>
 
 <!-- Section -->
 <section>
-    <header class="major">
-        <h2>Ultimas Notícias</h2>
-    </header>
     <div class="posts">
         @foreach ($noticias as $noticia)
             <article>

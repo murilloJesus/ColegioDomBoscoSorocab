@@ -12,6 +12,6 @@ class PagesController extends Controller
     {
         $banners = BannerController::getFromJSON();
 
-        return view("pages.home", ["banners" => $banners]);
+        return view("pages.home", ["banners" => $banners, 'page' => 'home']);
     }
 }

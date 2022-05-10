@@ -4,7 +4,6 @@ import Alias from './alias.vue'
 import Imagem from './image.vue'
 import Switcher from './switch.vue'
 import Uploader from './uploader.vue'
-import Categorias from '../pages/categorias.vue'
 
 export {
     Editor,
@@ -12,6 +11,5 @@ export {
     Alias,
     Imagem,
     Switcher,
-    Uploader,
-    Categorias
+    Uploader
 }

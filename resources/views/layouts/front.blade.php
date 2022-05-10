@@ -31,7 +31,7 @@
 
 		<div id="page-wrapper" >
 
-            <x-front.menu></x-front.menu>
+            <x-front.menu :page=$page></x-front.menu>
 
             @yield('content')
 

@@ -82,6 +82,27 @@ class NewsController extends Controller
     }
 
 
+    public function home(Request $request)
+    {
+        if($request->get('pesquisa')){
+            $pesquisa = $request->get('pesquisa');
+
+            $encontrados = News::where('title', 'LIKE', '%'.$pesquisa.'%')
+                                    ->orWhere('subtitle', 'LIKE', '%'.$pesquisa.'%')
+                                    ->orWhere('content', 'LIKE', '%'.$pesquisa.'%')->get();
+
+            return view('pages.noticias.lista', ['noticias' => $encontrados, 'search' => ["PESQUISA", $pesquisa] ]);
+
+        }else if($request->get('categoria')){
+            $categoria = $request->get('categoria');
+
+            return view('pages.noticias.lista', ['noticias' => News::where('categories', $categoria)->get(), 'search' => ["CATEGORIA", $categoria] ]);
+        }else{
+            return view('pages.noticias.index', ['noticias' => News::orderBy('created_at')->get()]);
+        }
+    }
+
+
     /**
      * Upload Image for api editing news
      *

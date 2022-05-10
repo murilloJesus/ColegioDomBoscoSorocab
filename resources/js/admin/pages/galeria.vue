@@ -7,7 +7,6 @@ import Galeria from './../classes/galeria.js'
 import Base from './base'
 
 export default {
-    props: ['component'],
     extends: Base,
     data: () => {
         return {

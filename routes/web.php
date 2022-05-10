@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,41 +28,17 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('administrador')->group(
 });
 
 
+Route::prefix('noticias')->group(function(){
+
+    Route::get('/', [NewsController::class, 'home']);
+
+    Route::get('/{name}', [NewsController::class, 'ver']);
+
+});
 
 Route::get('/', [PagesController::class, 'index']);
 
-Route::get('/proposta-pedagogica', function () {
-    return view('pages.proposta_pedagogica');
+Route::get('/{pagina}', function ($pagina) {
+    return view("pages.$pagina")->with('page', $pagina);
 });
 
-Route::get('/segmentos', function () {
-    return view('pages.segmentos');
-});
-
-Route::get('/contato', function () {
-    return view('pages.contato');
-});
-
-Route::get('/colegio', function () {
-    return view('pages.colegio');
-});
-
-Route::get('/estrutura', function () {
-    return view('pages.estrutura');
-});
-
-Route::get('/galerias', function () {
-    return view('pages.galerias');
-});
-
-Route::prefix('noticias')->group(function(){
-
-    Route::get('/', function(){
-        return view('pages.noticias.index');
-    });
-
-    Route::get('/{name}', function($name){
-        return view('pages.noticias.noticia');
-    });
-
-});

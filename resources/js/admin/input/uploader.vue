@@ -9,6 +9,7 @@
                     </div>
                 </form>
                 <div class="img-uploaded" v-show="fieldset[field]" @click="alterar">
+                    <h3>{{header}}</h3>
                     <img  :src="`/${fieldset[field]}`" >
                     <div></div>
                     <i>Click para alterar</i>
@@ -28,7 +29,7 @@ export default {
         },
         header: {
             type: String,
-            default: ''
+            default: 'Imagem'
         },
         path_to: String
     },

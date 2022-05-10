@@ -29,7 +29,7 @@ class Banner extends Api {
             },
             image: {
                 name: 'Imagem',
-                component: 'imagem'
+                component: 'image'
             },
             action: {
                 name: 'Url',

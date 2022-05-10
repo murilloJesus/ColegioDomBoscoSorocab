@@ -41,8 +41,8 @@ class Table {
                 return Output.Text
                 break;
 
-            case 'image_source':
-                return Output.ImageSource
+            case 'image':
+                return Output.Image
                 break;
 
             default:

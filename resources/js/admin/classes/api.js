@@ -113,7 +113,7 @@ class Api {
         }
 
         if(res) {
-            this.instance = res.data
+            this.finishData()
         }
 
         return res
