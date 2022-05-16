@@ -32,7 +32,7 @@ Route::prefix('noticias')->group(function(){
 
     Route::get('/', [NewsController::class, 'home']);
 
-    Route::get('/{name}', [NewsController::class, 'ver']);
+    Route::get('/{name}/{id}', [NewsController::class, 'ver']);
 
 });
 

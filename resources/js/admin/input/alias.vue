@@ -14,11 +14,18 @@ export default {
             default: 'alias'
         },
         name: String,
-        page_id: [Number, null]
+        page_id: {
+            type: [Number, null],
+            default: null
+        },
+        page_name: {
+            type: [String, null],
+            default: null
+        }
     },
-    data: () => {
+    data: (props) => {
         return {
-            path: ''
+            path: props.page_name ? props.page_name : ''
         }
     },
     watch: {
@@ -35,7 +42,7 @@ export default {
            this.path = id ? (await axios.get(`/api/pages/${id}`)).data[this.field] : ''
         },
         setField(){
-            this.fieldset[this.field] = `${this.path}/${normalize_url(this.fieldset.name)}`
+            this.fieldset[this.field] = `${this.path}/${normalize_url(this.name)}`
         }
     }
 }

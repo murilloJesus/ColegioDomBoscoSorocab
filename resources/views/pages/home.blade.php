@@ -38,18 +38,16 @@
     <section id="main">
         <div class="container">
             <div class="row gtr-200">
-
                 <!-- DEPOIMENTOS -->
                 <depoimentos></depoimentos>
-
-                <!-- COLÉGIO -->
-                {{-- <colegio></colegio> --}}
 
                 <!-- CONTEUDO -->
                 <conteudo></conteudo>
 
-                {{-- <x-front.news></x-front.news> --}}
+                <x-front.news></x-front.news>
 
+                <!-- COLÉGIO -->
+                <colegio></colegio>
             </div>
         </div>
     </section>

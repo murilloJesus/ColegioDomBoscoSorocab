@@ -2,24 +2,23 @@
 
 namespace App\View\Components\front;
 
+use App\Models\News as ModelsNews;
 use Illuminate\View\Component;
 
-class menu extends Component
+class News extends Component
 {
-    public $page;
 
+    public $popular_news = [];
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($page = '')
+    public function __construct()
     {
-        $this->page = $page;
-    }
+        $news = ModelsNews::where('status', 1)->orderBy('times_accessed', 'desc')->get();
 
-    public function isPage($page){
-        return $page === $this->page;
+        $this->popular_news = $news->slice(0, 4);
     }
 
     /**
@@ -29,6 +28,6 @@ class menu extends Component
      */
     public function render()
     {
-        return view('components.front.menu');
+        return view('components.front.news');
     }
 }

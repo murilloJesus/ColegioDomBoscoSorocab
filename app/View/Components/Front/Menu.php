@@ -4,16 +4,22 @@ namespace App\View\Components\front;
 
 use Illuminate\View\Component;
 
-class footer extends Component
+class Menu extends Component
 {
+    public $page;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($page = '')
     {
-        //
+        $this->page = $page;
+    }
+
+    public function isPage($page){
+        return $page === $this->page;
     }
 
     /**
@@ -23,6 +29,6 @@ class footer extends Component
      */
     public function render()
     {
-        return view('components.front.footer');
+        return view('components.front.menu');
     }
 }

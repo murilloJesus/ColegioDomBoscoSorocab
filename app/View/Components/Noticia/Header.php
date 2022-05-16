@@ -2,7 +2,6 @@
 
 namespace App\View\Components\Noticia;
 
-use DOMDocument;
 use Illuminate\View\Component;
 
 class Header extends Component
@@ -20,6 +19,8 @@ class Header extends Component
         $this->getBigAndSmall($cabecalho->title);
         $this->header['subtitle'] = $cabecalho->subtitle;
         $this->header['image'] = $cabecalho->image;
+        $this->header['alias'] = $cabecalho->alias;
+        $this->header['id'] = $cabecalho->id;
     }
 
     private function getBigAndSmall($title)

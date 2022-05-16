@@ -16,6 +16,13 @@
         r = r.replace(new RegExp("œ", 'gi'),"oe");
         r = r.replace(new RegExp("[ùúûü]", 'gi'),"u");
         r = r.replace(new RegExp("[ýÿ]", 'gi'),"y");
+        r = r.replace(new RegExp("[\"“”.;]", 'gi'),"");
+        r = r.replace(new RegExp(",", 'gi'),"-virgula");
+        r = r.replace(new RegExp("[%]", 'gi'),"-porcento-");
+        r = r.replace(new RegExp("[#]", 'gi'),"-hashtag-");
+        r = r.replace(new RegExp("--", 'gi'),"-");
+        r = r.replace(new RegExp("/", 'gi'),"-");
+
         return r;
     }
 

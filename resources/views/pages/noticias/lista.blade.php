@@ -2,22 +2,16 @@
 
 
 @section('content')
-
-<header id="header">
-    <a href="index.html" class="logo"><strong>{{$search[0]}}</strong> {{$search[1]}}</a>
-    <x-noticia.social />
-</header>
-
-<!-- Section -->
+<h2 class="searcher-identification"><strong>{{$search[0]}}</strong> `{{$search[1]}}`</h2>
 <section>
     <div class="posts">
         @foreach ($noticias as $noticia)
             <article>
-                <a href="#" class="image"><img src="/{{$noticia->image}}" alt="" /></a>
+                <a href="{{$noticia->alias}}/{{$noticia->id}}" class="image"><img src="/{{$noticia->image}}" alt="" /></a>
                 <h3>{{$noticia->title}}</h3>
                 <p>{{$noticia->subtitle}}</p>
                 <ul class="actions">
-                    <li><a href="#" class="button">Mais</a></li>
+                    <li><a href="{{$noticia->alias}}/{{$noticia->id}}" class="button">Mais</a></li>
                 </ul>
             </article>
         @endforeach

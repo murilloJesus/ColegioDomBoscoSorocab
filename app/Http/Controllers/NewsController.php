@@ -30,6 +30,10 @@ class NewsController extends Controller
         $news = News::create($request->post());
 
         if($news){
+            $highest_news = News::where('status', 1)->orderBy('times_accessed', 'desc')->first()->times_accessed;
+            $news->initial_times_accessed = $news->times_accessed = intval($highest_news/3);
+            $news->save();
+
             $this->saveJSON();
             return $news;
         }
@@ -112,9 +116,18 @@ class NewsController extends Controller
         }
     }
 
-    public function ver($noticia)
+    public function ver(Request $request, $nomeNoticia, $id)
     {
-        return view('pages.noticias.noticia');
+        $noticia =  News::find($id);
+
+        if(!$request->session()->has("noticias.$nomeNoticia")){
+            $noticia->times_accessed++;
+            $noticia->save();
+            $request->session()->put("noticias.$nomeNoticia", true);
+        }
+
+
+        return view('pages.noticias.noticia', ['noticia' => $noticia]);
     }
 
     /**

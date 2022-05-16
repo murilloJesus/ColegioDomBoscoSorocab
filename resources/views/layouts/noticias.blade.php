@@ -18,6 +18,13 @@
                 <div id="main">
                     <div class="inner">
 
+                        <!-- Header -->
+                        <header id="header">
+                            <a href="/noticias" class="logo"><strong>NOTÍCIAS</strong> Dom Bosco Sorocaba</a>
+                            <x-noticia.social />
+                        </header>
+
+
 				    <!-- Main -->
                     @yield('content')
 

@@ -19,7 +19,7 @@ class Menu extends Component
      */
     public function __construct()
     {
-        $news = News::where('status', 1)->orderBy('times_accessed')->get();
+        $news = News::where('status', 1)->orderBy('times_accessed', 'desc')->get();
 
         $this->categorias = $news->unique('categories');
         $this->visitados = $news->slice(0, 3);

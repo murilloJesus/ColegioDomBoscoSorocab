@@ -18,7 +18,9 @@ class Noticia extends Api {
             alias: instance.alias ? instance.alias : '/',
             image: instance.image ? instance.image : '',
             content: instance.content ? instance.content : '',
-            times_accessed: instance.times_accessed ? instance.times_accessed : 0,
+            times_accessed: instance.initial_times_accessed ?
+                (instance.times_accessed - instance.initial_times_accessed) :
+                instance.times_accessed ? instance.times_accessed : 0,
             categories: instance.categories ? instance.categories : '',
             created: instance.created_at ? instance.created_at : '',
             updated: instance.updated_at ? instance.updated_at : ''

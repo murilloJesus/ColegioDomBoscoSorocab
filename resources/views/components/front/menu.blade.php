@@ -36,7 +36,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="/noticias">Notícias</a></li>
+                    <li><a href="/noticias" target="_blank">Notícias</a></li>
                     <li {{ $page === 'galerias' ? 'class=current' : '' }}><a href="/galerias">Galerias</a></li>
                     <li {{ $page === 'contato' ? 'class=current' : '' }}><a href="/contato">Contato</a></li>
                 </ul>

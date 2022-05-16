@@ -1,9 +1,3 @@
-<!-- Header -->
-<header id="header">
-    <a href="#" class="logo"><strong>NOTÍCIAS</strong> Dom Bosco Sorocaba</a>
-    <x-noticia.social />
-</header>
-
 <!-- Banner -->
 <section id="banner">
     <div class="content">
@@ -15,7 +9,7 @@
         <p>{{$header['subtitle']}}
         </p>
         <ul class="actions">
-            <li><a href="#" class="button big">Leia Mais</a></li>
+            <li><a href="{{$header['alias']}}/{{$header['id']}}" class="button big">Leia Mais</a></li>
         </ul>
     </div>
     <span class="image object">

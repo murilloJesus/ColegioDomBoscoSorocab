@@ -211,7 +211,7 @@ body,
 input,
 select,
 textarea {
-    color: #7f888f;
+    color: #737c8f;
     font-family: "Open Sans", sans-serif;
     font-size: 13pt;
     font-weight: 400;
@@ -259,7 +259,11 @@ a {
 }
 
 a:hover {
-    border-bottom-color: #F71;
+    border-bottom-color: #ffad70;
+    color: #ffad70 !important;
+}
+
+a:hover > strong {
     color: #F71 !important;
 }
 
@@ -2017,7 +2021,7 @@ input[type="radio"] {
 input[type="checkbox"]+label,
 input[type="radio"]+label {
     text-decoration: none;
-    color: #7f888f;
+    color: #737c8f;
     cursor: pointer;
     display: inline-block;
     font-size: 1em;
@@ -3166,7 +3170,7 @@ button:disabled,
     -webkit-transform: scaleX(-1);
     -ms-transform: scaleX(-1);
     transform: scaleX(-1);
-    color: #7f888f;
+    color: #737c8f;
     content: '\f002';
     cursor: default;
     display: block;
@@ -3376,7 +3380,7 @@ button:disabled,
     }
 
     #sidebar .toggle:before {
-        color: #7f888f;
+        color: #737c8f;
         margin-left: -0.0625em;
         margin-top: -0.25em;
         font-size: 1.1rem;
@@ -3681,3 +3685,16 @@ posts article p {
     height: 88px;
     overflow-x: hidden;
   }
+
+.notice-content {
+    text-align:justify
+}
+
+.searcher-identification {
+    padding-top: 1em;
+    color: #737c8f;
+}
+
+.searcher-identification strong{
+    color: #152445;
+}

@@ -1,11 +1,15 @@
 <template>
+    <div class="summernote-clickable">
+        <button class="btn btn-primary btn-sm hec-button" v-if="!status" @click="edit">Editar conteúdo</button>
+        <button class="btn btn-success btn-sm hec-save" v-if="status" @click="save">Salvar conteúdo</button>
+    </div>
     <div class="summernote-wrap">
         <div ref="editor" class="html-editor-click">
         </div>
     </div>
-    <div class="summernote-clickable">
-        <button class="btn btn-primary btn-sm hec-button" v-if="!status" @click="edit">Editar</button>
-        <button class="btn btn-success btn-sm hec-save" v-if="status" @click="save">Salvar</button>
+    <div v-if="fieldset[field]" class="summernote-clickable">
+        <button class="btn btn-primary btn-sm hec-button" v-if="!status" @click="edit">Editar conteúdo</button>
+        <button class="btn btn-success btn-sm hec-save" v-if="status" @click="save">Salvar conteúdo</button>
     </div>
 </template>
 
@@ -24,7 +28,7 @@
         data: () => {
             return {
                 status: false,
-                imagem: new Image()
+                imagem: new Image(),
             }
         },
         methods: {

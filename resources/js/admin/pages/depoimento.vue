@@ -32,7 +32,15 @@
             </div>
             <div class="row" style="margin: auto;">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <uploader :fieldset="fieldset" header="Foto (800x800)" />
+                    <uploader :fieldset="fieldset" path-to="depoimentos" :img-style="{maxWidth: '30%'}">
+                        <template v-slot:header>
+                            <h2>
+                                Selecione uma foto da Família
+                                <br>
+                                <small>recomendado: 500x500, centralizado</small>
+                            </h2>
+                        </template>
+                    </uploader>
                 </div>
             </div>
         </div>

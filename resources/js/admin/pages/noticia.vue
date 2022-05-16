@@ -52,14 +52,22 @@
                     <div class="form-group ">
                         <div class="nk-int-st">
                             <label for="name">Link</label>
-                            <alias :fieldset="fieldset" :name="fieldset.name" :page_id="fieldset.page_id"></alias>
+                            <alias :fieldset="fieldset" :name="fieldset.title" page_name="/noticias"></alias>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <uploader path_to="noticias" :fieldset="fieldset" header="Banner da noticia" />
+                    <uploader path-to="noticias" :fieldset="fieldset">
+                        <template v-slot:header>
+                            <h2>
+                                Banner da Notícia
+                                <br>
+                                <small>Recomendado: 900x360</small>
+                            </h2>
+                        </template>
+                    </uploader>
                 </div>
             </div>
             <div class="row">

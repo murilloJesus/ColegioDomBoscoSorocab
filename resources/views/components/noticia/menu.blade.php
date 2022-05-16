@@ -28,13 +28,16 @@
                 <div class="mini-posts">
                     @foreach ($visitados as $post)
                         <article>
-                            <a href="#" class="image">
+                            <a href="{{$post->alias}}/{{$post->id}}" class="image">
                                 <img src="/{{$post->image}}" alt="" />
                             </a>
-                            <p>{{$post->title}} ( <small><i>{{$post->times_accessed}} cliques.</i></small>)</p>
+                            <p>{{$post->title}}
+                                @if ($post->times_accessed > 0)
+                                 ( <small><i>{{$post->times_accessed}} {{$post->times_accessed > 1 ? 'cliques' : 'click'}}</i></small>)</p>
+                                @endif
                         </article>
                         <ul class="actions">
-                            <li><a href="#" class="button">Ver</a></li>
+                            <li><a href="{{$post->alias}}/{{$post->id}}" class="button">Ver</a></li>
                         </ul>
                     @endforeach
                 </div>

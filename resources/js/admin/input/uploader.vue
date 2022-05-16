@@ -1,16 +1,15 @@
 <template>
         <div class="dropdone-nk mg-t-30">
             <div class="multi-uploader-cs">
-                <form  v-show="!fieldset[field]" :action="`/api/${path_to}/upload`" class="dropzone dropzone-nk needsclick" id="upload">
+                <form  v-show="!fieldset[field]" :action="`/api/${pathTo}/upload`" class="dropzone dropzone-nk needsclick" id="upload">
                     <div class="mg-0 dz-message needsclick download-custom">
-                        <h2 v-if="header">{{header}}</h2>
+                        <slot name="header"></slot>
                         <i class="notika-icon notika-cloud"></i>
-                        <h2>Solte os arquivos aqui ou clique para fazer upload.</h2>
+                        <h2>Solte o(s) arquivo(s) aqui ou clique para fazer upload.</h2>
                     </div>
                 </form>
                 <div class="img-uploaded" v-show="fieldset[field]" @click="alterar">
-                    <h3>{{header}}</h3>
-                    <img  :src="`/${fieldset[field]}`" >
+                    <img  :src="`/${fieldset[field]}`" :style="imgStyle" >
                     <div></div>
                     <i>Click para alterar</i>
                 </div>
@@ -31,7 +30,11 @@ export default {
             type: String,
             default: 'Imagem'
         },
-        path_to: String
+        pathTo: String,
+        imgStyle:{
+            type: Object,
+            default: {}
+        }
     },
     beforeCreate(){
         let t = this
@@ -40,6 +43,7 @@ export default {
             acceptedFiles: 'image/*',
             success: function(file, response){
                 t.fieldset[t.field] = response
+                this.removeAllFiles(true)
             },
             accept: function(file, done) {
                 done()

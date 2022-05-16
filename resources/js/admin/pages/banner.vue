@@ -42,7 +42,15 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <uploader path_to="banners" :fieldset="fieldset" header="Selecione uma imagem: 1900x830" />
+                    <uploader path-to="banners" :fieldset="fieldset" header="Selecione uma imagem: 1900x830" >
+                        <template v-slot:header>
+                            <h2>
+                                Selecione uma Imagem
+                                <br>
+                                <small>recomendado: 1900x830</small>
+                            </h2>
+                        </template>
+                    </uploader>
                 </div>
             </div>
         </div>
