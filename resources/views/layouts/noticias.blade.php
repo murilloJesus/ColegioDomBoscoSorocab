@@ -6,8 +6,9 @@
 -->
 <html>
 	<head>
-		<title>Editorial by HTML5 UP</title>
+		<title>Notícias Colégio Dom Bosco - Sorocaba</title>
 		<meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="/public/images/icon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/public/editorial/assets/css/main.css" />
 	</head>

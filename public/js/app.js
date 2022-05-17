@@ -22654,8 +22654,9 @@ __webpack_require__.r(__webpack_exports__);
         name: "Premiações",
         desc: false,
         href: 'premiacoes',
-        classImage: "image-missao-visao-valores",
-        text: []
+        classImage: "image-premiacoes",
+        text: ["O Programa de Excel\xEAncia - PEX do Sistema de Ensino Dom Bosco \xE9 uma plataforma de reconhecimento, que a partir de\n                            um manual de gerenciamento cont\xE9m orienta\xE7\xF5es que possibilitam a condu\xE7\xE3o das institui\xE7\xF5es de ensino com sucesso,\n                            com base nos resultados alcan\xE7ados, destaca-se os col\xE9gios que alcan\xE7am os padr\xF5es de excel\xEAncia estabelecidos pelo Programa."],
+        see_more: "/colegio#premiacoes"
       }, {
         name: "Proposta Pedagógica",
         desc: "Educação Infantil",
@@ -22678,9 +22679,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     set_actived: function set_actived(item) {
-      this.actived = item; // $([document.documentElement, document.body]).animate({
-      //     scrollTop: $(this.$refs.content).offset().top - this.size_of_menu()
-      // }, 2000);
+      this.actived = item;
     }
   }
 });
@@ -22868,18 +22867,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Estrutura",
+  name: "Galeria",
   data: function data() {
     return {
+      gallery_index: 0,
       img_index: 0,
       size_of_galery: jquery__WEBPACK_IMPORTED_MODULE_1___default()(document).width() > 980 ? 6 : 4,
       galeries: [_data_galery_infraestrutura_json__WEBPACK_IMPORTED_MODULE_0__]
     };
   },
+  mounted: function mounted() {
+    var ht = window.location.href;
+    ht = ht.split(/#/)[1];
+
+    if (jquery__WEBPACK_IMPORTED_MODULE_1___default()("#".concat(ht))[0]) {
+      var top = jquery__WEBPACK_IMPORTED_MODULE_1___default()("#".concat(ht)).offset().top;
+      jquery__WEBPACK_IMPORTED_MODULE_1___default()('html,body').animate({
+        scrollTop: top
+      }, 500);
+      return false;
+    }
+  },
   methods: {
-    log: function log(varr) {
-      console.log(varr);
-    },
     move: function move(dir) {
       var new_position = this.img_index + dir;
 
@@ -22890,11 +22899,20 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       this.img_index = new_position;
+    },
+    moveTo: function moveTo(item) {
+      this.img_index = this.opened.images.findIndex(function (el, index) {
+        return el == item ? index : false;
+      });
+    },
+    changeGalery: function changeGalery(index) {
+      this.gallery_index = index;
+      this.img_index = 0;
     }
   },
   computed: {
     opened: function opened() {
-      return this.galeries[0];
+      return this.galeries[this.gallery_index];
     },
     images: function images() {
       var inicio = this.paginator.index_atual,
@@ -22915,8 +22933,8 @@ __webpack_require__.r(__webpack_exports__);
           index = this.img_index + 1,
           index_atual = index;
 
-      if (index + size >= total_images) {
-        index_atual = total_images - size;
+      if (index + size > total_images) {
+        index_atual = total_images - size + 1;
       }
 
       index_atual--;
@@ -22941,21 +22959,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _data_galery_infraestrutura_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../data/galery/infraestrutura.json */ "./resources/js/data/galery/infraestrutura.json");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _data_galery_infraestrutura_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../data/galery/infraestrutura.json */ "./resources/js/data/galery/infraestrutura.json");
+
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Galeria",
   data: function data() {
     return {
+      gallery_index: 0,
       img_index: 0,
-      size_of_galery: 6,
-      galeries: [_data_galery_infraestrutura_json__WEBPACK_IMPORTED_MODULE_0__]
+      size_of_galery: $(document).width() > 980 ? 6 : 4,
+      galeries: [_data_galery_infraestrutura_json__WEBPACK_IMPORTED_MODULE_2__]
     };
   },
+  mounted: function mounted() {
+    var _this = this;
+
+    return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/data/galerias.json').then(function (_ref) {
+                var data = _ref.data;
+                _this.galeries = [_data_galery_infraestrutura_json__WEBPACK_IMPORTED_MODULE_2__].concat(_toConsumableArray(data));
+              });
+
+            case 2:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }))();
+  },
   methods: {
-    log: function log(varr) {
-      console.log(varr);
-    },
     move: function move(dir) {
       var new_position = this.img_index + dir;
 
@@ -22966,12 +23027,20 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       this.img_index = new_position;
-      console.log(this.paginator);
+    },
+    moveTo: function moveTo(item) {
+      this.img_index = this.opened.images.findIndex(function (el, index) {
+        return el == item ? index : false;
+      });
+    },
+    changeGalery: function changeGalery(index) {
+      this.gallery_index = index;
+      this.img_index = 0;
     }
   },
   computed: {
     opened: function opened() {
-      return this.galeries[0];
+      return this.galeries[this.gallery_index];
     },
     images: function images() {
       var inicio = this.paginator.index_atual,
@@ -22992,8 +23061,8 @@ __webpack_require__.r(__webpack_exports__);
           index = this.img_index + 1,
           index_atual = index;
 
-      if (index + size >= total_images) {
-        index_atual = total_images - size;
+      if (index + size > total_images) {
+        index_atual = total_images - size + 1;
       }
 
       index_atual--;
@@ -23383,110 +23452,11 @@ var _withScopeId = function _withScopeId(n) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-df382d32"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
 };
 
-var _hoisted_1 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, "Estrutura")], -1
-  /* HOISTED */
-  );
-});
-
-var _hoisted_2 = {
-  "class": "container"
-};
-
-var _hoisted_3 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "caption-container"
-  }, null, -1
-  /* HOISTED */
-  );
-});
-
-var _hoisted_4 = {
-  "class": "mySlides"
-};
-var _hoisted_5 = {
-  "class": "numbertext"
-};
-var _hoisted_6 = {
-  "class": "caption-container"
-};
-var _hoisted_7 = {
-  id: "caption"
-};
-var _hoisted_8 = {
-  "class": "row"
-};
-var _hoisted_9 = ["onClick"];
-var _hoisted_10 = ["src", "alt"];
-function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.img_index + 1) + " / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.paginator.total_images), 1
-  /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "image-gallery",
-    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background-image: url('".concat($options.path, "/").concat($options.selected.src, "')"))
-  }, null, 4
-  /* STYLE */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    "class": "prev",
-    onClick: _cache[0] || (_cache[0] = function ($event) {
-      return $options.move(-1);
-    })
-  }, "❮"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    "class": "next",
-    onClick: _cache[1] || (_cache[1] = function ($event) {
-      return $options.move(1);
-    })
-  }, "❯"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.selected.name), 1
-  /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.images, function (item, index) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
-      "class": "column",
-      key: index,
-      onClick: function onClick($event) {
-        return _ctx.img_index = $options.paginator.index_atual + index;
-      }
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["demo cursor", _ctx.img_index == $options.paginator.index_atual + index ? 'active' : '']),
-      src: "".concat($options.path, "/").concat(item.src),
-      style: {
-        "width": "100%"
-      },
-      alt: item.name
-    }, null, 10
-    /* CLASS, PROPS */
-    , _hoisted_10)], 8
-    /* PROPS */
-    , _hoisted_9);
-  }), 128
-  /* KEYED_FRAGMENT */
-  ))])])]);
-}
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/componentes/Galeria.vue?vue&type=template&id=25d6ee05&scoped=true":
-/*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/componentes/Galeria.vue?vue&type=template&id=25d6ee05&scoped=true ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render)
-/* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-
-
-var _withScopeId = function _withScopeId(n) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-25d6ee05"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
-};
-
 var _hoisted_1 = {
   "class": "row"
 };
 var _hoisted_2 = {
-  "class": "col-9 col-12-medium"
+  "class": "col-12 col-12-medium"
 };
 var _hoisted_3 = {
   "class": "content"
@@ -23496,9 +23466,7 @@ var _hoisted_4 = {
 };
 
 var _hoisted_5 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    href: "#"
-  }, "Estruturas")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <p>With a smaller subtitle that attempts to elaborate</p> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul class=\"meta\">\n                                <li class=\"icon fa-clock\">15 minutes ago</li>\n                                <li class=\"icon fa-comments\"><a href=\"#\">8</a></li>\n                            </ul> ")], -1
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, "Estrutura"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <p>With a smaller subtitle that attempts to elaborate</p> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul class=\"meta\">\n                                <li class=\"icon fa-clock\">15 minutes ago</li>\n                                <li class=\"icon fa-comments\"><a href=\"#\">8</a></li>\n                            </ul> ")], -1
   /* HOISTED */
   );
 });
@@ -23528,27 +23496,15 @@ var _hoisted_11 = {
   id: "caption"
 };
 var _hoisted_12 = {
-  "class": "row"
+  "class": "column-container"
 };
-var _hoisted_13 = ["onClick"];
-var _hoisted_14 = ["src", "alt"];
-
-var _hoisted_15 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "col-3 col-12-medium"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "sidebar"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Archives "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul class=\"divided\">\n                        <li>\n                            <article class=\"box post-summary\">\n                                <h3><a href=\"#\">A Subheading</a></h3>\n                                <ul class=\"meta\">\n                                    <li class=\"icon fa-clock\">6 hours ago</li>\n                                    <li class=\"icon fa-comments\"><a href=\"#\">34</a></li>\n                                </ul>\n                            </article>\n                        </li>\n                        <li>\n                            <article class=\"box post-summary\">\n                                <h3><a href=\"#\">Another Subheading</a></h3>\n                                <ul class=\"meta\">\n                                    <li class=\"icon fa-clock\">9 hours ago</li>\n                                    <li class=\"icon fa-comments\"><a href=\"#\">27</a></li>\n                                </ul>\n                            </article>\n                        </li>\n                        <li>\n                            <article class=\"box post-summary\">\n                                <h3><a href=\"#\">And Another</a></h3>\n                                <ul class=\"meta\">\n                                    <li class=\"icon fa-clock\">Yesterday</li>\n                                    <li class=\"icon fa-comments\"><a href=\"#\">184</a></li>\n                                </ul>\n                            </article>\n                        </li>\n                        <li>\n                            <article class=\"box post-summary\">\n                                <h3><a href=\"#\">And Another</a></h3>\n                                <ul class=\"meta\">\n                                    <li class=\"icon fa-clock\">2 days ago</li>\n                                    <li class=\"icon fa-comments\"><a href=\"#\">286</a></li>\n                                </ul>\n                            </article>\n                        </li>\n                        <li>\n                            <article class=\"box post-summary\">\n                                <h3><a href=\"#\">And One More</a></h3>\n                                <ul class=\"meta\">\n                                    <li class=\"icon fa-clock\">3 days ago</li>\n                                    <li class=\"icon fa-comments\"><a href=\"#\">8,086</a></li>\n                                </ul>\n                            </article>\n                        </li>\n                    </ul>\n                    <a href=\"#\" class=\"button alt\">Ver Mais</a> ")])], -1
-  /* HOISTED */
-  );
-});
-
+var _hoisted_13 = ["onClick", "alt"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Galeria "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Featured Post "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("article", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.img_index + 1) + " / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.paginator.total_images), 1
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Estrututa "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Featured Post "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("article", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.img_index + 1) + " / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.paginator.total_images), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "image-gallery",
-    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background-image: url('".concat($options.path, "/").concat($options.selected.src, "')"))
+    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background-image: url('/".concat($options.selected.source, "')"))
   }, null, 4
   /* STYLE */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
@@ -23565,27 +23521,157 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.images, function (item, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
-      "class": "column",
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["column", _ctx.img_index == $options.paginator.index_atual + index ? 'active' : '']),
       key: index,
       onClick: function onClick($event) {
-        return _ctx.img_index = index;
-      }
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["demo cursor", _ctx.img_index == index ? 'active' : '']),
-      src: "".concat($options.path, "/").concat(item.src),
-      style: {
-        "width": "100%"
+        return $options.moveTo(item);
       },
-      alt: item.name
-    }, null, 10
-    /* CLASS, PROPS */
-    , _hoisted_14)], 8
-    /* PROPS */
+      alt: item.name,
+      style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)({
+        backgroundImage: "url(/".concat(item.source, ")")
+      })
+    }, null, 14
+    /* CLASS, STYLE, PROPS */
     , _hoisted_13);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])])])])]), _hoisted_15])], 2112
+  ))])])])])])])], 2112
   /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
+  );
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/componentes/Galeria.vue?vue&type=template&id=25d6ee05&scoped=true":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/componentes/Galeria.vue?vue&type=template&id=25d6ee05&scoped=true ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+var _withScopeId = function _withScopeId(n) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-25d6ee05"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
+};
+
+var _hoisted_1 = {
+  "class": "row"
+};
+var _hoisted_2 = ["onClick"];
+var _hoisted_3 = {
+  "class": "image featured"
+};
+var _hoisted_4 = ["src"];
+var _hoisted_5 = {
+  "class": "row"
+};
+var _hoisted_6 = {
+  "class": "col-12 col-12-medium"
+};
+var _hoisted_7 = {
+  "class": "content"
+};
+var _hoisted_8 = {
+  "class": "box post"
+};
+var _hoisted_9 = {
+  href: "#"
+};
+var _hoisted_10 = {
+  "class": "container"
+};
+
+var _hoisted_11 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "caption-container"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_12 = {
+  "class": "mySlides"
+};
+var _hoisted_13 = {
+  "class": "numbertext"
+};
+var _hoisted_14 = {
+  "class": "caption-container"
+};
+var _hoisted_15 = {
+  id: "caption"
+};
+var _hoisted_16 = {
+  "class": "column-container"
+};
+var _hoisted_17 = ["onClick", "alt"];
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Galeria "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.galeries, function (item, index) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+      key: index,
+      "class": "col-2 col-4-medium col-6-small"
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Feature "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", {
+      "class": "box feature",
+      onClick: function onClick($event) {
+        return $options.changeGalery(index);
+      }
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+      src: "/".concat(item.background.path),
+      alt: ""
+    }, null, 8
+    /* PROPS */
+    , _hoisted_4)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 1
+    /* TEXT */
+    )], 8
+    /* PROPS */
+    , _hoisted_2)]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Featured Post "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("article", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.opened.name), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <p>With a smaller subtitle that attempts to elaborate</p> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul class=\"meta\">\n                                <li class=\"icon fa-clock\">15 minutes ago</li>\n                                <li class=\"icon fa-comments\"><a href=\"#\">8</a></li>\n                            </ul> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.img_index + 1) + " / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.paginator.total_images), 1
+  /* TEXT */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "image-gallery",
+    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background-image: url('/".concat($options.selected.source, "')"))
+  }, null, 4
+  /* STYLE */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    "class": "prev",
+    onClick: _cache[0] || (_cache[0] = function ($event) {
+      return $options.move(-1);
+    })
+  }, "❮"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    "class": "next",
+    onClick: _cache[1] || (_cache[1] = function ($event) {
+      return $options.move(1);
+    })
+  }, "❯"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.selected.name), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.images, function (item, index) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["column", _ctx.img_index == $options.paginator.index_atual + index ? 'active' : '']),
+      key: index,
+      onClick: function onClick($event) {
+        return $options.moveTo(item);
+      },
+      alt: item.name,
+      style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)({
+        backgroundImage: "url(/".concat(item.source, ")")
+      })
+    }, null, 14
+    /* CLASS, STYLE, PROPS */
+    , _hoisted_17);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])])])])])])], 64
+  /* STABLE_FRAGMENT */
   );
 }
 
@@ -28712,7 +28798,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.parallax[data-v-2dade014] {\n    min-height: 250px;\n    /* background-attachment: fixed; */\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n.active[data-v-2dade014] {\n    color: #0a58ca;\n}\n.paragraph[data-v-2dade014] {\n    text-indent: 1em;\n    font-size: 1.3em;\n    text-align: justify;\n}\n@media screen and (max-width: 736px) {\n.text[data-v-2dade014] {\n        font-size: 1.1em;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.parallax[data-v-2dade014] {\n        min-height: 250px;\n        /* background-attachment: fixed; */\n        background-position: center;\n        background-repeat: no-repeat;\n        background-size: cover;\n}\n.active[data-v-2dade014] {\n        color: #0a58ca;\n}\n.paragraph[data-v-2dade014] {\n        text-indent: 1em;\n        font-size: 1.3em;\n        text-align: justify;\n}\n@media screen and (max-width: 736px) {\n.text[data-v-2dade014] {\n            font-size: 1.1em;\n}\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -28784,7 +28870,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.image-gallery[data-v-df382d32] {\n        width: 100%;\n        height: 450px;\n        background-color: #152445;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-position: center;\n}\n\n    /* FROM W3SCHOOL */\n    /* Position the image container (needed to position the left and right arrows) */\n.container[data-v-df382d32] {\n        position: relative;\n}\n\n    /* Add a pointer when hovering over the thumbnail images */\n.cursor[data-v-df382d32] {\n        cursor: pointer;\n}\n\n    /* Next & previous buttons */\n.prev[data-v-df382d32],\n    .next[data-v-df382d32] {\n        cursor: pointer;\n        position: absolute;\n        top: 40%;\n        width: auto;\n        padding: 16px;\n        margin-top: -50px;\n        color: white;\n        font-weight: bold;\n        font-size: 30px;\n        border-radius: 0 3px 3px 0;\n        -moz-user-select: none;\n         -ms-user-select: none;\n             user-select: none;\n        -webkit-user-select: none;\n        text-decoration: none;\n}\n\n    /* Position the \"next button\" to the right */\n.next[data-v-df382d32] {\n        right: 25px;\n        border-radius: 3px 0 0 3px;\n}\n\n    /* On hover, add a black background color with a little bit see-through */\n.prev[data-v-df382d32]:hover,\n    .next[data-v-df382d32]:hover {\n        background-color: rgba(0, 0, 0, 0.8);\n}\n\n    /* Number text (1/3 etc) */\n.numbertext[data-v-df382d32] {\n        color: #f2f2f2;\n        font-size: 12px;\n        padding: 8px 12px;\n        position: absolute;\n        top: 0;\n}\n\n    /* Container for image text */\n.caption-container[data-v-df382d32] {\n        min-height: 10px;\n        text-align: center;\n        background-color: #152445;\n        padding: 2px 16px;\n        color: white;\n}\n.caption-container p[data-v-df382d32] {\n        margin-bottom: 5px;\n        text-align: center !important;\n        text-indent: 0em !important;\n}\n.row[data-v-df382d32]:after {\n        content: \"\";\n        display: table;\n        clear: both;\n}\n\n    /* Six columns side by side */\n.column[data-v-df382d32] {\n        float: left;\n        width: 16.66%;\n}\n\n    /* Add a transparency effect for thumnbail images */\n.demo[data-v-df382d32] {\n        opacity: 0.6;\n}\n.active[data-v-df382d32],\n    .demo[data-v-df382d32]:hover {\n        opacity: 1;\n        border: 2px solid #F71;\n}\n@media screen and (max-width: 980px) {\n.image-gallery[data-v-df382d32] {\n            height: 280px;\n}\n.column[data-v-df382d32]{\n            width: 25%;\n}\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.image-gallery[data-v-df382d32] {\n        width: 100%;\n        height: 450px;\n        background-color: #04070e;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-position: center;\n}\n\n    /* FROM W3SCHOOL */\n    /* Position the image container (needed to position the left and right arrows) */\n.container[data-v-df382d32] {\n        position: relative;\n}\n\n    /* Add a pointer when hovering over the thumbnail images */\n.cursor[data-v-df382d32] {\n        cursor: pointer;\n}\n\n    /* Next & previous buttons */\n.prev[data-v-df382d32],\n    .next[data-v-df382d32] {\n        cursor: pointer;\n        position: absolute;\n        top: 40%;\n        width: auto;\n        padding: 16px;\n        margin-top: -50px;\n        color: white;\n        font-weight: bold;\n        font-size: 30px;\n        border-radius: 0 3px 3px 0;\n        -moz-user-select: none;\n         -ms-user-select: none;\n             user-select: none;\n        -webkit-user-select: none;\n        text-decoration: none;\n}\n\n    /* Position the \"next button\" to the right */\n.next[data-v-df382d32] {\n        right: 25px;\n        border-radius: 3px 0 0 3px;\n}\n\n    /* On hover, add a black background color with a little bit see-through */\n.prev[data-v-df382d32]:hover,\n    .next[data-v-df382d32]:hover {\n        background-color: rgba(0, 0, 0, 0.8);\n}\n\n    /* Number text (1/3 etc) */\n.numbertext[data-v-df382d32] {\n        color: #f2f2f2;\n        font-size: 12px;\n        padding: 8px 12px;\n        position: absolute;\n        top: 0;\n}\n\n    /* Container for image text */\n.caption-container[data-v-df382d32] {\n        min-height: 10px;\n        text-align: center;\n        background-color: #04070e;\n        padding: 2px 16px;\n        color: white;\n}\n.caption-container p[data-v-df382d32] {\n        margin-bottom: 5px;\n}\n.row[data-v-df382d32]:after {\n        content: \"\";\n        display: table;\n        clear: both;\n}\n.column-container[data-v-df382d32] {\n        margin: 0 auto;\n        display: flex;\n}\n\n    /* Six columns side by side */\n.column[data-v-df382d32] {\n        float: left;\n        height: 120px;\n        background-size: cover;\n        margin: 10px 5px 0px 5px;\n        flex-grow: 1;\n        opacity: 0.6;\n        cursor: pointer;\n}\n.column[data-v-df382d32]:hover {\n        opacity: 1;\n}\n\n    /* Add a transparency effect for thumnbail images */\n.demo[data-v-df382d32] {\n        opacity: 0.6;\n}\n.active[data-v-df382d32],\n    .demo[data-v-df382d32]:hover {\n        opacity: 1;\n        border: 2px solid #F71;\n}\nsection.box[data-v-df382d32] {\n        padding: 0 0 2em 0 !important;\n}\n.image.featured[data-v-df382d32] {\n        margin: 0 0 10px 0 !important;\n}\ndiv.image[data-v-df382d32] {\n        height: 160px;\n        overflow: hidden;\n        text-align: center;\n        background-color: black;\n}\ndiv.image img[data-v-df382d32] {\n        transition: transform 1s, opacity 1s ease-in-out;\n        opacity: 0.6;\n        transform: scale(1.0);\n}\ndiv.image:hover img[data-v-df382d32] {\n        transform: scale(1.1);\n        opacity: 1;\n}\nsection.box[data-v-df382d32] {\n        cursor: pointer;\n}\n@media screen and (max-width: 980px) {\n.image-gallery[data-v-df382d32] {\n            height: 280px;\n}\n.column[data-v-df382d32] {\n            width: 25%;\n}\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -28808,7 +28894,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.image-gallery[data-v-25d6ee05]{\n    width: 100%;\n    height: 450px;\n    background-color: #152445;\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n}\n\n/* FROM W3SCHOOL */\n/* Position the image container (needed to position the left and right arrows) */\n.container[data-v-25d6ee05] {\n  position: relative;\n}\n\n/* Add a pointer when hovering over the thumbnail images */\n.cursor[data-v-25d6ee05] {\n  cursor: pointer;\n}\n\n/* Next & previous buttons */\n.prev[data-v-25d6ee05],\n.next[data-v-25d6ee05] {\n  cursor: pointer;\n  position: absolute;\n  top: 40%;\n  width: auto;\n  padding: 16px;\n  margin-top: -50px;\n  color: white;\n  font-weight: bold;\n  font-size: 30px;\n  border-radius: 0 3px 3px 0;\n  -moz-user-select: none;\n   -ms-user-select: none;\n       user-select: none;\n  -webkit-user-select: none;\n  text-decoration: none;\n}\n\n/* Position the \"next button\" to the right */\n.next[data-v-25d6ee05] {\n  right: 25px;\n  border-radius: 3px 0 0 3px;\n}\n\n/* On hover, add a black background color with a little bit see-through */\n.prev[data-v-25d6ee05]:hover,\n.next[data-v-25d6ee05]:hover {\n  background-color: rgba(0, 0, 0, 0.8);\n}\n\n/* Number text (1/3 etc) */\n.numbertext[data-v-25d6ee05] {\n  color: #f2f2f2;\n  font-size: 12px;\n  padding: 8px 12px;\n  position: absolute;\n  top: 0;\n}\n\n/* Container for image text */\n.caption-container[data-v-25d6ee05] {\n  min-height: 10px;\n  text-align: center;\n  background-color: #152445;\n  padding: 2px 16px;\n  color: white;\n}\n.caption-container p[data-v-25d6ee05] {\n    margin-bottom: 5px;\n}\n.row[data-v-25d6ee05]:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n/* Six columns side by side */\n.column[data-v-25d6ee05] {\n  float: left;\n  width: 16.66%;\n}\n\n/* Add a transparency effect for thumnbail images */\n.demo[data-v-25d6ee05] {\n  opacity: 0.6;\n}\n.active[data-v-25d6ee05],\n.demo[data-v-25d6ee05]:hover {\n  opacity: 1;\n  border: 2px solid #F71;\n}\n@media screen and (max-width: 980px) {\n.image-gallery[data-v-25d6ee05] {\n            height: 280px;\n}\n.column[data-v-25d6ee05]{\n            width: 25%;\n}\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.image-gallery[data-v-25d6ee05] {\n        width: 100%;\n        height: 450px;\n        background-color: #04070e;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-position: center;\n}\n\n    /* FROM W3SCHOOL */\n    /* Position the image container (needed to position the left and right arrows) */\n.container[data-v-25d6ee05] {\n        position: relative;\n}\n\n    /* Add a pointer when hovering over the thumbnail images */\n.cursor[data-v-25d6ee05] {\n        cursor: pointer;\n}\n\n    /* Next & previous buttons */\n.prev[data-v-25d6ee05],\n    .next[data-v-25d6ee05] {\n        cursor: pointer;\n        position: absolute;\n        top: 40%;\n        width: auto;\n        padding: 16px;\n        margin-top: -50px;\n        color: white;\n        font-weight: bold;\n        font-size: 30px;\n        border-radius: 0 3px 3px 0;\n        -moz-user-select: none;\n         -ms-user-select: none;\n             user-select: none;\n        -webkit-user-select: none;\n        text-decoration: none;\n}\n\n    /* Position the \"next button\" to the right */\n.next[data-v-25d6ee05] {\n        right: 25px;\n        border-radius: 3px 0 0 3px;\n}\n\n    /* On hover, add a black background color with a little bit see-through */\n.prev[data-v-25d6ee05]:hover,\n    .next[data-v-25d6ee05]:hover {\n        background-color: rgba(0, 0, 0, 0.8);\n}\n\n    /* Number text (1/3 etc) */\n.numbertext[data-v-25d6ee05] {\n        color: #f2f2f2;\n        font-size: 12px;\n        padding: 8px 12px;\n        position: absolute;\n        top: 0;\n}\n\n    /* Container for image text */\n.caption-container[data-v-25d6ee05] {\n        min-height: 10px;\n        text-align: center;\n        background-color: #04070e;\n        padding: 2px 16px;\n        color: white;\n}\n.caption-container p[data-v-25d6ee05] {\n        margin-bottom: 5px;\n}\n.row[data-v-25d6ee05]:after {\n        content: \"\";\n        display: table;\n        clear: both;\n}\n.column-container[data-v-25d6ee05] {\n        margin: 0 auto;\n        display: flex;\n}\n\n    /* Six columns side by side */\n.column[data-v-25d6ee05] {\n        float: left;\n        height: 120px;\n        background-size: cover;\n        margin: 10px 5px 0px 5px;\n        flex-grow: 1;\n        opacity: 0.6;\n        cursor: pointer;\n}\n.column[data-v-25d6ee05]:hover{\n        opacity: 1;\n}\n\n    /* Add a transparency effect for thumnbail images */\n.demo[data-v-25d6ee05] {\n        opacity: 0.6;\n}\n.active[data-v-25d6ee05],\n    .demo[data-v-25d6ee05]:hover {\n        opacity: 1;\n        border: 2px solid #F71;\n}\nsection.box[data-v-25d6ee05]{\n        padding: 0 0 2em 0 !important;\n}\n.image.featured[data-v-25d6ee05] {\n        margin: 0 0 10px 0 !important;\n}\ndiv.image[data-v-25d6ee05] {\n        height: 160px;\n        overflow: hidden;\n        text-align: center;\n        background-color: black;\n}\ndiv.image img[data-v-25d6ee05] {\n        transition: transform 1s, opacity 1s ease-in-out;\n        opacity: 0.6;\n        transform: scale(1.0);\n}\ndiv.image:hover img[data-v-25d6ee05] {\n        transform: scale(1.1);\n        opacity: 1;\n}\nsection.box[data-v-25d6ee05] {\n        cursor: pointer;\n}\n@media screen and (max-width: 980px) {\n.image-gallery[data-v-25d6ee05] {\n            height: 280px;\n}\n.column[data-v-25d6ee05] {\n            width: 25%;\n}\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -59105,7 +59191,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"Estrutura","path":"/images/estrutura","images":[{"name":"Biblioteca","src":"biblioteca.png"},{"name":"Lousa Digital","src":"lousa_digital.png"},{"name":"Parque","src":"parque_1.png"},{"name":"Parque","src":"parque_2.png"},{"name":"Parque","src":"parque_3.png"},{"name":"Quadra Poliesportiva","src":"quadra_poliesportiva.png"},{"name":"Recepção","src":"recepcao.png"},{"name":"Refeitório","src":"refeitorio.png"},{"name":"Sala de Recreação","src":"sala_de_recreacao.png"},{"name":"Sala de Recreação","src":"sala_de_recreacao2.png"},{"name":"Salas Climatizadas","src":"salas_climatizadas.png"},{"name":"Salas Climatizadas","src":"salas_climatizadas2.png"},{"name":"Salas Climatizadas","src":"salas_climatizadas3.png"},{"name":"Salas Climatizadas","src":"salas_climatizadas4.png"},{"name":"Salas Climatizadas","src":"salas_climatizadas5.png"}]}');
+module.exports = JSON.parse('{"name":"Estrutura","path":"/images/estrutura","background":{"path":"images/estrutura/biblioteca.png","modified":"26/10/2021 14:23:42"},"images":[{"name":"Biblioteca","source":"images/estrutura/biblioteca.png"},{"name":"Lousa Digital","source":"images/estrutura/lousa_digital.png"},{"name":"Parque","source":"images/estrutura/parque_1.png"},{"name":"Parque","source":"images/estrutura/parque_2.png"},{"name":"Parque","source":"images/estrutura/parque_3.png"},{"name":"Quadra Poliesportiva","source":"images/estrutura/quadra_poliesportiva.png"},{"name":"Recepção","source":"images/estrutura/recepcao.png"},{"name":"Refeitório","source":"images/estrutura/refeitorio.png"},{"name":"Sala de Recreação","source":"images/estrutura/sala_de_recreacao.png"},{"name":"Sala de Recreação","source":"images/estrutura/sala_de_recreacao2.png"},{"name":"Salas Climatizadas","source":"images/estrutura/salas_climatizadas.png"},{"name":"Salas Climatizadas","source":"images/estrutura/salas_climatizadas2.png"},{"name":"Salas Climatizadas","source":"images/estrutura/salas_climatizadas3.png"},{"name":"Salas Climatizadas","source":"images/estrutura/salas_climatizadas4.png"},{"name":"Salas Climatizadas","source":"images/estrutura/salas_climatizadas5.png"}]}');
 
 /***/ })
 

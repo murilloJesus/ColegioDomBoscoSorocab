@@ -122,6 +122,25 @@
 
                         <a href="#" class="image featured image-content-colegio image-premiacoes"></a>
 
+                        <section>
+                            <p>
+                                O Programa de Excelência - PEX do Sistema de Ensino Dom Bosco é uma plataforma de reconhecimento, que a partir de
+                                um manual de gerenciamento contém orientações que possibilitam a condução das instituições de ensino com sucesso,
+                                com base nos resultados alcançados, destaca-se os colégios que alcançam os padrões de excelência estabelecidos pelo Programa.
+                            </p>
+
+                            <p>
+                                As Regras de Reconhecimento de Mérito estabelecem as condições e categorias para tal reconhecimento da instituição de ensino,
+                                como uma das vencedoras no Programa de Excelência Dom Bosco, para fazer jus a premiação do PEX, o Colégio Dom Bosco Sorocaba foi
+                                avaliado em vários quesitos e recebemos em por 3 anos consecutivos o troféu de reconhecimento.
+                            </p>
+                            <p>
+                                É com muita alegria e gratidão que recebemos essa premiação, pois compreendemos que esse tipo de conquista só é possível pelo
+                            fruto do trabalho incansável e incessante de uma equipe comprometida, unida, coesa e harmoniosa, que, com empenho, garra,
+                            responsabilidade, competência construímos uma educação de qualidade para todos os nossos alunos.
+                            </p>
+                        </section>
+
                         <div id="estrutura" class="anchoring"></div>
                         <estrutura></estrutura>
 

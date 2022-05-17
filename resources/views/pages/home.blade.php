@@ -44,10 +44,10 @@
                 <!-- CONTEUDO -->
                 <conteudo></conteudo>
 
-                <x-front.news></x-front.news>
-
                 <!-- COLÉGIO -->
                 <colegio></colegio>
+
+                <x-front.news></x-front.news>
             </div>
         </div>
     </section>

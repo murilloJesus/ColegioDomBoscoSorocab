@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 Auth::routes();
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('administrador')->group( function () {
@@ -41,4 +44,3 @@ Route::get('/', [PagesController::class, 'index']);
 Route::get('/{pagina}', function ($pagina) {
     return view("pages.$pagina")->with('page', $pagina);
 });
-

@@ -1,66 +1,70 @@
 {
     "name": "Estrutura",
     "path": "/images/estrutura",
+    "background": {
+        "path": "images/estrutura/biblioteca.png",
+        "modified": "26/10/2021 14:23:42"
+    },
     "images": [
         {
             "name": "Biblioteca",
-            "src": "biblioteca.png"
+            "source": "images/estrutura/biblioteca.png"
         },
         {
             "name": "Lousa Digital",
-            "src": "lousa_digital.png"
+            "source": "images/estrutura/lousa_digital.png"
         },
         {
             "name": "Parque",
-            "src": "parque_1.png"
+            "source": "images/estrutura/parque_1.png"
         },
         {
             "name": "Parque",
-            "src": "parque_2.png"
+            "source": "images/estrutura/parque_2.png"
         },
         {
             "name": "Parque",
-            "src": "parque_3.png"
+            "source": "images/estrutura/parque_3.png"
         },
         {
             "name": "Quadra Poliesportiva",
-            "src": "quadra_poliesportiva.png"
+            "source": "images/estrutura/quadra_poliesportiva.png"
         },
         {
             "name": "Recepção",
-            "src": "recepcao.png"
+            "source": "images/estrutura/recepcao.png"
         },
         {
             "name": "Refeitório",
-            "src": "refeitorio.png"
+            "source": "images/estrutura/refeitorio.png"
         },
         {
             "name": "Sala de Recreação",
-            "src": "sala_de_recreacao.png"
+            "source": "images/estrutura/sala_de_recreacao.png"
         },
         {
             "name": "Sala de Recreação",
-            "src": "sala_de_recreacao2.png"
+            "source": "images/estrutura/sala_de_recreacao2.png"
         },
         {
             "name": "Salas Climatizadas",
-            "src": "salas_climatizadas.png"
+            "source": "images/estrutura/salas_climatizadas.png"
         },
         {
             "name": "Salas Climatizadas",
-            "src": "salas_climatizadas2.png"
+            "source": "images/estrutura/salas_climatizadas2.png"
         },
         {
             "name": "Salas Climatizadas",
-            "src": "salas_climatizadas3.png"
+            "source": "images/estrutura/salas_climatizadas3.png"
         },
         {
             "name": "Salas Climatizadas",
-            "src": "salas_climatizadas4.png"
+            "source": "images/estrutura/salas_climatizadas4.png"
         },
         {
             "name": "Salas Climatizadas",
-            "src": "salas_climatizadas5.png"
+            "source": "images/estrutura/salas_climatizadas5.png"
         }
     ]
 }

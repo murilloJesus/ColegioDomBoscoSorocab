@@ -3,12 +3,18 @@
 
         <!-- Search -->
             <section id="search" class="alt">
+                <div class="holder-logo">
+                    <a href="/">
+                        <img class="logo" src="/images/logo.png" alt="logo colégio dom bosco sorocaba">
+                    </a>
+                </div>
                 <form method="get" action="?">
                     <input type="text" name="pesquisa" id="search" placeholder="Procurar" />
                 </form>
             </section>
 
-        <!-- Menu -->
+
+            <!-- Menu -->
             <nav id="menu">
                 <header class="major">
                     <h2>Categorias</h2>

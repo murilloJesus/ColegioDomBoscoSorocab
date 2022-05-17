@@ -83,7 +83,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #f2f5f3;
+		background: #e8e9ec;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1920,8 +1920,8 @@ input, select, textarea {
         padding-left: 0;
         cursor: default;
         position: fixed;
-        right: 0px;
-        top: 5px;
+        right: 30px;
+        top: 15px;
         z-index: 1001;
         padding: 10px 42px 10px 6px;
         /* background: rgba(211, 211, 211, 0.8); */
@@ -1936,7 +1936,7 @@ input, select, textarea {
 			transition: top .15s ease-in-out;
 			position: relative;
 			display: inline-block;
-			margin: 0 0.25em 0 0.25em;
+			margin: 0 0.3em 0 0.3em;
 			top: 0;
 			padding-left: 0;
 		}
@@ -1948,19 +1948,19 @@ input, select, textarea {
 				transition: background-color .2s ease-in-out;
 				display: block;
 				position: relative;
-				width: 48px;
-				height: 48px;
+				width: 29px;
+				height: 29px;
 				border-radius: 6px;
 				outline: 0;
-				background: #848C94;
+				background: #737c8f;
 				text-align: center;
                 padding: 0 !important;
 			}
 
 				ul.contact li a:before {
-					color: #f2f5f3;
-					font-size: 32px;
-					line-height: 48px;
+					color: #e8e9ec;
+					font-size: 20px;
+					line-height: 29px;
 				}
 
 			ul.contact li:hover {
@@ -2729,19 +2729,19 @@ input, select, textarea {
             }
 
             ul.contact {
-                top: 10px;
+                top: 8px;
                 padding-right: 5px;
             }
 
             ul.contact li a {
-                width: 32px;
-                height: 32px;
+                width: 29px;
+                height: 29px;
             }
 
             ul.contact li a::before {
-                color: #f2f5f3;
+                color: #e8e9ec;
                 font-size: 20px;
-                line-height: 33px;
+                line-height: 29 c  0- /px;
             }
 
 	}
@@ -3184,7 +3184,7 @@ input, select, textarea {
             }
 
             ul.contact li a:before {
-                color: #f2f5f3;
+                color: #e8e9ec;
                 font-size: 32px;
                 line-height: 48px;
             }

@@ -1,46 +1,61 @@
 <template>
-    <article>
-        <header>
-            <h3>Estrutura</h3>
-        </header>
+    <!-- Estrututa -->
+    <div class="row">
+        <div class="col-12 col-12-medium">
+            <div class="content">
+                <!-- Featured Post -->
+                <article class="box post">
+                    <header>
+                        <h3>Estrutura</h3>
+                        <!-- <p>With a smaller subtitle that attempts to elaborate</p> -->
+                        <!-- <ul class="meta">
+                                <li class="icon fa-clock">15 minutes ago</li>
+                                <li class="icon fa-comments"><a href="#">8</a></li>
+                            </ul> -->
+                    </header>
+                    <div class="container">
+                        <div class="caption-container">
 
-        <div class="container">
-            <div class="caption-container">
+                        </div>
 
-            </div>
+                        <div class="mySlides">
+                            <div class="numbertext">{{img_index + 1}} / {{paginator.total_images}}</div>
+                            <div class="image-gallery" :style="`background-image: url('/${selected.source}')`">
 
-            <div class="mySlides">
-                <div class="numbertext">{{img_index + 1}} / {{paginator.total_images}}</div>
-                <div class="image-gallery" :style="`background-image: url('${path}/${selected.src}')`"></div>
-            </div>
+                            </div>
+                        </div>
 
-            <a class="prev" @click="move(-1)">❮</a>
-            <a class="next" @click="move(1)">❯</a>
+                        <a class="prev" @click="move(-1)">❮</a>
+                        <a class="next" @click="move(1)">❯</a>
 
-            <div class="caption-container">
-                <p id="caption"> {{selected.name}} </p>
-            </div>
+                        <div class="caption-container">
+                            <p id="caption"> {{selected.name}} </p>
+                        </div>
 
-            <div class="row">
-                <div class="column" v-for="(item, index) in images" :key="index" @click="img_index = paginator.index_atual+index">
-                    <img class="demo cursor" :class="img_index == paginator.index_atual+index ? 'active' : ''"
-                        :src="`${path}/${item.src}`" style="width:100%" :alt="item.name">
-                </div>
+                        <div class="column-container">
+                            <div class="column" v-for="(item, index) in images" :key="index" @click="moveTo(item)"
+                                :class="img_index == paginator.index_atual + index ? 'active' : ''" :alt="item.name"
+                                :style="{backgroundImage: `url(/${item.source})`}">
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
-    </article>
+    </div>
 
 </template>
 
 <script>
     import infraestrutura from './../data/galery/infraestrutura.json'
+
     import $ from 'jquery'
 
     export default {
-        name: "Estrutura",
+        name: "Galeria",
         data: () => {
-
             return {
+                gallery_index: 0,
                 img_index: 0,
                 size_of_galery: $(document).width() > 980 ? 6 : 4,
                 galeries: [
@@ -48,10 +63,19 @@
                 ]
             }
         },
+        mounted(){
+
+            let ht = window.location.href;
+
+            ht = ht.split(/#/)[1]
+
+            if( $(`#${ht}`)[0] ){
+                 var top = $(`#${ht}`).offset().top;
+                    $('html,body').animate({scrollTop: top}, 500);
+                    return false;
+            }
+        },
         methods: {
-            log(varr) {
-                console.log(varr);
-            },
             move(dir) {
                 let new_position = this.img_index + dir
 
@@ -62,11 +86,21 @@
                 }
 
                 this.img_index = new_position
+            },
+            moveTo(item) {
+
+                this.img_index = this.opened.images.findIndex((el, index) => {
+                    return el == item ? index : false
+                })
+            },
+            changeGalery(index) {
+                this.gallery_index = index
+                this.img_index = 0
             }
         },
         computed: {
             opened() {
-                return this.galeries[0]
+                return this.galeries[this.gallery_index]
             },
             images() {
                 let inicio = this.paginator.index_atual,
@@ -86,8 +120,8 @@
                     index = this.img_index + 1,
                     index_atual = index
 
-                if (index + size >= total_images) {
-                    index_atual = total_images - size
+                if (index + size > total_images) {
+                    index_atual = total_images - size + 1
                 }
 
                 index_atual--
@@ -107,7 +141,7 @@
     .image-gallery {
         width: 100%;
         height: 450px;
-        background-color: #152445;
+        background-color: #04070e;
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
@@ -167,15 +201,13 @@
     .caption-container {
         min-height: 10px;
         text-align: center;
-        background-color: #152445;
+        background-color: #04070e;
         padding: 2px 16px;
         color: white;
     }
 
     .caption-container p {
         margin-bottom: 5px;
-        text-align: center !important;
-        text-indent: 0em !important;
     }
 
     .row:after {
@@ -184,10 +216,24 @@
         clear: both;
     }
 
+    .column-container {
+        margin: 0 auto;
+        display: flex;
+    }
+
     /* Six columns side by side */
     .column {
         float: left;
-        width: 16.66%;
+        height: 120px;
+        background-size: cover;
+        margin: 10px 5px 0px 5px;
+        flex-grow: 1;
+        opacity: 0.6;
+        cursor: pointer;
+    }
+
+    .column:hover {
+        opacity: 1;
     }
 
     /* Add a transparency effect for thumnbail images */
@@ -201,13 +247,43 @@
         border: 2px solid #F71;
     }
 
+    section.box {
+        padding: 0 0 2em 0 !important;
+    }
+
+    .image.featured {
+        margin: 0 0 10px 0 !important;
+    }
+
+    div.image {
+        height: 160px;
+        overflow: hidden;
+        text-align: center;
+        background-color: black;
+    }
+
+    div.image img {
+        transition: transform 1s, opacity 1s ease-in-out;
+        opacity: 0.6;
+        transform: scale(1.0);
+    }
+
+    div.image:hover img {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    section.box {
+        cursor: pointer;
+    }
+
     @media screen and (max-width: 980px) {
 
         .image-gallery {
             height: 280px;
         }
 
-        .column{
+        .column {
             width: 25%;
         }
     }

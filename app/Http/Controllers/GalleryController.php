@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use DateTime;
 use Illuminate\Filesystem\FilesystemAdapter;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 use ZipArchive;
 
@@ -56,7 +57,11 @@ class GalleryController extends Controller
         $zip = new ZipArchive;
         $res = $zip->open(public_path($file));
         if($res === TRUE){
-            return $zip->extractTo($this->private_path);
+            $galeria =  $zip->extractTo($this->private_path);
+            if($galeria){
+                $this->saveJSON();
+                return $galeria;
+            }
         }else{
             abort(403, 'Sem autorização');
         }
@@ -101,18 +106,6 @@ class GalleryController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Requests\galleryRequest $request, $id)
-    {
-        //
-    }
-
-    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
@@ -120,12 +113,17 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        return $this->storage->deleteDirectory($this->directories[$id]);
+        $galeria = $this->storage->deleteDirectory($this->directories[$id]);
+
+        if($galeria){
+            $this->saveJSON();
+            return $galeria;
+        }
     }
 
     private function backgroundImage($directory)
     {
-        $images = $this->storage->exists("$directory/background.jpeg") ? ["$directory/background.jpeg"] : $this->storage->allFiles($directory);
+        $images = $this->storage->exists("$directory/background.jpg") ? ["$directory/background.jpg"] : $this->storage->allFiles($directory);
 
         if($images){
             $image =  $images[0];
@@ -138,49 +136,67 @@ class GalleryController extends Controller
         }
     }
 
+    private function getGalerias()
+    {
+        $galerias = [];
+        foreach ($this->storage->allDirectories($this->private_path) as $dir ) {
+            $galerias[] = [
+                "name" => $this->getNome($dir),
+                "path" => $dir,
+                "background" => $this->backgroundImage($dir),
+                "images" => $this->getImages($dir)
+            ];
+        }
+
+        return $galerias;
+    }
+
+    private function getImages($galeria)
+    {
+        $images = [];
+        foreach ($this->storage->allFiles($galeria) as $image ) {
+
+            $images[] = [
+                "name" => $this->getNome($image, 'img'),
+                "source" => $image
+            ];
+        }
+
+        return $images;
+    }
+
+    private function getNome($path, $type = 'dir')
+    {
+        switch($type){
+            case 'dir':
+                $name = explode("/", $path);
+                $name = end($name);
+            break;
+
+            case 'img':
+                $img = explode("/", $path);
+                $img_name = explode(".", end($img));
+                $name = $img_name[0];
+            break;
+        }
+
+            $name = str_replace(['-', '_'], ' ', $name);
+            return $name;
+    }
+
 
     /**
-     * extractImages
+     * saveJSON
      *
-     * @param  string $file
-     * @param  string $folder
-     * @return string
+     * @return void
      */
-    private function extractImages($file, $folder){
+    public function saveJSON()
+    {
 
-        $zip = new ZipArchive;
-        if ($zip->open($file ) === true)
-        {
+        $galerias = $this->getGalerias();
 
-            //make all the folders
-            for($i = 0; $i < $zip->numFiles; $i++)
-            {
-                $OnlyFileName = $zip->getNameIndex($i);
-                $FullFileName = $zip->statIndex($i);
-                if ($FullFileName['name'][strlen($FullFileName['name'])-1] =="/")
-                {
-                    @mkdir($folder."/".$FullFileName['name'],0700,true);
-                }
-            }
-
-            //unzip into the folders
-            for($i = 0; $i < $zip->numFiles; $i++)
-            {
-                $OnlyFileName = $zip->getNameIndex($i);
-                $FullFileName = $zip->statIndex($i);
-
-                if (!($FullFileName['name'][strlen($FullFileName['name'])-1] =="/"))
-                {
-                    if (preg_match('#\.(jpg|jpeg|gif|png)$#i', $OnlyFileName))
-                    {
-                        copy('zip://'. $file .'#'. $OnlyFileName , $folder."/".$FullFileName['name'] );
-                    }
-                }
-            }
-            $zip->close();
-        } else
-        {
-            return  "Error: Can't open zip file";
-        }
+        $json = Collection::make($galerias)
+                    ->toJson(JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        return Storage::put('data/galerias.json', $json);
     }
 }

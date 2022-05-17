@@ -7,11 +7,9 @@
                 <h2 class="major"><span>Colégio</span></h2>
                 <ul class="divided">
                     <li v-for="(item, index) in segmentos" :key="index">
-                        <article class="box post-summary" >
-                            <h4><a
-                                :class="actived.name == item.name ? 'active' : '' "
-                                @click="set_actived(item)"
-                                :href="`#${item.href}`">{{item.name}}</a></h4>
+                        <article class="box post-summary">
+                            <h4><a :class="actived.name == item.name ? 'active' : '' " @click="set_actived(item)"
+                                    :href="`#${item.href}`">{{item.name}}</a></h4>
                         </article>
                     </li>
                 </ul>
@@ -35,18 +33,8 @@
                         <li class="icon fa-comments"><a href="#">8</a></li>
                     </ul> -->
                 </header>
-                <a
-                    v-if="actived.classImage"
-                    href="#"
-                    :class="actived.classImage"
-                    class="image featured parallax"
-                ></a>
-                <p
-                v-for="(text, t_index) in actived.text"
-                :key="t_index"
-                v-html="text"
-                class="paragraph"
-                ></p>
+                <a v-if="actived.classImage" href="#" :class="actived.classImage" class="image featured parallax"></a>
+                <p v-for="(text, t_index) in actived.text" :key="t_index" v-html="text" class="paragraph"></p>
                 <a :href="actived.see_more" v-if="actived.see_more" class="button alt">Continue Lendo</a>
             </article>
         </div>
@@ -55,21 +43,20 @@
 </template>
 
 <script>
-import EstruturaVue from './Estrutura.vue';
+    import EstruturaVue from './Estrutura.vue';
     export default {
         name: "Content",
         data: () => {
             return {
                 actived: {},
-                segmentos: [
-                    {
+                segmentos: [{
                         name: "História",
                         desc: false,
                         href: 'historia',
                         classImage: "image-historia",
                         text: [
                             `O Colégio DOM BOSCO nasce em 2009 com a denominação “Múltiplo Educação Infantil”, atendendo ao segmento da Educação Infantil, tendo o afeto e a educação humanizada como principais pilares em sua prática, conquistando uma ascensão constante e surpreendente, o que nada mais foi do que o resultado e um excelente trabalho desenvolvido.`,
-                            ],
+                        ],
                         see_more: "/colegio#historia"
                     },
                     {
@@ -93,9 +80,13 @@ import EstruturaVue from './Estrutura.vue';
                         name: "Premiações",
                         desc: false,
                         href: 'premiacoes',
-                        classImage: "image-missao-visao-valores",
+                        classImage: "image-premiacoes",
                         text: [
-                        ]
+                            `O Programa de Excelência - PEX do Sistema de Ensino Dom Bosco é uma plataforma de reconhecimento, que a partir de
+                            um manual de gerenciamento contém orientações que possibilitam a condução das instituições de ensino com sucesso,
+                            com base nos resultados alcançados, destaca-se os colégios que alcançam os padrões de excelência estabelecidos pelo Programa.`,
+                        ],
+                        see_more: "/colegio#premiacoes"
                     },
                     {
                         name: "Proposta Pedagógica",
@@ -118,15 +109,12 @@ import EstruturaVue from './Estrutura.vue';
                 ]
             }
         },
-        created(){
+        created() {
             this.actived = this.segmentos[0]
         },
         methods: {
-            set_actived(item){
+            set_actived(item) {
                 this.actived = item;
-                // $([document.documentElement, document.body]).animate({
-                //     scrollTop: $(this.$refs.content).offset().top - this.size_of_menu()
-                // }, 2000);
             }
         }
     }
@@ -134,27 +122,28 @@ import EstruturaVue from './Estrutura.vue';
 </script>
 
 <style scoped>
-.parallax {
-    min-height: 250px;
-    /* background-attachment: fixed; */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.active {
-    color: #0a58ca;
-}
-
-.paragraph {
-    text-indent: 1em;
-    font-size: 1.3em;
-    text-align: justify;
-}
-
-@media screen and (max-width: 736px) {
-    .text {
-        font-size: 1.1em;
+    .parallax {
+        min-height: 250px;
+        /* background-attachment: fixed; */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-}
+
+    .active {
+        color: #0a58ca;
+    }
+
+    .paragraph {
+        text-indent: 1em;
+        font-size: 1.3em;
+        text-align: justify;
+    }
+
+    @media screen and (max-width: 736px) {
+        .text {
+            font-size: 1.1em;
+        }
+    }
+
 </style>
