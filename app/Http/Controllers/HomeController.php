@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Accessed;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,5 +25,12 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function home()
+    {
+        $statistics = [
+            'month' => Accessed::find()
+        ];
     }
 }

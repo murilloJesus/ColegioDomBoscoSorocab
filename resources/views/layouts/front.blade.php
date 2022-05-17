@@ -9,11 +9,12 @@
 		<title>Colégio Dom Bosco - Sorocaba</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        @include('facebook-pixel::head')
+
         <link rel="icon" type="image/png" href="/public/images/icon.png" />
 		<link rel="stylesheet" href="/public/assets/css/main.css" />
 		<link rel="stylesheet" href="/public/assets/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="/public/assets/css/cookiealert.css" />
-
 
         <script src="/public/assets/js/jquery.min.js"></script>
         <script src="/public/assets/js/jquery.dropotron.min.js"></script>
@@ -28,7 +29,7 @@
         <script src="{{ asset('/public/js/app.js') }}" defer></script>
 	</head>
 	<body class="homepage is-preload" id="app">
-
+        @include('facebook-pixel::body')
 		<div id="page-wrapper" >
 
             <x-front.menu :page=$page></x-front.menu>

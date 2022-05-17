@@ -8,12 +8,13 @@
 	<head>
 		<title>Notícias Colégio Dom Bosco - Sorocaba</title>
 		<meta charset="utf-8" />
+        @include('facebook-pixel::head')
         <link rel="icon" type="image/png" href="/public/images/icon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/public/editorial/assets/css/main.css" />
 	</head>
 	<body class="is-preload">
-
+        @include('facebook-pixel::body')
 		<!-- Wrapper -->
 			<div id="wrapper">
                 <div id="main">

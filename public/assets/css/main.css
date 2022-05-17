@@ -1793,7 +1793,7 @@ input, select, textarea {
 		font-weight: 700;
 		text-transform: uppercase;
 		text-decoration: none;
-		background:#ffd583;
+		background:#ffa058;
 		color: #fff;
 		border: 0;
 		line-height: 1em;
@@ -1811,12 +1811,12 @@ input, select, textarea {
 	}
 
 		.button:hover {
-			background: #ffd583;
+			background: #ffa058;
 			color: white;
 		}
 
 		.button:active {
-			background:#ffd583;
+			background:#ffa058;
 			color: white;
 		}
 
@@ -1833,7 +1833,7 @@ input, select, textarea {
 			input[type="reset"].alt:hover,
 			button.alt:hover,
 			.button.alt:hover {
-				background:	#ffd583;
+				background:	#ffa058;
 				color: white;
 			}
 
@@ -1842,7 +1842,7 @@ input, select, textarea {
 			input[type="reset"].alt:active,
 			button.alt:active,
 			.button.alt:active {
-				background:	#ffd583;
+				background:	#ffa058;
 				color: white;
 			}
 
@@ -2126,7 +2126,7 @@ input, select, textarea {
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			border-color: #a1cd9b;
+			border-color: #ffa058;
 		}
 
 	form input[type="text"],

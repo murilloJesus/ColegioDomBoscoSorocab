@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
@@ -21,9 +22,7 @@ Auth::routes();
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('administrador')->group( function () {
 
-    Route::get('/', function () {
-        return view('admin.home')->with('page', 'home');
-    });
+    Route::get('/', [HomeController::class, 'home']);
 
     Route::get('/{pagina}', function ($pagina) {
         return view("admin.$pagina")->with('page', $pagina);
@@ -41,6 +40,9 @@ Route::prefix('noticias')->group(function(){
 
 Route::get('/', [PagesController::class, 'index']);
 
+Route::resource('message', MessageController::class);
+
 Route::get('/{pagina}', function ($pagina) {
     return view("pages.$pagina")->with('page', $pagina);
 });
+
