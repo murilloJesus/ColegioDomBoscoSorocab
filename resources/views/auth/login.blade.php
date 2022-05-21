@@ -15,7 +15,7 @@
                     <img src="/public/admin/img/logo.png" />
                 </div>
 
-                <h3>ADMIN</h3>
+                <h4>Painel Administrativo</h4>
 
                 <div class="input-group mg-t-15">
                     <div class="nk-int-st">
