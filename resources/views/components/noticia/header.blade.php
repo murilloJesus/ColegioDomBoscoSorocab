@@ -13,6 +13,6 @@
         </ul>
     </div>
     <span class="image object">
-        <img src="/{{$header['image']}}" alt="" />
+        <img src="/public/{{$header['image']}}" alt="" />
     </span>
 </section>

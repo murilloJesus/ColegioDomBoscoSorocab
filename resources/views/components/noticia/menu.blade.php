@@ -35,7 +35,7 @@
                     @foreach ($visitados as $post)
                         <article>
                             <a href="{{$post->alias}}/{{$post->id}}" class="image">
-                                <img src="/{{$post->image}}" alt="" />
+                                <img src="/public/{{$post->image}}" alt="" />
                             </a>
                             <p>{{$post->title}}
                                 @if ($post->times_accessed > 0)

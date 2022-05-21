@@ -9,7 +9,7 @@
                     </div>
                 </form>
                 <div class="img-uploaded" v-show="fieldset[field]" @click="alterar">
-                    <img  :src="`/${fieldset[field]}`" :style="imgStyle" >
+                    <img  :src="`/public/${fieldset[field]}`" :style="imgStyle" >
                     <div></div>
                     <i>Click para alterar</i>
                 </div>

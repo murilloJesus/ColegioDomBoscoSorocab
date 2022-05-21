@@ -17,12 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Auth::routes();
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('administrador')->group( function () {
 
-    Route::get('/', [HomeController::class, 'home']);
+    Route::get('/', function ()
+    {
+        return view('admin.home')->with('page', 'home');
+    });
 
     Route::get('/{pagina}', function ($pagina) {
         return view("admin.$pagina")->with('page', $pagina);

@@ -1,7 +1,7 @@
 <template>
 <div>
     <a :href="`/${data}`" target="_blank">
-        <img :src="`/${data}`">
+        <img :src="`/public/${data}`">
     </a>
 </div>
 </template>
