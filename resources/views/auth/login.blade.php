@@ -17,21 +17,20 @@
 
                 <h4>Painel Administrativo</h4>
 
-                <div class="input-group mg-t-15">
+                <div class="input-group">
+                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
                     <div class="nk-int-st">
-                        <input type="email" class="form-control" placeholder="Email" name="email" required>
-
-                        @error('email')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
+                        <input type="text" name="email" class="form-control" placeholder="Email">
                     </div>
                 </div>
 
+
                 <div class="input-group mg-t-15">
+                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
+
                     <div class="nk-int-st">
-                        <input type="password" class="form-control" placeholder="Senha" name="password" required autocomplete="current-password">
+                        <input type="password" class="form-control" placeholder="Senha" name="password" required
+                            autocomplete="current-password">
 
                         @error('password')
                         <span class="invalid-feedback" role="alert">
