@@ -17,11 +17,19 @@
 
                 <h3>ADMIN</h3>
 
-                <input type="hidden" name="email" required autocomplete="email" value="admin@admin.com" autofocus>
+                <div class="input-group mg-t-15">
+                    <div class="nk-int-st">
+                        <input type="email" class="form-control" placeholder="Email" name="email" required>
 
+                        @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                </div>
 
                 <div class="input-group mg-t-15">
-                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
                     <div class="nk-int-st">
                         <input type="password" class="form-control" placeholder="Senha" name="password" required autocomplete="current-password">
 
