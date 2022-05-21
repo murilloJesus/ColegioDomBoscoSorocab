@@ -24,7 +24,7 @@ class galleryRequest extends FormRequest
     public function rules()
     {
         return [
-            'file' => 'required|max:102400'
+            'file' => 'required|max:1024000'
         ];
     }
 
@@ -37,7 +37,7 @@ class galleryRequest extends FormRequest
     {
         return [
             'file.required' => 'É nescessario incluir o arquivo .zip ou .rar',
-            'file.max' => 'O arquivo não pode ser maior que 100MB, particione ele se nescessário (Meu_Arquivo1.zip, Meu_Arquivo2.zip)',
+            'file.max' => 'O arquivo não pode ser maior que 1000MB, particione ele se nescessário.',
         ];
     }
 }

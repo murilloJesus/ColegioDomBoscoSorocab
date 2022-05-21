@@ -55,7 +55,7 @@ class GalleryController extends Controller
         $file = $request->file->storeAs('zips', $request->file('file')->getClientOriginalName());
 
         $zip = new ZipArchive;
-        $res = $zip->open(public_path($file));
+        $res = $zip->open(private_path($file));
         if($res === TRUE){
             $galeria =  $zip->extractTo($this->private_path);
             if($galeria){
