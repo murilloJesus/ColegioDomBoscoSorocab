@@ -23437,7 +23437,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     add: function add() {
       this.$refs.modal.open();
     },
-    save: function save() {
+    salvar: function salvar() {
       var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -24731,7 +24731,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         type: "button",
         "class": "btn btn-default",
         onClick: _cache[1] || (_cache[1] = function () {
-          return $options.save && $options.save.apply($options, arguments);
+          return $options.salvar && $options.salvar.apply($options, arguments);
         })
       }, "Salvar"), _hoisted_7];
     }),
