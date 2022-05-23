@@ -24671,6 +24671,13 @@ var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "button",
+  "class": "btn btn-default"
+}, "Salvar", -1
+/* HOISTED */
+);
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  type: "button",
   "class": "btn btn-default",
   "data-dismiss": "modal"
 }, "Fechar", -1
@@ -24727,13 +24734,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       , ["controller"])];
     }),
     footer: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-        type: "button",
-        "class": "btn btn-default",
-        onClick: _cache[1] || (_cache[1] = function () {
-          return $options.salvar && $options.salvar.apply($options, arguments);
-        })
-      }, "Salvar"), _hoisted_7];
+      return [_hoisted_7, _hoisted_8];
     }),
     _: 1
     /* STABLE */

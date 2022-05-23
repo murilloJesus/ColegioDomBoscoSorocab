@@ -22,7 +22,7 @@
             </formulario>
         </template>
         <template v-slot:footer>
-            <button type="button" class="btn btn-default" @click="salvar">Salvar</button>
+            <button type="button" class="btn btn-default">Salvar</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
         </template>
     </modal>
