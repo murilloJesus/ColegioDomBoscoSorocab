@@ -56,9 +56,8 @@ class GalleryController extends Controller
 
         $zip = new ZipArchive;
         $res = $zip->open($file);
-        dd($file);
         if($res === TRUE){
-            $galeria =  $zip->extractTo($this->private_path);
+            $galeria =  $zip->extractTo(storage_path($this->private_path));
             if($galeria){
                 $this->saveJSON();
                 return $galeria;
