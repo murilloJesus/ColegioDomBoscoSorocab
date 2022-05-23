@@ -246,6 +246,7 @@
         flex-grow: 1;
         opacity: 0.6;
         cursor: pointer;
+        background-position: center;
     }
 
     .column:hover{
