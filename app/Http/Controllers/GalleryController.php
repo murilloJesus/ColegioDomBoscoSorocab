@@ -13,7 +13,7 @@ class GalleryController extends Controller
 {
 
     private FilesystemAdapter $storage;
-    private $private_path = "images/galerias/";
+    private $private_path = "/images/galerias/";
     private $directories;
 
     public function __construct()
@@ -36,7 +36,7 @@ class GalleryController extends Controller
         foreach ($dir as $key) {
             $retorno[] = [
                 "path" => $key,
-                "name" => str_replace($this->private_path, '', $key),
+                "name" => str_replace("images/galerias/", '', $key),
                 "image" => $this->backgroundImage($key)
             ];
         }
