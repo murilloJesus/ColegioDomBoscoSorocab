@@ -12,7 +12,7 @@
                 @if ($banner->action != '')
                     <a href="{{$banner->action}}" target="{{$banner->target}}" id="banner" class="carousel-item {{$index == 0 ? 'active' : ''}}" style="background-image: url(/{{$banner->image}})"></a>
                 @else
-                    <div id="banner" class="carousel-item {{$index == 0 ? 'active' : ''}}" style="background-image: url(/images/{{$banner->image}})"></div>
+                    <div id="banner" class="carousel-item {{$index == 0 ? 'active' : ''}}" style="background-image: url(/public/{{$banner->image}})"></div>
                 @endif
             @endforeach
             @if (sizeof($banners) > 1)
