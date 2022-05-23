@@ -4,8 +4,8 @@
         <div v-for="(item, index) in galeries" :key="index" class="col-2 col-4-medium col-6-small">
             <!-- Feature -->
             <section class="box feature" @click="changeGalery(index)">
-                <div class="image featured"><img :src="`/${item.background.path}`" alt="" /></div>
-                <h4>{{item.name}}</h4>
+                <div class="image featured"><img :src="`/public/${item.background.path}`" alt="" /></div>
+                <h6>{{item.name}}</h6>
             </section>
         </div>
     </div>
