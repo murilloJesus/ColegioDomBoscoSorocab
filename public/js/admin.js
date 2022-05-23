@@ -23454,8 +23454,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                 if (isSaved) {
                   _this.fieldset[_this.field] = isSaved[_this.insertField];
-
-                  _this.controller.getData();
+                  console.log(_this.fieldset);
 
                   _this.$refs.modal.close();
                 }
@@ -23627,7 +23626,6 @@ __webpack_require__.r(__webpack_exports__);
       },
       set: function set(value) {
         this.controller.fieldset = value;
-        console.log(value);
       }
     },
     url: function url() {

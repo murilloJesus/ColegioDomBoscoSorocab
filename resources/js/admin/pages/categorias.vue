@@ -71,7 +71,7 @@
 
                 if(isSaved){
                     this.fieldset[this.field] = isSaved[this.insertField]
-                    this.controller.getData()
+                    console.log(this.fieldset)
                     this.$refs.modal.close()
                 }
             }
