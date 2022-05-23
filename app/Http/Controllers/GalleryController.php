@@ -13,7 +13,7 @@ class GalleryController extends Controller
 {
 
     private FilesystemAdapter $storage;
-    private $private_path = "images/galerias/";
+    private $private_path = "/images/galerias/";
     private $directories;
 
     public function __construct()
@@ -52,12 +52,12 @@ class GalleryController extends Controller
      */
     public function store(Requests\galleryRequest $request)
     {
-        $file = $request->file->storeAs('zips', $request->file('file')->getClientOriginalName());
+        $file = $request->file->storeAs('zips', $request->file('file')->getClientOriginalName()); // OK
 
         $zip = new ZipArchive;
-        $res = $zip->open($file);
-        if($res === TRUE){
-            $galeria =  $zip->extractTo(storage_path($this->private_path));
+        $res = $zip->open(storage_path($file), ZipArchive::CREATE | ZIPARCHIVE::OVERWRITE);
+        if($res === TRUE){// OK
+            $galeria =  $zip->extractTo(storage_path("app$this->private_path"));
             if($galeria){
                 $this->saveJSON();
                 return $galeria;
