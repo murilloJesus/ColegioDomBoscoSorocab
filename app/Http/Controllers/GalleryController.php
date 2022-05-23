@@ -52,12 +52,11 @@ class GalleryController extends Controller
      */
     public function store(Requests\galleryRequest $request)
     {
-        $file = $request->file->storeAs('zips', $request->file('file')->getClientOriginalName()); // ok
+        $file = $request->file->storeAs('zips', $request->file('file')->getClientOriginalName()); // OK
 
         $zip = new ZipArchive;
         $res = $zip->open(storage_path($file), ZipArchive::CREATE | ZIPARCHIVE::OVERWRITE);
-        dd($res);
-        if($res === TRUE){
+        if($res === TRUE){// OK
             $galeria =  $zip->extractTo($this->private_path);
             if($galeria){
                 $this->saveJSON();
