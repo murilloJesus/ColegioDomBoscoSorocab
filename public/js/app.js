@@ -23619,7 +23619,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
       "class": "image featured",
-      style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background-image: url(/public/".concat(item.background.path, ")"))
+      style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background-image: url('/public/".concat(item.background.path, "')"))
     }, null, 4
     /* STYLE */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 1
@@ -23659,7 +23659,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       },
       alt: item.name,
       style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)({
-        backgroundImage: "url(/public/".concat(item.source, ")")
+        backgroundImage: "url('/public/".concat(item.source, ")'")
       })
     }, null, 14
     /* CLASS, STYLE, PROPS */

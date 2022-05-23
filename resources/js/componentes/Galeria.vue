@@ -4,7 +4,7 @@
         <div v-for="(item, index) in galeries" :key="index" class="col-2 col-4-medium col-6-small">
             <!-- Feature -->
             <section class="box feature" @click="changeGalery(index)">
-                <div class="image featured" :style="`background-image: url(/public/${item.background.path})`"></div>
+                <div class="image featured" :style="`background-image: url('/public/${item.background.path}')`"></div>
                 <h6>{{item.name}}</h6>
             </section>
         </div>
@@ -52,7 +52,7 @@
                                 @click="moveTo(item)"
                                 :class="img_index == paginator.index_atual + index ? 'active' : ''"
                                 :alt="item.name"
-                                :style="{backgroundImage: `url(/public/${item.source})`}">
+                                :style="{backgroundImage: `url('/public/${item.source})'`}">
                             </div>
                         </div>
                     </div>
