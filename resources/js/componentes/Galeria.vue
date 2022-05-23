@@ -4,7 +4,7 @@
         <div v-for="(item, index) in galeries" :key="index" class="col-2 col-4-medium col-6-small">
             <!-- Feature -->
             <section class="box feature" @click="changeGalery(index)">
-                <div class="image featured"><img :src="`/public/${item.background.path}`" alt="" /></div>
+                <div class="image featured" :style="`background-image: url(/public/${item.background.path})`"></div>
                 <h6>{{item.name}}</h6>
             </section>
         </div>
@@ -269,6 +269,8 @@
 
     .image.featured {
         margin: 0 0 10px 0 !important;
+        background-size: cover;
+        background-position: center;
     }
 
     div.image {

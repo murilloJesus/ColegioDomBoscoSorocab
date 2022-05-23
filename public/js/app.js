@@ -23565,29 +23565,25 @@ var _hoisted_1 = {
 };
 var _hoisted_2 = ["onClick"];
 var _hoisted_3 = {
-  "class": "image featured"
-};
-var _hoisted_4 = ["src"];
-var _hoisted_5 = {
   "class": "row"
 };
-var _hoisted_6 = {
+var _hoisted_4 = {
   "class": "col-12 col-12-medium"
 };
-var _hoisted_7 = {
+var _hoisted_5 = {
   "class": "content"
 };
-var _hoisted_8 = {
+var _hoisted_6 = {
   "class": "box post"
 };
-var _hoisted_9 = {
+var _hoisted_7 = {
   href: "#"
 };
-var _hoisted_10 = {
+var _hoisted_8 = {
   "class": "container"
 };
 
-var _hoisted_11 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_9 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "caption-container"
   }, null, -1
@@ -23595,22 +23591,22 @@ var _hoisted_11 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_12 = {
+var _hoisted_10 = {
   "class": "mySlides"
 };
-var _hoisted_13 = {
+var _hoisted_11 = {
   "class": "numbertext"
 };
-var _hoisted_14 = {
+var _hoisted_12 = {
   "class": "caption-container"
 };
-var _hoisted_15 = {
+var _hoisted_13 = {
   id: "caption"
 };
-var _hoisted_16 = {
+var _hoisted_14 = {
   "class": "column-container"
 };
-var _hoisted_17 = ["onClick", "alt"];
+var _hoisted_15 = ["onClick", "alt"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Galeria "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.galeries, function (item, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
@@ -23621,21 +23617,21 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       onClick: function onClick($event) {
         return $options.changeGalery(index);
       }
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-      src: "/public/".concat(item.background.path),
-      alt: ""
-    }, null, 8
-    /* PROPS */
-    , _hoisted_4)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 1
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+      "class": "image featured",
+      style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background-image: url(/public/".concat(item.background.path, ")"))
+    }, null, 4
+    /* STYLE */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 1
     /* TEXT */
     )], 8
     /* PROPS */
     , _hoisted_2)]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Featured Post "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("article", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.opened.name), 1
+  ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Featured Post "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("article", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.opened.name), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <p>With a smaller subtitle that attempts to elaborate</p> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul class=\"meta\">\n                                <li class=\"icon fa-clock\">15 minutes ago</li>\n                                <li class=\"icon fa-comments\"><a href=\"#\">8</a></li>\n                            </ul> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.img_index + 1) + " / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.paginator.total_images), 1
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <p>With a smaller subtitle that attempts to elaborate</p> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul class=\"meta\">\n                                <li class=\"icon fa-clock\">15 minutes ago</li>\n                                <li class=\"icon fa-comments\"><a href=\"#\">8</a></li>\n                            </ul> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.img_index + 1) + " / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.paginator.total_images), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "image-gallery",
@@ -23652,9 +23648,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[1] || (_cache[1] = function ($event) {
       return $options.move(1);
     })
-  }, "❯"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.selected.name), 1
+  }, "❯"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.selected.name), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.images, function (item, index) {
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.images, function (item, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["column", _ctx.img_index == $options.paginator.index_atual + index ? 'active' : '']),
       key: index,
@@ -23667,7 +23663,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       })
     }, null, 14
     /* CLASS, STYLE, PROPS */
-    , _hoisted_17);
+    , _hoisted_15);
   }), 128
   /* KEYED_FRAGMENT */
   ))])])])])])])], 64
@@ -28894,7 +28890,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.image-gallery[data-v-25d6ee05] {\n        width: 100%;\n        height: 450px;\n        background-color: #04070e;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-position: center;\n}\n\n    /* FROM W3SCHOOL */\n    /* Position the image container (needed to position the left and right arrows) */\n.container[data-v-25d6ee05] {\n        position: relative;\n}\n\n    /* Add a pointer when hovering over the thumbnail images */\n.cursor[data-v-25d6ee05] {\n        cursor: pointer;\n}\n\n    /* Next & previous buttons */\n.prev[data-v-25d6ee05],\n    .next[data-v-25d6ee05] {\n        cursor: pointer;\n        position: absolute;\n        top: 40%;\n        width: auto;\n        padding: 16px;\n        margin-top: -50px;\n        color: white;\n        font-weight: bold;\n        font-size: 30px;\n        border-radius: 0 3px 3px 0;\n        -moz-user-select: none;\n         -ms-user-select: none;\n             user-select: none;\n        -webkit-user-select: none;\n        text-decoration: none;\n}\n\n    /* Position the \"next button\" to the right */\n.next[data-v-25d6ee05] {\n        right: 25px;\n        border-radius: 3px 0 0 3px;\n}\n\n    /* On hover, add a black background color with a little bit see-through */\n.prev[data-v-25d6ee05]:hover,\n    .next[data-v-25d6ee05]:hover {\n        background-color: rgba(0, 0, 0, 0.8);\n}\n\n    /* Number text (1/3 etc) */\n.numbertext[data-v-25d6ee05] {\n        color: #f2f2f2;\n        font-size: 12px;\n        padding: 8px 12px;\n        position: absolute;\n        top: 0;\n}\n\n    /* Container for image text */\n.caption-container[data-v-25d6ee05] {\n        min-height: 10px;\n        text-align: center;\n        background-color: #04070e;\n        padding: 2px 16px;\n        color: white;\n}\n.caption-container p[data-v-25d6ee05] {\n        margin-bottom: 5px;\n}\n.row[data-v-25d6ee05]:after {\n        content: \"\";\n        display: table;\n        clear: both;\n}\n.column-container[data-v-25d6ee05] {\n        margin: 0 auto;\n        display: flex;\n}\n\n    /* Six columns side by side */\n.column[data-v-25d6ee05] {\n        float: left;\n        height: 120px;\n        background-size: cover;\n        margin: 10px 5px 0px 5px;\n        flex-grow: 1;\n        opacity: 0.6;\n        cursor: pointer;\n}\n.column[data-v-25d6ee05]:hover{\n        opacity: 1;\n}\n\n    /* Add a transparency effect for thumnbail images */\n.demo[data-v-25d6ee05] {\n        opacity: 0.6;\n}\n.active[data-v-25d6ee05],\n    .demo[data-v-25d6ee05]:hover {\n        opacity: 1;\n        border: 2px solid #F71;\n}\nsection.box[data-v-25d6ee05]{\n        padding: 0 0 2em 0 !important;\n}\n.image.featured[data-v-25d6ee05] {\n        margin: 0 0 10px 0 !important;\n}\ndiv.image[data-v-25d6ee05] {\n        height: 160px;\n        overflow: hidden;\n        text-align: center;\n        background-color: black;\n}\ndiv.image img[data-v-25d6ee05] {\n        transition: transform 1s, opacity 1s ease-in-out;\n        opacity: 0.6;\n        transform: scale(1.0);\n}\ndiv.image:hover img[data-v-25d6ee05] {\n        transform: scale(1.1);\n        opacity: 1;\n}\nsection.box[data-v-25d6ee05] {\n        cursor: pointer;\n}\n@media screen and (max-width: 980px) {\n.image-gallery[data-v-25d6ee05] {\n            height: 280px;\n}\n.column[data-v-25d6ee05] {\n            width: 25%;\n}\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.image-gallery[data-v-25d6ee05] {\n        width: 100%;\n        height: 450px;\n        background-color: #04070e;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-position: center;\n}\n\n    /* FROM W3SCHOOL */\n    /* Position the image container (needed to position the left and right arrows) */\n.container[data-v-25d6ee05] {\n        position: relative;\n}\n\n    /* Add a pointer when hovering over the thumbnail images */\n.cursor[data-v-25d6ee05] {\n        cursor: pointer;\n}\n\n    /* Next & previous buttons */\n.prev[data-v-25d6ee05],\n    .next[data-v-25d6ee05] {\n        cursor: pointer;\n        position: absolute;\n        top: 40%;\n        width: auto;\n        padding: 16px;\n        margin-top: -50px;\n        color: white;\n        font-weight: bold;\n        font-size: 30px;\n        border-radius: 0 3px 3px 0;\n        -moz-user-select: none;\n         -ms-user-select: none;\n             user-select: none;\n        -webkit-user-select: none;\n        text-decoration: none;\n}\n\n    /* Position the \"next button\" to the right */\n.next[data-v-25d6ee05] {\n        right: 25px;\n        border-radius: 3px 0 0 3px;\n}\n\n    /* On hover, add a black background color with a little bit see-through */\n.prev[data-v-25d6ee05]:hover,\n    .next[data-v-25d6ee05]:hover {\n        background-color: rgba(0, 0, 0, 0.8);\n}\n\n    /* Number text (1/3 etc) */\n.numbertext[data-v-25d6ee05] {\n        color: #f2f2f2;\n        font-size: 12px;\n        padding: 8px 12px;\n        position: absolute;\n        top: 0;\n}\n\n    /* Container for image text */\n.caption-container[data-v-25d6ee05] {\n        min-height: 10px;\n        text-align: center;\n        background-color: #04070e;\n        padding: 2px 16px;\n        color: white;\n}\n.caption-container p[data-v-25d6ee05] {\n        margin-bottom: 5px;\n}\n.row[data-v-25d6ee05]:after {\n        content: \"\";\n        display: table;\n        clear: both;\n}\n.column-container[data-v-25d6ee05] {\n        margin: 0 auto;\n        display: flex;\n}\n\n    /* Six columns side by side */\n.column[data-v-25d6ee05] {\n        float: left;\n        height: 120px;\n        background-size: cover;\n        margin: 10px 5px 0px 5px;\n        flex-grow: 1;\n        opacity: 0.6;\n        cursor: pointer;\n}\n.column[data-v-25d6ee05]:hover{\n        opacity: 1;\n}\n\n    /* Add a transparency effect for thumnbail images */\n.demo[data-v-25d6ee05] {\n        opacity: 0.6;\n}\n.active[data-v-25d6ee05],\n    .demo[data-v-25d6ee05]:hover {\n        opacity: 1;\n        border: 2px solid #F71;\n}\nsection.box[data-v-25d6ee05]{\n        padding: 0 0 2em 0 !important;\n}\n.image.featured[data-v-25d6ee05] {\n        margin: 0 0 10px 0 !important;\n        background-size: cover;\n        background-position: center;\n}\ndiv.image[data-v-25d6ee05] {\n        height: 160px;\n        overflow: hidden;\n        text-align: center;\n        background-color: black;\n}\ndiv.image img[data-v-25d6ee05] {\n        transition: transform 1s, opacity 1s ease-in-out;\n        opacity: 0.6;\n        transform: scale(1.0);\n}\ndiv.image:hover img[data-v-25d6ee05] {\n        transform: scale(1.1);\n        opacity: 1;\n}\nsection.box[data-v-25d6ee05] {\n        cursor: pointer;\n}\n@media screen and (max-width: 980px) {\n.image-gallery[data-v-25d6ee05] {\n            height: 280px;\n}\n.column[data-v-25d6ee05] {\n            width: 25%;\n}\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
