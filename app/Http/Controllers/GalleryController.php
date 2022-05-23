@@ -13,7 +13,7 @@ class GalleryController extends Controller
 {
 
     private FilesystemAdapter $storage;
-    private $private_path = "/app/images/galerias/";
+    private $private_path = "/images/galerias/";
     private $directories;
 
     public function __construct()
@@ -57,7 +57,8 @@ class GalleryController extends Controller
         $zip = new ZipArchive;
         $res = $zip->open(storage_path($file), ZipArchive::CREATE | ZIPARCHIVE::OVERWRITE);
         if($res === TRUE){// OK
-            $galeria =  $zip->extractTo($this->private_path);
+            dd(storage_path("/app/$this->private_path"));
+            $galeria =  $zip->extractTo();
             if($galeria){
                 $this->saveJSON();
                 return $galeria;
