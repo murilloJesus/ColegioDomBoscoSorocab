@@ -32,7 +32,7 @@
 
                         <div class="mySlides">
                             <div class="numbertext">{{img_index + 1}} / {{paginator.total_images}}</div>
-                            <div class="image-gallery" :style="`background-image: url('/${selected.source}')`">
+                            <div class="image-gallery" :style="`background-image: url('/public/${selected.source}')`">
 
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                                 @click="moveTo(item)"
                                 :class="img_index == paginator.index_atual + index ? 'active' : ''"
                                 :alt="item.name"
-                                :style="{backgroundImage: `url(/${item.source})`}">
+                                :style="{backgroundImage: `url(/public/${item.source})`}">
                             </div>
                         </div>
                     </div>

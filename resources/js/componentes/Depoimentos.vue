@@ -9,7 +9,7 @@
                 :class="item.name === actived.name ? 'actived' : ''">
                 <a
                     href="javascript: void(0);"
-                    :style="`background-image: url(/${item.image}); ${item.style ? item.style : ''}`"
+                    :style="`background-image: url(/public/${item.image}); ${item.style ? item.style : ''}`"
                     @click="change(key)"></a>
             </li>
         </ul>
