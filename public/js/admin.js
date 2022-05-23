@@ -23143,8 +23143,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       if (newV == '___ADD___') {
         this.controller.add();
         this.value = this.fieldset[this.field] = '';
-      } else {
-        alert(newV);
       }
     }
   },
@@ -23629,6 +23627,7 @@ __webpack_require__.r(__webpack_exports__);
       },
       set: function set(value) {
         this.controller.fieldset = value;
+        console.log(value);
       }
     },
     url: function url() {

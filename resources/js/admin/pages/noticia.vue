@@ -105,6 +105,7 @@
                 },
                 set(value) {
                     this.controller.fieldset = value
+                    console.log(value)
                 }
             },
             url() {
