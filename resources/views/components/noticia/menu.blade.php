@@ -5,7 +5,7 @@
             <section id="search" class="alt">
                 <div class="holder-logo">
                     <a href="/">
-                        <img class="logo" src="/images/logo.png" alt="logo colégio dom bosco sorocaba">
+                        <img class="logo" src="/public/images/logo.png" alt="logo colégio dom bosco sorocaba">
                     </a>
                 </div>
                 <form method="get" action="?">

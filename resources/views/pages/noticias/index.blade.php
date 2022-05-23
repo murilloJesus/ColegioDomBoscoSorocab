@@ -16,7 +16,7 @@
     <div class="posts">
         @foreach ($noticias as $noticia)
             <article>
-                <a href="{{$noticia->alias}}/{{$noticia->id}}" class="image"><img src="/{{$noticia->image}}" alt="" /></a>
+                <a href="{{$noticia->alias}}/{{$noticia->id}}" class="image"><img src="/public/{{$noticia->image}}" alt="" /></a>
                 <h3>{{$noticia->title}}</h3>
                 <p>{{$noticia->subtitle}}</p>
                 <ul class="actions">
