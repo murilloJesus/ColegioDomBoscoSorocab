@@ -1,9 +1,9 @@
 <template>
     <div class="chosen-select-act fm-cmp-mg">
         <select ref="select" class="chosen" data-placeholder="Escolha..." v-model="fieldset[field]">
-            <option value="">Selecione...</option>
-            <option v-for="(item, index) in filteredList" :value="item[insertField]" :key="index">{{item.name}}</option>
             <option v-if="hasAdd" value="___ADD___"><b>Adicionar</b></option>
+            <option v-else value="">Selecione...</option>
+            <option v-for="(item, index) in filteredList" :value="item[insertField]" :key="index">{{item.name}}</option>
         </select>
     </div>
 </template>
