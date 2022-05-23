@@ -4,7 +4,9 @@
 @section('content')
 
 
-    <x-noticia.header :cabecalho="$cabecalho" />
+    @if ($cabecalho)
+        <x-noticia.header :cabecalho="$cabecalho" />
+    @endif
 
 <!-- Section -->
 <section>
