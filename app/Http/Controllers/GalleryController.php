@@ -52,7 +52,7 @@ class GalleryController extends Controller
      */
     public function store(Requests\galleryRequest $request)
     {
-        $file = $request->file->storeAs('zips', $request->file('file')->getClientOriginalName());
+        $file = $request->file->storeAs(storage_path('zips'), $request->file('file')->getClientOriginalName());
 
         dd($file);
 
