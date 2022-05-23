@@ -41,7 +41,7 @@
                         <a class="next" @click="move(1)">❯</a>
 
                         <div class="caption-container">
-                            <p id="caption"> {{selected.name}} </p>
+                            <!-- <p id="caption"> {{selected.name}} </p> -->
                         </div>
 
                         <div class="column-container">
