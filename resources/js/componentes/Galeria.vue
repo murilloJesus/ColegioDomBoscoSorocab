@@ -81,7 +81,7 @@
             }
         },
         async mounted() {
-            await axios.get('/data/galerias.json')
+            await axios.get('/public/data/galerias.json')
                 .then(({
                     data
                 }) => {

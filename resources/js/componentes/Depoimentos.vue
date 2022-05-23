@@ -40,7 +40,7 @@
           }
         },
         async beforeCreate(){
-            await axios.get('/data/testimonials.json')
+            await axios.get('/public/data/testimonials.json')
                 .then(({data}) => {
                     this.depoimentos = data
                 });
