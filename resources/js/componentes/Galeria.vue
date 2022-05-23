@@ -52,7 +52,7 @@
                                 @click="moveTo(item)"
                                 :class="img_index == paginator.index_atual + index ? 'active' : ''"
                                 :alt="item.name"
-                                :style="{backgroundImage: `url('/public/${item.source})'`}">
+                                :style="{backgroundImage: `url('/public/${item.source}')`}">
                             </div>
                         </div>
                     </div>
