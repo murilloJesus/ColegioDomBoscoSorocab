@@ -23454,7 +23454,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                 if (isSaved) {
                   _this.fieldset[_this.field] = isSaved[_this.insertField];
-                  console.log(_this.fieldset);
+
+                  _this.controller.getData();
 
                   _this.$refs.modal.close();
                 }
