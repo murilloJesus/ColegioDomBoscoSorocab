@@ -118,6 +118,6 @@ class BannerController extends Controller
     {
 
 
-        return Json::decode( Storage::exists("/data/banners.json") ? Storage::get("/data/banners.json") : [] );
+        return Json::decode( Storage::exists("/data/banners.json") ? Storage::get("/data/banners.json") : '[]' );
     }
 }
