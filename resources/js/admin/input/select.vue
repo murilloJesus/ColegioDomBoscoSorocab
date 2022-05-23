@@ -66,6 +66,9 @@ export default {
                 this.controller.add()
                 this.value = this.fieldset[this.field] = ''
             }
+            else {
+                alert(newV)
+            }
         }
     },
     updated(){
