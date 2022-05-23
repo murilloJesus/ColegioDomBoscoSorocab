@@ -13,7 +13,7 @@ class GalleryController extends Controller
 {
 
     private FilesystemAdapter $storage;
-    private $private_path = "/images/galerias/";
+    private $private_path = "images/galerias/";
     private $directories;
 
     public function __construct()
