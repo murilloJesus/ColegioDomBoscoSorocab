@@ -26,11 +26,18 @@ class Header extends Component
     private function getBigAndSmall($title)
     {
         $exp_header = explode(' ', $title);
-        $this->header['big'] = [$exp_header[0], $exp_header[1], $exp_header[2]];
 
-        unset($exp_header[0], $exp_header[1], $exp_header[2]);
+        if(isset($exp_header[3]) && $exp_header[3]){
+            $this->header['big'] = [$exp_header[0], $exp_header[1], $exp_header[2]];
 
-        $this->header['small'] = implode(' ', $exp_header);
+            unset($exp_header[0], $exp_header[1], $exp_header[2]);
+
+            $this->header['small'] = implode(' ', $exp_header);
+        }else{
+            $this->header['big'] = $title;
+            $this->header['small'] = false;
+        }
+
     }
 
     /**
