@@ -11,7 +11,7 @@
 
                                 <!-- Feature -->
                                     <section class="box feature">
-                                        <a  href="{{$news->alias}}/{{$news->id}}" target="_blank" class="image featured"><img  src="/{{$news->image}}" alt="" /></a>
+                                        <a  href="{{$news->alias}}/{{$news->id}}" target="_blank" class="image featured"><img  src="/public/{{$news->image}}" alt="" /></a>
                                         <h6><a href="{{$news->alias}}/{{$news->id}}" target="_blank">{{$news->title}}</a></h6>
                                         <p>
                                             {{$news->subtitle}}
