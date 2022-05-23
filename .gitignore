@@ -16,3 +16,10 @@ yarn-error.log
 .htaccess
 .ftpaccess
 /storage/*
+/public/data
+/public/files
+/public/zips
+/public/images/banners
+/public/images/depoimentos
+/public/images/galerias
+/public/images/noticias
