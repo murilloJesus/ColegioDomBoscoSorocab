@@ -24,12 +24,14 @@ export default {
     },
     provide(){
         return {
-            save: async  () => {
+            save: async  (reset = true) => {
                 let res = await this.controller.saveData()
                 if( res ){
                     notificar("success", "Salvo com Sucesso!")
-                    this.controller.getData()
-                    window.app.component = 'tabela'
+                    if(reset){
+                        this.controller.getData()
+                        window.app.component = 'tabela'
+                    }
                     return res.data
                 } else {
                     swal("Erro!", "Nao foi possivel concluir a solicitação.", "error")

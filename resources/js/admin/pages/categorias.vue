@@ -22,7 +22,7 @@
             </formulario>
         </template>
         <template v-slot:footer>
-            <button type="button" class="btn btn-default">Salvar</button>
+            <button type="button" class="btn btn-default" @click="save">Salvar</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
         </template>
     </modal>
@@ -66,8 +66,8 @@
             add() {
                 this.$refs.modal.open()
             },
-            async salvar(){
-                let isSaved = await this.$refs.formulario.save()
+            async save(){
+                let isSaved = await this.$refs.formulario.save(false)
 
                 if(isSaved){
                     this.fieldset[this.field] = isSaved[this.insertField]

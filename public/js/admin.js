@@ -23437,7 +23437,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     add: function add() {
       this.$refs.modal.open();
     },
-    salvar: function salvar() {
+    save: function save() {
       var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -23447,7 +23447,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _this.$refs.formulario.save();
+                return _this.$refs.formulario.save(false);
 
               case 2:
                 isSaved = _context.sent;
@@ -24671,13 +24671,6 @@ var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "button",
-  "class": "btn btn-default"
-}, "Salvar", -1
-/* HOISTED */
-);
-
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  type: "button",
   "class": "btn btn-default",
   "data-dismiss": "modal"
 }, "Fechar", -1
@@ -24734,7 +24727,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       , ["controller"])];
     }),
     footer: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_7, _hoisted_8];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+        type: "button",
+        "class": "btn btn-default",
+        onClick: _cache[1] || (_cache[1] = function () {
+          return $options.save && $options.save.apply($options, arguments);
+        })
+      }, "Salvar"), _hoisted_7];
     }),
     _: 1
     /* STABLE */
@@ -26679,15 +26678,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     return {
       save: function () {
         var _save = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-          var res;
+          var reset,
+              res,
+              _args2 = arguments;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
             while (1) {
               switch (_context2.prev = _context2.next) {
                 case 0:
-                  _context2.next = 2;
+                  reset = _args2.length > 0 && _args2[0] !== undefined ? _args2[0] : true;
+                  _context2.next = 3;
                   return _this2.controller.saveData();
 
-                case 2:
+                case 3:
                   res = _context2.sent;
 
                   if (!res) {
@@ -26697,9 +26699,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
                   notificar("success", "Salvo com Sucesso!");
 
-                  _this2.controller.getData();
+                  if (reset) {
+                    _this2.controller.getData();
 
-                  window.app.component = 'tabela';
+                    window.app.component = 'tabela';
+                  }
+
                   return _context2.abrupt("return", res.data);
 
                 case 10:
