@@ -550,7 +550,7 @@ body {}
 .ntd-ctn {
     position: absolute;
     top: 8px;
-    left: -8px;
+    right: -8px;
     font-size: 10px;
     background: #e46a76;
     height: 18px;
@@ -567,8 +567,8 @@ body {}
     border-radius: 50%;
     position: absolute;
     display: inline-block;
-    top: 3px;
-    left: -14px;
+    top: 2px;
+    right: 1px;
 }
 
 .spinner4:after,
@@ -6343,3 +6343,15 @@ body.box-layout {
     bottom: 10px;
     right: 25px;
 }
+
+
+/* Alterações layout admin */
+.hd-message-info > a:first-child{
+    border-top: #a1a7b5 1px solid;
+}
+
+
+.hd-message-info > a{
+    border-bottom: #a1a7b5 1px solid;
+}
+

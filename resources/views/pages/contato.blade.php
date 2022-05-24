@@ -14,7 +14,7 @@
     <div class="container">
         @if ( isset($response) && $response)
         <div align=center>
-            <h4>{{$response}}</h4>
+            <h2 class="color-secundary">{{$response}}</h2>
         </div>
         @endif
         <div class="row">

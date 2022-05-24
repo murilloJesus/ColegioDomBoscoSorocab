@@ -13,8 +13,8 @@ class StatusForMensagens extends Migration
      */
     public function up()
     {
-        Schema::create('messages', function (Blueprint $table) {
-            $table->boolean('status')->after('name');
+        Schema::table('messages', function (Blueprint $table) {
+            $table->boolean('status')->default(false);
         });
     }
 

@@ -129,6 +129,21 @@ function main() {
 
    }
 
+   function logout(){
+        swal({
+            title: "Tem certeza?",
+            text: "Você está prestes a sair do sistema",
+            type: "question",
+            showCancelButton: true,
+            confirmButtonText: "Sim",
+            cancelButtonText: "Não",
+        }).then(async function(isConfirm){
+            if (isConfirm) {
+                window.location = "/administrador/logout";
+            }
+        });
+  }
+
    $(window).on("load",function(){
         $(".widgets-chat-scrollbar").mCustomScrollbar({
             setHeight:460,

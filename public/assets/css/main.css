@@ -3452,3 +3452,6 @@ input, select, textarea {
         opacity: 1;
     }
 
+    .color-secundary {
+        color: #F71;
+    }

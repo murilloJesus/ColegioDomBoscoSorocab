@@ -9,6 +9,7 @@ class Messages extends Component
 {
 
     public $last;
+    public $count;
 
     /**
      * Create a new component instance.
@@ -17,7 +18,9 @@ class Messages extends Component
      */
     public function __construct()
     {
-        $this->last = Message::where('status', 0)->orderBy('id', 'DESC');
+        $mensagens = Message::where('status', 0)->orderBy('id', 'DESC')->get();
+        $this->last = $mensagens->slice(0, 4);
+        $this->count = $mensagens->count();
     }
 
     /**

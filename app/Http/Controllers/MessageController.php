@@ -28,9 +28,9 @@ class MessageController extends Controller
         $try = Message::create($request->post());
 
         if($try){
-            return view('pages.contato')->with(['response' => 'Sua mensagem foi enviada! Agradecemos o contato.', 'page' => 'contato']);
+            return view('pages.contato')->with(['response' => 'Sua mensagem foi enviada! Agradecemos o contato', 'page' => 'contato']);
         }else{
-            return view('pages.contato')->with(['response' => 'Algo deu errado. Tente novamente mais tarde.', 'page' => 'contato']);
+            return view('pages.contato')->with(['response' => 'Algo deu errado. Tente novamente mais tarde', 'page' => 'contato']);
         }
     }
 

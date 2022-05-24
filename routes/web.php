@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PagesController;
@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('administrador')->group( function () {
+
+    Route::get('/logout', [LoginController::class, 'logout']);
 
     Route::get('/', function ()
     {
