@@ -11,6 +11,7 @@ class Banner extends Api {
         return {
             id: instance.id ? instance.id : false,
             status: instance.status ? instance.status : 1,
+            ordem: instance.ordem ? instance.ordem : '',
             header: instance.header ? instance.header : '',
             content: instance.content ? instance.content : '',
             action: instance.action ? instance.action : '',

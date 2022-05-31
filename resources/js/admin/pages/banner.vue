@@ -6,7 +6,7 @@
                 <h2>{{fieldset.id ? 'Editar Banner' : 'Novo Banner'}}</h2>
             </div>
             <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
                     <div class="form-group ">
                         <div class="nk-int-st">
                             <label for="name">Título</label>
@@ -15,11 +15,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
                     <div class="nk-int-mk sl-dp-mn">
                         <h2>Status</h2>
                     </div>
                     <switcher :fieldset="fieldset" field="status"  />
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
+                   <div class="form-group ">
+                        <div class="nk-int-st">
+                            <label for="name">Ordem</label>
+                            <input type="text" class="form-control" v-model="fieldset.ordem"
+                                placeholder="Ordem do banner">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">

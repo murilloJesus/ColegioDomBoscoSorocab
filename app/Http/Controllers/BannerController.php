@@ -103,7 +103,7 @@ class BannerController extends Controller
      */
     public function saveJSON()
     {
-       $banners = Banner::where("status", 1)->get();
+       $banners = Banner::where("status", 1)->orderBy('ordem', 'desc')->get();
        $json = Collection::make($banners)
                     ->toJson(JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         return Storage::put('data/banners.json', $json);
