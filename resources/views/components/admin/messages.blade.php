@@ -12,7 +12,7 @@
             </div>
             <div class="hd-message-info">
                 @foreach ($last as $mensagem)
-                    <a href="#">
+                    <a href="/administrador/mensagens#{{$mensagem->id}}">
                         <div class="hd-message-sn">
                             <div class="hd-mg-ctn">
                                 <h3>{{$mensagem->name}}</h3>

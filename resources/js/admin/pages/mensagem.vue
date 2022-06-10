@@ -39,12 +39,22 @@
 import Mensagem from './../classes/mensagem.js'
 import Base from './base'
 
+import $ from 'jquery'
+
 export default {
     extends: Base,
     data: () => {
         return {
             controller: new Mensagem(),
         }
+    },
+    mounted(){
+        window.addEventListener("hashchange", () => {
+          alert()
+          this.hasHash()
+        }, false);
+
+        this.hasHash()
     },
     computed: {
         fieldset: {
@@ -57,6 +67,15 @@ export default {
         },
         url() {
             return `${process.env.MIX_APP_DOMAIN}${this.fieldset.alias}`
+        }
+    },
+    methods:{
+        hasHash(){
+            let number = window.location.hash.slice(1)
+
+            if(number && !isNaN(number)){
+                this.controller.getInstance( number )
+            }
         }
     }
 }

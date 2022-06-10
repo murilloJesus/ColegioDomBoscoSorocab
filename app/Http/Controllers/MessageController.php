@@ -42,6 +42,11 @@ class MessageController extends Controller
      */
     public function show(Message $message)
     {
+        if(!$message->status){
+            $message->status = true;
+            $message->save();
+        }
+
         return $message;
     }
 }

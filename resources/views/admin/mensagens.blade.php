@@ -26,7 +26,7 @@
                                 <button data-toggle="tooltip" data-placement="top" title="Tabela"
                                     v-on:click="app.component = 'tabela'" class="btn"><i
                                         class="notika-icon notika-windows"></i></button>
-                                <button data-toggle="tooltip" data-placement="top" title="Ver"
+                                <button id="ver" data-toggle="tooltip" data-placement="top" title="Ver"
                                     v-on:click="app.component = 'ver'" class="btn"><i
                                         class="notika-icon notika-search"></i></button>
                             </div>
@@ -47,10 +47,19 @@
 
 @section('configs')
 <script>
+
+    let component = 'tabela'
+
+    let number = window.location.hash.slice(1)
+
+    if(number && !isNaN(number)){
+        component = 'ver'
+    }
+
     window.controller = {
         data: () => {
             return {
-                component: 'tabela'
+                component
             }
         }
     }
