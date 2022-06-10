@@ -44,7 +44,7 @@ Route::prefix('noticias')->group(function(){
 
 Route::get('/', [PagesController::class, 'index']);
 
-Route::resource('message', MessageController::class);
+Route::resource('message', MessageController::class)->only('index');
 
 Route::get('/{pagina}', function ($pagina) {
     return view("pages.$pagina")->with('page', $pagina);

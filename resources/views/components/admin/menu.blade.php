@@ -15,6 +15,8 @@
                     </li>
                     <li {{ $isPage('noticias') ? 'class=active' : '' }}><a href="/administrador/noticias"><i class="notika-icon notika-edit"></i> Noticias </a>
                     </li>
+                    <li {{ $isPage('noticias') ? 'class=active' : '' }}><a href="/administrador/mensagens"><i class="notika-icon notika-form"></i> Mensagens</a>
+                    </li>
                     </li>
                 </ul>
             </div>

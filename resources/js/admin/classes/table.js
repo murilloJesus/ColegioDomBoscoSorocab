@@ -41,6 +41,10 @@ class Table {
                 return Output.Text
                 break;
 
+            case 'croped-text':
+                return Output.CropedText
+                break;
+
             case 'image':
                 return Output.Image
                 break;

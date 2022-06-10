@@ -28,7 +28,7 @@
                                         class="notika-icon notika-windows"></i></button>
                                 <button data-toggle="tooltip" data-placement="top" title="Ver"
                                     v-on:click="app.component = 'ver'" class="btn"><i
-                                        class="notika-icon notika-plus-symbol"></i></button>
+                                        class="notika-icon notika-search"></i></button>
                             </div>
                         </div>
                     </div>

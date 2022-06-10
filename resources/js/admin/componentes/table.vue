@@ -14,7 +14,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <row v-for="(item, index) in rows" :key="index" :data="item" :columns="controller.dataTable.columns"></row>
+                                <row v-for="(item, index) in rows" :key="index" :data="item" :columns="controller.dataTable.columns" :actions="controller.getActions()"></row>
                             </tbody>
                             <tfoot>
                                 <tr>

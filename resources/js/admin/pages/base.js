@@ -1,5 +1,6 @@
 import Tabela from '../componentes/table.vue'
 import Formulario from '../componentes/form.vue'
+import Visualizacao from '../componentes/view.vue'
 import Galeria from '../componentes/gallery.vue'
 import * as Inputs from '../input/index.js'
 
@@ -15,6 +16,7 @@ export default {
     components: {
         Tabela,
         Formulario,
+        Visualizacao,
         Galeria,
         ...Inputs
     },
@@ -40,6 +42,10 @@ export default {
             edit: (id) => {
               this.controller.getInstance(id)
               window.app.component = 'formulario'
+            },
+            see: (id) => {
+                this.controller.getInstance(id)
+                window.app.component = 'ver'
             },
             destroy: (id) => {
                 let t = this

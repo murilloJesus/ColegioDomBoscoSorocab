@@ -4,6 +4,8 @@ import Imagem from './image.vue'
 import Galeria from './galeria.vue'
 import Noticia from './noticia.vue'
 import Depoimento from './depoimento.vue'
+import Mensagem from './mensagem.vue'
+
 
 export {
     Pagina,
@@ -11,5 +13,6 @@ export {
     Imagem,
     Galeria,
     Noticia,
-    Depoimento
+    Depoimento,
+    Mensagem
 }

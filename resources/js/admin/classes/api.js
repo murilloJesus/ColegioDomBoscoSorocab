@@ -52,6 +52,10 @@ class Api {
         return data
     }
 
+    getActions(){
+        return ['edit', 'remove']
+    }
+
     // PATH's
     index(){
         return {

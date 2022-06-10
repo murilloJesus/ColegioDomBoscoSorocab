@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TestimonialController;
 use Illuminate\Http\Request;
@@ -32,7 +33,8 @@ Route::resources([
     'galeria' => GalleryController::class,
     'noticias' => NewsController::class,
     'depoimentos' => TestimonialController::class,
-    'categories' => CategoriesController::class
+    'categories' => CategoriesController::class,
+    'message' => MessageController::class
 ]);
 
 Route::post('/banners/upload', [BannerController::class, 'upload']);
