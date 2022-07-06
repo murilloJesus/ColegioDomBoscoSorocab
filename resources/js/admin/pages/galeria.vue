@@ -1,5 +1,7 @@
 <template>
-    <galeria v-show="component == 'galeria'" :controller="controller"></galeria>
+    <formulario :controller="controller">
+        <galeria v-show="component == 'galeria'" :controller="controller"></galeria>
+    </formulario>
 </template>
 
 <script>

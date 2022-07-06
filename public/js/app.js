@@ -22705,33 +22705,27 @@ __webpack_require__.r(__webpack_exports__);
       segmentos: [{
         name: "Ensino Infantil",
         desc: "Despertar, envolver, descobrir.",
-        classe: "image-content image-educacao-infantil",
+        classe: "ease-image-content image-educacao-infantil",
         href: 'segmento-infantil',
         text: ["A Educa\xE7\xE3o Infantil \xE9 uma fase muito importante na forma\xE7\xE3o do aluno. Brincar \xE9 a principal tarefa dos pequenos, pois \xE9 na brincadeira que descobrem o mundo \xE0 sua volta, comunicam-se e se conectam em um ambiente social.", "O nosso Col\xE9gio tem um ambiente de  aprendizagem agrad\xE1vel para que seu filho possa desenvolver suas capacidades e est\xEDmulos imaginativos, al\xE9m de ser acolhedor."]
       }, {
         name: "Fundamental I",
         desc: "Autonomia, observação e desenvolver.",
-        classe: "image-content image-educacao-fundamental-inicial",
+        classe: "ease-image-content image-educacao-fundamental-inicial",
         href: 'segmento-funtamental-I',
         text: ["Nos Anos Iniciais do Ensino Fundamental (1\xBA ao 5\xBA ano), os estudantes aprendem usando a criatividade e a imagina\xE7\xE3o. Respeitar o tempo e as caracter\xEDsticas de cada aluno \xE9 essencial.", "Em nosso col\xE9gio aplicamos o trabalho em grupo, a solu\xE7\xE3o colaborativa de situa\xE7\xF5es-problema e a promo\xE7\xE3o da criatividade para, dessa forma, melhorar a capacidade de decis\xE3o e a capacidade de desenvolver saberes, considerando seu pr\xF3prio cotidiano."]
       }, {
         name: "Fundamental II",
         desc: "Independência, reflexão e raciocínio.",
-        classe: "image-content image-educacao-fundamental-final",
+        classe: "ease-image-content image-educacao-fundamental-final",
         href: 'segmento-funtamental-II',
         text: ["\xC9 no per\xEDodo dos Anos Finais em que os alunos passam por grandes mudan\xE7as f\xEDsicas, emocionais e psicol\xF3gicas.", "Assim, para que o aprendizado seja significativo e divertido, oferecemos uma extensa variedade de g\xEAneros textuais, distribu\xEDdos nas diversas disciplinas. Isso favorece o letramento no ambiente educativo. Com atividades que contemplam m\xE9todos para \u201Caprender a aprender\u201D, desenvolvendo a interdisciplinaridade, fortalecendo a qualidade do ensino e concretizando a aprendizagem como um ato de intera\xE7\xE3o entre autor, professor, aluno, fam\xEDlia e escola."]
       }, {
-        name: "Período Integral e Ensino Bilíngue",
+        name: "Período Integral",
         desc: false,
         classe: false,
         href: 'segmento-integral-bilingue',
-        text: ["Para ampliar a oportunidade de exposi\xE7\xE3o das crian\xE7as \xE0 l\xEDngua inglesa, o Per\xEDodo Integral e Bil\xEDngue \xE9 a op\xE7\xE3o que mais se aproxima dos padr\xF5es internacionais.", "O objetivo deste projeto \xE9 reduzir as lacunas na educa\xE7\xE3o b\xE1sica escolar brasileira no que diz respeito \xE0 l\xEDngua inglesa, tornando-a um elemento de forma\xE7\xE3o permanente para os nossos alunos."]
-      }, {
-        name: "Cursos Extracurriculares",
-        desc: false,
-        classe: "image-content-extra image-educacao-extra",
-        href: 'segmento-extracurriculares',
-        text: ["O aluno podem frequentar os cursos extracurriculares de sua prefer\xEAncia no per\xEDodo inverso \xE0 aula, no qual desenvolvem suas capacidades e habilidades, com participa\xE7\xE3o de professores capacitados.", "As atividades extracurriculares visam produzir conhecimento que contribuam para o desenvolvimento social, cultural e art\xEDstico do aluno."]
+        text: ["O per\xEDodo Integral \xE9 uma op\xE7\xE3o, para os pais que trabalham o dia todo.", "Nesse segmento os alunos cursam as disciplinas curriculares em um per\xEDodo e no outro realizam atividades complementares atrav\xE9s de Oficinas (como dan\xE7a, teatro, m\xFAsica, inicia\xE7\xE3o cient\xEDfica, artes manuais, culin\xE1ria) al\xE9m de um momento para realizar as Atividades de Revis\xE3o e Refor\xE7o dos conte\xFAdos aprendidos."]
       }]
     };
   },
@@ -23504,7 +23498,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "image-gallery",
-    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background-image: url('/".concat($options.selected.source, "')"))
+    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background-image: url('/public/".concat($options.selected.source, "')"))
   }, null, 4
   /* STYLE */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
@@ -23528,7 +23522,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       },
       alt: item.name,
       style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)({
-        backgroundImage: "url(/".concat(item.source, ")")
+        backgroundImage: "url(/public/".concat(item.source, ")")
       })
     }, null, 14
     /* CLASS, STYLE, PROPS */
@@ -28867,7 +28861,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.image-gallery[data-v-df382d32] {\n        width: 100%;\n        height: 450px;\n        background-color: #04070e;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-position: center;\n}\n\n    /* FROM W3SCHOOL */\n    /* Position the image container (needed to position the left and right arrows) */\n.container[data-v-df382d32] {\n        position: relative;\n}\n\n    /* Add a pointer when hovering over the thumbnail images */\n.cursor[data-v-df382d32] {\n        cursor: pointer;\n}\n\n    /* Next & previous buttons */\n.prev[data-v-df382d32],\n    .next[data-v-df382d32] {\n        cursor: pointer;\n        position: absolute;\n        top: 40%;\n        width: auto;\n        padding: 16px;\n        margin-top: -50px;\n        color: white;\n        font-weight: bold;\n        font-size: 30px;\n        border-radius: 0 3px 3px 0;\n        -moz-user-select: none;\n         -ms-user-select: none;\n             user-select: none;\n        -webkit-user-select: none;\n        text-decoration: none;\n}\n\n    /* Position the \"next button\" to the right */\n.next[data-v-df382d32] {\n        right: 25px;\n        border-radius: 3px 0 0 3px;\n}\n\n    /* On hover, add a black background color with a little bit see-through */\n.prev[data-v-df382d32]:hover,\n    .next[data-v-df382d32]:hover {\n        background-color: rgba(0, 0, 0, 0.8);\n}\n\n    /* Number text (1/3 etc) */\n.numbertext[data-v-df382d32] {\n        color: #f2f2f2;\n        font-size: 12px;\n        padding: 8px 12px;\n        position: absolute;\n        top: 0;\n}\n\n    /* Container for image text */\n.caption-container[data-v-df382d32] {\n        min-height: 10px;\n        text-align: center;\n        background-color: #04070e;\n        padding: 2px 16px;\n        color: white;\n}\n.caption-container p[data-v-df382d32] {\n        margin-bottom: 5px;\n}\n.row[data-v-df382d32]:after {\n        content: \"\";\n        display: table;\n        clear: both;\n}\n.column-container[data-v-df382d32] {\n        margin: 0 auto;\n        display: flex;\n}\n\n    /* Six columns side by side */\n.column[data-v-df382d32] {\n        float: left;\n        height: 120px;\n        background-size: cover;\n        margin: 10px 5px 0px 5px;\n        flex-grow: 1;\n        opacity: 0.6;\n        cursor: pointer;\n}\n.column[data-v-df382d32]:hover {\n        opacity: 1;\n}\n\n    /* Add a transparency effect for thumnbail images */\n.demo[data-v-df382d32] {\n        opacity: 0.6;\n}\n.active[data-v-df382d32],\n    .demo[data-v-df382d32]:hover {\n        opacity: 1;\n        border: 2px solid #F71;\n}\nsection.box[data-v-df382d32] {\n        padding: 0 0 2em 0 !important;\n}\n.image.featured[data-v-df382d32] {\n        margin: 0 0 10px 0 !important;\n}\ndiv.image[data-v-df382d32] {\n        height: 160px;\n        overflow: hidden;\n        text-align: center;\n        background-color: black;\n}\ndiv.image img[data-v-df382d32] {\n        transition: transform 1s, opacity 1s ease-in-out;\n        opacity: 0.6;\n        transform: scale(1.0);\n}\ndiv.image:hover img[data-v-df382d32] {\n        transform: scale(1.1);\n        opacity: 1;\n}\nsection.box[data-v-df382d32] {\n        cursor: pointer;\n}\n@media screen and (max-width: 980px) {\n.image-gallery[data-v-df382d32] {\n            height: 280px;\n}\n.column[data-v-df382d32] {\n            width: 25%;\n}\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.image-gallery[data-v-df382d32] {\n        width: 100%;\n        height: 450px;\n        background-color: #fff;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-position: center;\n}\n\n    /* FROM W3SCHOOL */\n    /* Position the image container (needed to position the left and right arrows) */\n.container[data-v-df382d32] {\n        position: relative;\n}\n\n    /* Add a pointer when hovering over the thumbnail images */\n.cursor[data-v-df382d32] {\n        cursor: pointer;\n}\n\n    /* Next & previous buttons */\n.prev[data-v-df382d32],\n    .next[data-v-df382d32] {\n        cursor: pointer;\n        position: absolute;\n        top: 40%;\n        width: auto;\n        padding: 16px;\n        margin-top: -50px;\n        color: #04070e;\n        font-weight: bold;\n        font-size: 30px;\n        border-radius: 0 3px 3px 0;\n        -moz-user-select: none;\n         -ms-user-select: none;\n             user-select: none;\n        -webkit-user-select: none;\n        text-decoration: none;\n}\n\n    /* Position the \"next button\" to the right */\n.next[data-v-df382d32] {\n        right: 25px;\n        border-radius: 3px 0 0 3px;\n}\n\n    /* On hover, add a black background color with a little bit see-through */\n.prev[data-v-df382d32]:hover,\n    .next[data-v-df382d32]:hover {\n        background-color: rgba(255, 255, 255, 0.8);\n}\n\n    /* Number text (1/3 etc) */\n.numbertext[data-v-df382d32] {\n        color: #04070e;\n        font-size: 12px;\n        padding: 8px 12px;\n        position: absolute;\n        top: 0;\n}\n\n    /* Container for image text */\n.caption-container[data-v-df382d32] {\n        min-height: 10px;\n        text-align: center;\n        background-color: #fff;\n        padding: 2px 16px;\n        color: #04070e;\n}\n.caption-container p[data-v-df382d32] {\n        margin-bottom: 5px;\n}\n.row[data-v-df382d32]:after {\n        content: \"\";\n        display: table;\n        clear: both;\n}\n.column-container[data-v-df382d32] {\n        margin: 0 auto;\n        display: flex;\n}\n\n    /* Six columns side by side */\n.column[data-v-df382d32] {\n        float: left;\n        height: 120px;\n        background-size: cover;\n        margin: 10px 5px 0px 5px;\n        flex-grow: 1;\n        opacity: 0.6;\n        cursor: pointer;\n}\n.column[data-v-df382d32]:hover {\n        opacity: 1;\n}\n\n    /* Add a transparency effect for thumnbail images */\n.demo[data-v-df382d32] {\n        opacity: 0.6;\n}\n.active[data-v-df382d32],\n    .demo[data-v-df382d32]:hover {\n        opacity: 1;\n        border: 2px solid #F71;\n}\nsection.box[data-v-df382d32] {\n        padding: 0 0 2em 0 !important;\n}\n.image.featured[data-v-df382d32] {\n        margin: 0 0 10px 0 !important;\n}\ndiv.image[data-v-df382d32] {\n        height: 160px;\n        overflow: hidden;\n        text-align: center;\n        background-color: black;\n}\ndiv.image img[data-v-df382d32] {\n        transition: transform 1s, opacity 1s ease-in-out;\n        opacity: 0.6;\n        transform: scale(1.0);\n}\ndiv.image:hover img[data-v-df382d32] {\n        transform: scale(1.1);\n        opacity: 1;\n}\nsection.box[data-v-df382d32] {\n        cursor: pointer;\n}\n@media screen and (max-width: 980px) {\n.image-gallery[data-v-df382d32] {\n            height: 280px;\n}\n.column[data-v-df382d32] {\n            width: 25%;\n}\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -28891,7 +28885,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.image-gallery[data-v-25d6ee05] {\n        width: 100%;\n        height: 450px;\n        background-color: #04070e;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-position: center;\n}\n\n    /* FROM W3SCHOOL */\n    /* Position the image container (needed to position the left and right arrows) */\n.container[data-v-25d6ee05] {\n        position: relative;\n}\n\n    /* Add a pointer when hovering over the thumbnail images */\n.cursor[data-v-25d6ee05] {\n        cursor: pointer;\n}\n\n    /* Next & previous buttons */\n.prev[data-v-25d6ee05],\n    .next[data-v-25d6ee05] {\n        cursor: pointer;\n        position: absolute;\n        top: 40%;\n        width: auto;\n        padding: 16px;\n        margin-top: -50px;\n        color: white;\n        font-weight: bold;\n        font-size: 30px;\n        border-radius: 0 3px 3px 0;\n        -moz-user-select: none;\n         -ms-user-select: none;\n             user-select: none;\n        -webkit-user-select: none;\n        text-decoration: none;\n}\n\n    /* Position the \"next button\" to the right */\n.next[data-v-25d6ee05] {\n        right: 25px;\n        border-radius: 3px 0 0 3px;\n}\n\n    /* On hover, add a black background color with a little bit see-through */\n.prev[data-v-25d6ee05]:hover,\n    .next[data-v-25d6ee05]:hover {\n        background-color: rgba(0, 0, 0, 0.8);\n}\n\n    /* Number text (1/3 etc) */\n.numbertext[data-v-25d6ee05] {\n        color: #f2f2f2;\n        font-size: 12px;\n        padding: 8px 12px;\n        position: absolute;\n        top: 0;\n}\n\n    /* Container for image text */\n.caption-container[data-v-25d6ee05] {\n        min-height: 10px;\n        text-align: center;\n        background-color: #04070e;\n        padding: 2px 16px;\n        color: white;\n}\n.caption-container p[data-v-25d6ee05] {\n        margin-bottom: 5px;\n}\n.row[data-v-25d6ee05]:after {\n        content: \"\";\n        display: table;\n        clear: both;\n}\n.column-container[data-v-25d6ee05] {\n        margin: 0 auto;\n        display: flex;\n}\n\n    /* Six columns side by side */\n.column[data-v-25d6ee05] {\n        float: left;\n        height: 120px;\n        background-size: cover;\n        margin: 10px 5px 0px 5px;\n        flex-grow: 1;\n        opacity: 0.6;\n        cursor: pointer;\n}\n.column[data-v-25d6ee05]:hover{\n        opacity: 1;\n}\n\n    /* Add a transparency effect for thumnbail images */\n.demo[data-v-25d6ee05] {\n        opacity: 0.6;\n}\n.active[data-v-25d6ee05],\n    .demo[data-v-25d6ee05]:hover {\n        opacity: 1;\n        border: 2px solid #F71;\n}\nsection.box[data-v-25d6ee05]{\n        padding: 0 0 2em 0 !important;\n}\n.image.featured[data-v-25d6ee05] {\n        margin: 0 0 10px 0 !important;\n        background-size: cover;\n        background-position: center;\n}\ndiv.image[data-v-25d6ee05] {\n        height: 160px;\n        overflow: hidden;\n        text-align: center;\n        background-color: black;\n}\ndiv.image img[data-v-25d6ee05] {\n        transition: transform 1s, opacity 1s ease-in-out;\n        opacity: 0.6;\n        transform: scale(1.0);\n}\ndiv.image:hover img[data-v-25d6ee05] {\n        transform: scale(1.1);\n        opacity: 1;\n}\nsection.box[data-v-25d6ee05] {\n        cursor: pointer;\n}\n@media screen and (max-width: 980px) {\n.image-gallery[data-v-25d6ee05] {\n            height: 280px;\n}\n.column[data-v-25d6ee05] {\n            width: 25%;\n}\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.image-gallery[data-v-25d6ee05] {\n        width: 100%;\n        height: 450px;\n        background-color: #fff;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-position: center;\n}\n\n    /* FROM W3SCHOOL */\n    /* Position the image container (needed to position the left and right arrows) */\n.container[data-v-25d6ee05] {\n        position: relative;\n}\n\n    /* Add a pointer when hovering over the thumbnail images */\n.cursor[data-v-25d6ee05] {\n        cursor: pointer;\n}\n\n    /* Next & previous buttons */\n.prev[data-v-25d6ee05],\n    .next[data-v-25d6ee05] {\n        cursor: pointer;\n        position: absolute;\n        top: 40%;\n        width: auto;\n        padding: 16px;\n        margin-top: -50px;\n        color: #04070e;\n        font-weight: bold;\n        font-size: 30px;\n        border-radius: 0 3px 3px 0;\n        -moz-user-select: none;\n         -ms-user-select: none;\n             user-select: none;\n        -webkit-user-select: none;\n        text-decoration: none;\n}\n\n    /* Position the \"next button\" to the right */\n.next[data-v-25d6ee05] {\n        right: 25px;\n        border-radius: 3px 0 0 3px;\n}\n\n    /* On hover, add a black background color with a little bit see-through */\n.prev[data-v-25d6ee05]:hover,\n    .next[data-v-25d6ee05]:hover {\n        background-color: rgba(255, 255, 255, 0.8);\n}\n\n    /* Number text (1/3 etc) */\n.numbertext[data-v-25d6ee05] {\n        color: #04070e;\n        font-size: 12px;\n        padding: 8px 12px;\n        position: absolute;\n        top: 0;\n}\n\n    /* Container for image text */\n.caption-container[data-v-25d6ee05] {\n        min-height: 10px;\n        text-align: center;\n        background-color: #fff;\n        padding: 2px 16px;\n        color: #04070e;\n}\n.caption-container p[data-v-25d6ee05] {\n        margin-bottom: 5px;\n}\n.row[data-v-25d6ee05]:after {\n        content: \"\";\n        display: table;\n        clear: both;\n}\n.column-container[data-v-25d6ee05] {\n        margin: 0 auto;\n        display: flex;\n}\n\n    /* Six columns side by side */\n.column[data-v-25d6ee05] {\n        float: left;\n        height: 120px;\n        background-size: cover;\n        margin: 10px 5px 0px 5px;\n        flex-grow: 1;\n        opacity: 0.6;\n        cursor: pointer;\n}\n.column[data-v-25d6ee05]:hover{\n        opacity: 1;\n}\n\n    /* Add a transparency effect for thumnbail images */\n.demo[data-v-25d6ee05] {\n        opacity: 0.6;\n}\n.active[data-v-25d6ee05],\n    .demo[data-v-25d6ee05]:hover {\n        opacity: 1;\n        border: 2px solid #F71;\n}\nsection.box[data-v-25d6ee05]{\n        padding: 0 0 2em 0 !important;\n}\n.image.featured[data-v-25d6ee05] {\n        margin: 0 0 10px 0 !important;\n        background-size: cover;\n        background-position: center;\n}\ndiv.image[data-v-25d6ee05] {\n        height: 160px;\n        overflow: hidden;\n        text-align: center;\n        background-color: black;\n}\ndiv.image img[data-v-25d6ee05] {\n        transition: transform 1s, opacity 1s ease-in-out;\n        opacity: 0.6;\n        transform: scale(1.0);\n}\ndiv.image:hover img[data-v-25d6ee05] {\n        transform: scale(1.1);\n        opacity: 1;\n}\nsection.box[data-v-25d6ee05] {\n        cursor: pointer;\n}\n@media screen and (max-width: 980px) {\n.image-gallery[data-v-25d6ee05] {\n            height: 280px;\n}\n.column[data-v-25d6ee05] {\n            width: 25%;\n}\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -58513,13 +58507,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Banner_vue_vue_type_template_id_0369ca6e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Banner.vue?vue&type=template&id=0369ca6e */ "./resources/js/componentes/Banner.vue?vue&type=template&id=0369ca6e");
 /* harmony import */ var _Banner_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Banner.vue?vue&type=script&lang=js */ "./resources/js/componentes/Banner.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Banner_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Banner_vue_vue_type_template_id_0369ca6e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/componentes/Banner.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Banner_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Banner_vue_vue_type_template_id_0369ca6e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/componentes/Banner.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -58542,7 +58536,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Colegio_vue_vue_type_template_id_2dade014_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Colegio.vue?vue&type=template&id=2dade014&scoped=true */ "./resources/js/componentes/Colegio.vue?vue&type=template&id=2dade014&scoped=true");
 /* harmony import */ var _Colegio_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Colegio.vue?vue&type=script&lang=js */ "./resources/js/componentes/Colegio.vue?vue&type=script&lang=js");
 /* harmony import */ var _Colegio_vue_vue_type_style_index_0_id_2dade014_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Colegio.vue?vue&type=style&index=0&id=2dade014&scoped=true&lang=css */ "./resources/js/componentes/Colegio.vue?vue&type=style&index=0&id=2dade014&scoped=true&lang=css");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -58550,7 +58544,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Colegio_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Colegio_vue_vue_type_template_id_2dade014_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-2dade014"],['__file',"resources/js/componentes/Colegio.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Colegio_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Colegio_vue_vue_type_template_id_2dade014_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-2dade014"],['__file',"resources/js/componentes/Colegio.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -58573,7 +58567,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Conteudo_vue_vue_type_template_id_7044b3af_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Conteudo.vue?vue&type=template&id=7044b3af&scoped=true */ "./resources/js/componentes/Conteudo.vue?vue&type=template&id=7044b3af&scoped=true");
 /* harmony import */ var _Conteudo_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Conteudo.vue?vue&type=script&lang=js */ "./resources/js/componentes/Conteudo.vue?vue&type=script&lang=js");
 /* harmony import */ var _Conteudo_vue_vue_type_style_index_0_id_7044b3af_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Conteudo.vue?vue&type=style&index=0&id=7044b3af&scoped=true&lang=css */ "./resources/js/componentes/Conteudo.vue?vue&type=style&index=0&id=7044b3af&scoped=true&lang=css");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -58581,7 +58575,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Conteudo_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Conteudo_vue_vue_type_template_id_7044b3af_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-7044b3af"],['__file',"resources/js/componentes/Conteudo.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Conteudo_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Conteudo_vue_vue_type_template_id_7044b3af_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-7044b3af"],['__file',"resources/js/componentes/Conteudo.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -58604,7 +58598,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Depoimentos_vue_vue_type_template_id_5122bbd9_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Depoimentos.vue?vue&type=template&id=5122bbd9&scoped=true */ "./resources/js/componentes/Depoimentos.vue?vue&type=template&id=5122bbd9&scoped=true");
 /* harmony import */ var _Depoimentos_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Depoimentos.vue?vue&type=script&lang=js */ "./resources/js/componentes/Depoimentos.vue?vue&type=script&lang=js");
 /* harmony import */ var _Depoimentos_vue_vue_type_style_index_0_id_5122bbd9_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Depoimentos.vue?vue&type=style&index=0&id=5122bbd9&scoped=true&lang=css */ "./resources/js/componentes/Depoimentos.vue?vue&type=style&index=0&id=5122bbd9&scoped=true&lang=css");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -58612,7 +58606,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Depoimentos_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Depoimentos_vue_vue_type_template_id_5122bbd9_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-5122bbd9"],['__file',"resources/js/componentes/Depoimentos.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Depoimentos_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Depoimentos_vue_vue_type_template_id_5122bbd9_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-5122bbd9"],['__file',"resources/js/componentes/Depoimentos.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -58635,7 +58629,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Estrutura_vue_vue_type_template_id_df382d32_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Estrutura.vue?vue&type=template&id=df382d32&scoped=true */ "./resources/js/componentes/Estrutura.vue?vue&type=template&id=df382d32&scoped=true");
 /* harmony import */ var _Estrutura_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Estrutura.vue?vue&type=script&lang=js */ "./resources/js/componentes/Estrutura.vue?vue&type=script&lang=js");
 /* harmony import */ var _Estrutura_vue_vue_type_style_index_0_id_df382d32_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Estrutura.vue?vue&type=style&index=0&id=df382d32&scoped=true&lang=css */ "./resources/js/componentes/Estrutura.vue?vue&type=style&index=0&id=df382d32&scoped=true&lang=css");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -58643,7 +58637,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Estrutura_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Estrutura_vue_vue_type_template_id_df382d32_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-df382d32"],['__file',"resources/js/componentes/Estrutura.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Estrutura_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Estrutura_vue_vue_type_template_id_df382d32_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-df382d32"],['__file',"resources/js/componentes/Estrutura.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -58666,7 +58660,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Galeria_vue_vue_type_template_id_25d6ee05_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Galeria.vue?vue&type=template&id=25d6ee05&scoped=true */ "./resources/js/componentes/Galeria.vue?vue&type=template&id=25d6ee05&scoped=true");
 /* harmony import */ var _Galeria_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Galeria.vue?vue&type=script&lang=js */ "./resources/js/componentes/Galeria.vue?vue&type=script&lang=js");
 /* harmony import */ var _Galeria_vue_vue_type_style_index_0_id_25d6ee05_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Galeria.vue?vue&type=style&index=0&id=25d6ee05&scoped=true&lang=css */ "./resources/js/componentes/Galeria.vue?vue&type=style&index=0&id=25d6ee05&scoped=true&lang=css");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -58674,7 +58668,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Galeria_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Galeria_vue_vue_type_template_id_25d6ee05_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-25d6ee05"],['__file',"resources/js/componentes/Galeria.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Galeria_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Galeria_vue_vue_type_template_id_25d6ee05_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-25d6ee05"],['__file',"resources/js/componentes/Galeria.vue"]])
 /* hot reload */
 if (false) {}
 

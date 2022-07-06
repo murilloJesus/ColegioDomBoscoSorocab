@@ -22605,8 +22605,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _classes_galeria__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../classes/galeria */ "./resources/js/admin/classes/galeria.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_defineProperty({
   props: {
     controller: {
       type: _classes_galeria__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -22626,7 +22628,18 @@ __webpack_require__.r(__webpack_exports__);
       });
     }
   }
-});
+}, "computed", {
+  galeries: {
+    get: function get() {
+      return this.controller.fieldset.sort(function (val1, val2) {
+        return val1.indice > val2.indice;
+      });
+    },
+    set: function set(newV) {
+      this.controller.fieldset = newV;
+    }
+  }
+}));
 
 /***/ }),
 
@@ -23386,6 +23399,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _classes_banner_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../classes/banner.js */ "./resources/js/admin/classes/banner.js");
 /* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base */ "./resources/js/admin/pages/base.js");
+/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -23424,7 +23438,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     url: function url() {
-      return "".concat("www.colegiodomboscosorocaba.com.br").concat(this.fieldset.alias);
+      return "".concat(process.env.MIX_APP_DOMAIN).concat(this.fieldset.alias);
     }
   }
 });
@@ -23538,6 +23552,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _classes_depoimento_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../classes/depoimento.js */ "./resources/js/admin/classes/depoimento.js");
 /* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base */ "./resources/js/admin/pages/base.js");
+/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -23557,7 +23572,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     url: function url() {
-      return "".concat("www.colegiodomboscosorocaba.com.br").concat(this.fieldset.alias);
+      return "".concat(process.env.MIX_APP_DOMAIN).concat(this.fieldset.alias);
     }
   }
 });
@@ -23577,6 +23592,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _classes_galeria_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../classes/galeria.js */ "./resources/js/admin/classes/galeria.js");
 /* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base */ "./resources/js/admin/pages/base.js");
+/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -23596,7 +23612,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     url: function url() {
-      return "".concat("www.colegiodomboscosorocaba.com.br").concat(this.fieldset.alias);
+      return "".concat(process.env.MIX_APP_DOMAIN).concat(this.fieldset.alias);
     }
   }
 });
@@ -23660,6 +23676,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base */ "./resources/js/admin/pages/base.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
+/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
 
 
 
@@ -23690,7 +23707,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     url: function url() {
-      return "".concat("www.colegiodomboscosorocaba.com.br").concat(this.fieldset.alias);
+      return "".concat(process.env.MIX_APP_DOMAIN).concat(this.fieldset.alias);
     }
   },
   methods: {
@@ -23720,6 +23737,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _classes_noticia_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../classes/noticia.js */ "./resources/js/admin/classes/noticia.js");
 /* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base */ "./resources/js/admin/pages/base.js");
 /* harmony import */ var _categorias_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./categorias.vue */ "./resources/js/admin/pages/categorias.vue");
+/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
 
 
 
@@ -23743,7 +23761,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     url: function url() {
-      return "".concat("www.colegiodomboscosorocaba.com.br").concat(this.fieldset.alias);
+      return "".concat(process.env.MIX_APP_DOMAIN).concat(this.fieldset.alias);
     }
   }
 });
@@ -23763,6 +23781,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _classes_pagina_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../classes/pagina.js */ "./resources/js/admin/classes/pagina.js");
 /* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base */ "./resources/js/admin/pages/base.js");
+/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -23782,7 +23801,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     url: function url() {
-      return "".concat("www.colegiodomboscosorocaba.com.br").concat(this.fieldset.alias);
+      return "".concat(process.env.MIX_APP_DOMAIN).concat(this.fieldset.alias);
     }
   }
 });
@@ -23922,28 +23941,38 @@ var _hoisted_9 = {
 var _hoisted_10 = {
   "class": "gallery-actions breadcomb-report"
 };
-var _hoisted_11 = ["href"];
+var _hoisted_11 = {
+  "class": "col-lg-6 col-md-6 col-sm-6 col-xs-6"
+};
+var _hoisted_12 = {
+  "class": "form-group"
+};
+var _hoisted_13 = {
+  "class": "nk-int-st"
+};
+var _hoisted_14 = ["onUpdate:modelValue"];
+var _hoisted_15 = ["href"];
 
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "notika-icon notika-sent"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_13 = [_hoisted_12];
-var _hoisted_14 = ["onClick"];
+var _hoisted_17 = [_hoisted_16];
+var _hoisted_18 = ["onClick"];
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "notika-icon notika-close"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_16 = [_hoisted_15];
+var _hoisted_20 = [_hoisted_19];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.controller.data, function (item, index) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.galeries, function (item, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-      key: index
+      key: item.image.path
     }, [item.image ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
       src: "/public/".concat(item.image.path),
       alt: ""
@@ -23953,16 +23982,25 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 1
     /* TEXT */
-    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      type: "text",
+      "class": "form-control input-sm",
+      placeholder: "Indice",
+      "onUpdate:modelValue": function onUpdateModelValue($event) {
+        return item.indice = $event;
+      }
+    }, null, 8
+    /* PROPS */
+    , _hoisted_14), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, item.indice]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
       href: "".concat($options.download_link, "/").concat(item.id, "/edit"),
       target: "_blank",
       "data-toggle": "tooltip",
       "data-placement": "top",
       "class": "btn waves-effect",
       "data-original-title": "Download"
-    }, _hoisted_13, 8
+    }, _hoisted_17, 8
     /* PROPS */
-    , _hoisted_11), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    , _hoisted_15), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
       onClick: function onClick($event) {
         return $options.destroy(item.id);
       },
@@ -23970,9 +24008,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       "data-placement": "top",
       "class": "btn btn-danger danger-icon-notika waves-effect",
       "data-original-title": "Excluir"
-    }, _hoisted_16, 8
+    }, _hoisted_20, 8
     /* PROPS */
-    , _hoisted_14)])])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 64
+    , _hoisted_18)])])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 64
     /* STABLE_FRAGMENT */
     );
   }), 128
@@ -25113,11 +25151,24 @@ __webpack_require__.r(__webpack_exports__);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_galeria = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("galeria", true);
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)(((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_galeria, {
+  var _component_formulario = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("formulario");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_formulario, {
     controller: _ctx.controller
-  }, null, 8
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_galeria, {
+        controller: _ctx.controller
+      }, null, 8
+      /* PROPS */
+      , ["controller"]), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, _ctx.component == 'galeria']])];
+    }),
+    _: 1
+    /* STABLE */
+
+  }, 8
   /* PROPS */
-  , ["controller"])), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, _ctx.component == 'galeria']]);
+  , ["controller"]);
 }
 
 /***/ }),
@@ -26346,9 +26397,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api.js */ "./resources/js/admin/classes/api.js");
-/* harmony import */ var _table_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./table.js */ "./resources/js/admin/classes/table.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api.js */ "./resources/js/admin/classes/api.js");
+/* harmony import */ var _table_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./table.js */ "./resources/js/admin/classes/table.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
@@ -26379,6 +26440,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var Galeria = /*#__PURE__*/function (_Api) {
   _inherits(Galeria, _Api);
 
@@ -26403,24 +26465,75 @@ var Galeria = /*#__PURE__*/function (_Api) {
       return list.map(function (el, index) {
         return _this2.getObject(_objectSpread({
           id: index
-        }, el));
+        }, el))[0];
       });
     }
+  }, {
+    key: "store",
+    value: function store() {
+      console.log(this.getFieldset());
+      return {
+        method: 'post',
+        url: "".concat(this.route).concat(this.resources, "/sort"),
+        data: this.getFieldset()
+      };
+    }
+  }, {
+    key: "getFieldset",
+    value: function getFieldset() {
+      var data = Object.assign(this.fieldset),
+          retorno = {};
+      data.forEach(function (el) {
+        retorno[el.name] = el.indice;
+      });
+      return retorno;
+    }
+  }, {
+    key: "getData",
+    value: function () {
+      var _getData = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        var res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return axios__WEBPACK_IMPORTED_MODULE_1___default()(this.index());
+
+              case 2:
+                res = _context.sent;
+                return _context.abrupt("return", this.fieldset = this.getList(res.data));
+
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function getData() {
+        return _getData.apply(this, arguments);
+      }
+
+      return getData;
+    }()
   }, {
     key: "getObject",
     value: function getObject() {
       var instance = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-      return {
+      return [{
         id: instance.id,
         path: instance.path ? instance.path : '',
         name: instance.name ? instance.name : '',
-        image: instance.image ? instance.image : ''
-      };
+        image: instance.image ? instance.image : '',
+        indice: instance.indice ? instance.indice : 999
+      }];
     }
   }, {
     key: "getTable",
     value: function getTable() {
-      return new _table_js__WEBPACK_IMPORTED_MODULE_1__["default"]({
+      return new _table_js__WEBPACK_IMPORTED_MODULE_3__["default"]({
         id: {
           name: '#',
           component: 'text'
@@ -26438,7 +26551,7 @@ var Galeria = /*#__PURE__*/function (_Api) {
   }]);
 
   return Galeria;
-}(_api_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+}(_api_js__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Galeria);
 
@@ -62381,7 +62494,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _form_vue_vue_type_template_id_5f390ca6__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form.vue?vue&type=template&id=5f390ca6 */ "./resources/js/admin/componentes/form.vue?vue&type=template&id=5f390ca6");
 /* harmony import */ var _form_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form.vue?vue&type=script&lang=js */ "./resources/js/admin/componentes/form.vue?vue&type=script&lang=js");
 /* harmony import */ var _form_vue_vue_type_style_index_0_id_5f390ca6_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./form.vue?vue&type=style&index=0&id=5f390ca6&lang=css */ "./resources/js/admin/componentes/form.vue?vue&type=style&index=0&id=5f390ca6&lang=css");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -62389,7 +62502,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_form_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_form_vue_vue_type_template_id_5f390ca6__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/componentes/form.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_form_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_form_vue_vue_type_template_id_5f390ca6__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/componentes/form.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62411,13 +62524,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _gallery_vue_vue_type_template_id_43dfb540__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gallery.vue?vue&type=template&id=43dfb540 */ "./resources/js/admin/componentes/gallery.vue?vue&type=template&id=43dfb540");
 /* harmony import */ var _gallery_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gallery.vue?vue&type=script&lang=js */ "./resources/js/admin/componentes/gallery.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_gallery_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_gallery_vue_vue_type_template_id_43dfb540__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/componentes/gallery.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_gallery_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_gallery_vue_vue_type_template_id_43dfb540__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/componentes/gallery.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62440,7 +62553,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modal_vue_vue_type_template_id_c001ae8a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modal.vue?vue&type=template&id=c001ae8a */ "./resources/js/admin/componentes/modal.vue?vue&type=template&id=c001ae8a");
 /* harmony import */ var _modal_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal.vue?vue&type=script&lang=js */ "./resources/js/admin/componentes/modal.vue?vue&type=script&lang=js");
 /* harmony import */ var _modal_vue_vue_type_style_index_0_id_c001ae8a_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modal.vue?vue&type=style&index=0&id=c001ae8a&lang=css */ "./resources/js/admin/componentes/modal.vue?vue&type=style&index=0&id=c001ae8a&lang=css");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -62448,7 +62561,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_modal_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_modal_vue_vue_type_template_id_c001ae8a__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/componentes/modal.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_modal_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_modal_vue_vue_type_template_id_c001ae8a__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/componentes/modal.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62471,7 +62584,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _row_vue_vue_type_template_id_44398ee8_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./row.vue?vue&type=template&id=44398ee8&scoped=true */ "./resources/js/admin/componentes/row.vue?vue&type=template&id=44398ee8&scoped=true");
 /* harmony import */ var _row_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./row.vue?vue&type=script&lang=js */ "./resources/js/admin/componentes/row.vue?vue&type=script&lang=js");
 /* harmony import */ var _row_vue_vue_type_style_index_0_id_44398ee8_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./row.vue?vue&type=style&index=0&id=44398ee8&scoped=true&lang=css */ "./resources/js/admin/componentes/row.vue?vue&type=style&index=0&id=44398ee8&scoped=true&lang=css");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -62479,7 +62592,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_row_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_row_vue_vue_type_template_id_44398ee8_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-44398ee8"],['__file',"resources/js/admin/componentes/row.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_row_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_row_vue_vue_type_template_id_44398ee8_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-44398ee8"],['__file',"resources/js/admin/componentes/row.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62502,7 +62615,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _table_vue_vue_type_template_id_afb81d48_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./table.vue?vue&type=template&id=afb81d48&scoped=true */ "./resources/js/admin/componentes/table.vue?vue&type=template&id=afb81d48&scoped=true");
 /* harmony import */ var _table_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./table.vue?vue&type=script&lang=js */ "./resources/js/admin/componentes/table.vue?vue&type=script&lang=js");
 /* harmony import */ var _table_vue_vue_type_style_index_0_id_afb81d48_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./table.vue?vue&type=style&index=0&id=afb81d48&scoped=true&lang=css */ "./resources/js/admin/componentes/table.vue?vue&type=style&index=0&id=afb81d48&scoped=true&lang=css");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -62510,7 +62623,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_table_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_table_vue_vue_type_template_id_afb81d48_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-afb81d48"],['__file',"resources/js/admin/componentes/table.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_table_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_table_vue_vue_type_template_id_afb81d48_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-afb81d48"],['__file',"resources/js/admin/componentes/table.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62533,7 +62646,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _view_vue_vue_type_template_id_eb773bf2_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./view.vue?vue&type=template&id=eb773bf2&scoped=true */ "./resources/js/admin/componentes/view.vue?vue&type=template&id=eb773bf2&scoped=true");
 /* harmony import */ var _view_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./view.vue?vue&type=script&lang=js */ "./resources/js/admin/componentes/view.vue?vue&type=script&lang=js");
 /* harmony import */ var _view_vue_vue_type_style_index_0_id_eb773bf2_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./view.vue?vue&type=style&index=0&id=eb773bf2&scoped=true&lang=css */ "./resources/js/admin/componentes/view.vue?vue&type=style&index=0&id=eb773bf2&scoped=true&lang=css");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -62541,7 +62654,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_view_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_view_vue_vue_type_template_id_eb773bf2_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-eb773bf2"],['__file',"resources/js/admin/componentes/view.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_view_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_view_vue_vue_type_template_id_eb773bf2_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-eb773bf2"],['__file',"resources/js/admin/componentes/view.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62563,13 +62676,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _alias_vue_vue_type_template_id_4b847606__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./alias.vue?vue&type=template&id=4b847606 */ "./resources/js/admin/input/alias.vue?vue&type=template&id=4b847606");
 /* harmony import */ var _alias_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./alias.vue?vue&type=script&lang=js */ "./resources/js/admin/input/alias.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_alias_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_alias_vue_vue_type_template_id_4b847606__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/input/alias.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_alias_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_alias_vue_vue_type_template_id_4b847606__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/input/alias.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62591,13 +62704,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _editor_vue_vue_type_template_id_f34497e0__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./editor.vue?vue&type=template&id=f34497e0 */ "./resources/js/admin/input/editor.vue?vue&type=template&id=f34497e0");
 /* harmony import */ var _editor_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./editor.vue?vue&type=script&lang=js */ "./resources/js/admin/input/editor.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_editor_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_editor_vue_vue_type_template_id_f34497e0__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/input/editor.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_editor_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_editor_vue_vue_type_template_id_f34497e0__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/input/editor.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62620,7 +62733,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _image_vue_vue_type_template_id_46885a88_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./image.vue?vue&type=template&id=46885a88&scoped=true */ "./resources/js/admin/input/image.vue?vue&type=template&id=46885a88&scoped=true");
 /* harmony import */ var _image_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./image.vue?vue&type=script&lang=js */ "./resources/js/admin/input/image.vue?vue&type=script&lang=js");
 /* harmony import */ var _image_vue_vue_type_style_index_0_id_46885a88_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./image.vue?vue&type=style&index=0&id=46885a88&scoped=true&lang=css */ "./resources/js/admin/input/image.vue?vue&type=style&index=0&id=46885a88&scoped=true&lang=css");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -62628,7 +62741,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_image_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_image_vue_vue_type_template_id_46885a88_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-46885a88"],['__file',"resources/js/admin/input/image.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_image_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_image_vue_vue_type_template_id_46885a88_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-46885a88"],['__file',"resources/js/admin/input/image.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62650,13 +62763,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _select_vue_vue_type_template_id_ff232fc2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select.vue?vue&type=template&id=ff232fc2 */ "./resources/js/admin/input/select.vue?vue&type=template&id=ff232fc2");
 /* harmony import */ var _select_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./select.vue?vue&type=script&lang=js */ "./resources/js/admin/input/select.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_select_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_select_vue_vue_type_template_id_ff232fc2__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/input/select.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_select_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_select_vue_vue_type_template_id_ff232fc2__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/input/select.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62678,13 +62791,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _switch_vue_vue_type_template_id_6321e352__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./switch.vue?vue&type=template&id=6321e352 */ "./resources/js/admin/input/switch.vue?vue&type=template&id=6321e352");
 /* harmony import */ var _switch_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./switch.vue?vue&type=script&lang=js */ "./resources/js/admin/input/switch.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_switch_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_switch_vue_vue_type_template_id_6321e352__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/input/switch.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_switch_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_switch_vue_vue_type_template_id_6321e352__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/input/switch.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62706,13 +62819,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _uploader_vue_vue_type_template_id_c4975c5e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./uploader.vue?vue&type=template&id=c4975c5e */ "./resources/js/admin/input/uploader.vue?vue&type=template&id=c4975c5e");
 /* harmony import */ var _uploader_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./uploader.vue?vue&type=script&lang=js */ "./resources/js/admin/input/uploader.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_uploader_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_uploader_vue_vue_type_template_id_c4975c5e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/input/uploader.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_uploader_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_uploader_vue_vue_type_template_id_c4975c5e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/input/uploader.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62734,13 +62847,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _croped_text_vue_vue_type_template_id_6a1edc26__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./croped_text.vue?vue&type=template&id=6a1edc26 */ "./resources/js/admin/output/croped_text.vue?vue&type=template&id=6a1edc26");
 /* harmony import */ var _croped_text_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./croped_text.vue?vue&type=script&lang=js */ "./resources/js/admin/output/croped_text.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_croped_text_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_croped_text_vue_vue_type_template_id_6a1edc26__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/output/croped_text.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_croped_text_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_croped_text_vue_vue_type_template_id_6a1edc26__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/output/croped_text.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62763,7 +62876,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _image_source_vue_vue_type_template_id_65efd002_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./image_source.vue?vue&type=template&id=65efd002&scoped=true */ "./resources/js/admin/output/image_source.vue?vue&type=template&id=65efd002&scoped=true");
 /* harmony import */ var _image_source_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./image_source.vue?vue&type=script&lang=js */ "./resources/js/admin/output/image_source.vue?vue&type=script&lang=js");
 /* harmony import */ var _image_source_vue_vue_type_style_index_0_id_65efd002_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./image_source.vue?vue&type=style&index=0&id=65efd002&scoped=true&lang=css */ "./resources/js/admin/output/image_source.vue?vue&type=style&index=0&id=65efd002&scoped=true&lang=css");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -62771,7 +62884,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_image_source_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_image_source_vue_vue_type_template_id_65efd002_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-65efd002"],['__file',"resources/js/admin/output/image_source.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_image_source_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_image_source_vue_vue_type_template_id_65efd002_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-65efd002"],['__file',"resources/js/admin/output/image_source.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62793,13 +62906,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _text_vue_vue_type_template_id_7fd1a2a6__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text.vue?vue&type=template&id=7fd1a2a6 */ "./resources/js/admin/output/text.vue?vue&type=template&id=7fd1a2a6");
 /* harmony import */ var _text_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./text.vue?vue&type=script&lang=js */ "./resources/js/admin/output/text.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_text_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_text_vue_vue_type_template_id_7fd1a2a6__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/output/text.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_text_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_text_vue_vue_type_template_id_7fd1a2a6__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/output/text.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62821,13 +62934,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _banner_vue_vue_type_template_id_5fcea215__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./banner.vue?vue&type=template&id=5fcea215 */ "./resources/js/admin/pages/banner.vue?vue&type=template&id=5fcea215");
 /* harmony import */ var _banner_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./banner.vue?vue&type=script&lang=js */ "./resources/js/admin/pages/banner.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_banner_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_banner_vue_vue_type_template_id_5fcea215__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/banner.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_banner_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_banner_vue_vue_type_template_id_5fcea215__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/banner.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62849,13 +62962,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _categorias_vue_vue_type_template_id_7b727e09__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./categorias.vue?vue&type=template&id=7b727e09 */ "./resources/js/admin/pages/categorias.vue?vue&type=template&id=7b727e09");
 /* harmony import */ var _categorias_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./categorias.vue?vue&type=script&lang=js */ "./resources/js/admin/pages/categorias.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_categorias_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_categorias_vue_vue_type_template_id_7b727e09__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/categorias.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_categorias_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_categorias_vue_vue_type_template_id_7b727e09__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/categorias.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62877,13 +62990,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _depoimento_vue_vue_type_template_id_6bd262b1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./depoimento.vue?vue&type=template&id=6bd262b1 */ "./resources/js/admin/pages/depoimento.vue?vue&type=template&id=6bd262b1");
 /* harmony import */ var _depoimento_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./depoimento.vue?vue&type=script&lang=js */ "./resources/js/admin/pages/depoimento.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_depoimento_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_depoimento_vue_vue_type_template_id_6bd262b1__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/depoimento.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_depoimento_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_depoimento_vue_vue_type_template_id_6bd262b1__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/depoimento.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62905,13 +63018,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _galeria_vue_vue_type_template_id_560d0b3e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./galeria.vue?vue&type=template&id=560d0b3e */ "./resources/js/admin/pages/galeria.vue?vue&type=template&id=560d0b3e");
 /* harmony import */ var _galeria_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./galeria.vue?vue&type=script&lang=js */ "./resources/js/admin/pages/galeria.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_galeria_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_galeria_vue_vue_type_template_id_560d0b3e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/galeria.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_galeria_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_galeria_vue_vue_type_template_id_560d0b3e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/galeria.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62933,13 +63046,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _image_vue_vue_type_template_id_5eaa7bfc__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./image.vue?vue&type=template&id=5eaa7bfc */ "./resources/js/admin/pages/image.vue?vue&type=template&id=5eaa7bfc");
 /* harmony import */ var _image_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./image.vue?vue&type=script&lang=js */ "./resources/js/admin/pages/image.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_image_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_image_vue_vue_type_template_id_5eaa7bfc__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/image.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_image_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_image_vue_vue_type_template_id_5eaa7bfc__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/image.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62962,7 +63075,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mensagem_vue_vue_type_template_id_a7e7fd58__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mensagem.vue?vue&type=template&id=a7e7fd58 */ "./resources/js/admin/pages/mensagem.vue?vue&type=template&id=a7e7fd58");
 /* harmony import */ var _mensagem_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mensagem.vue?vue&type=script&lang=js */ "./resources/js/admin/pages/mensagem.vue?vue&type=script&lang=js");
 /* harmony import */ var _mensagem_vue_vue_type_style_index_0_id_a7e7fd58_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mensagem.vue?vue&type=style&index=0&id=a7e7fd58&lang=css */ "./resources/js/admin/pages/mensagem.vue?vue&type=style&index=0&id=a7e7fd58&lang=css");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -62970,7 +63083,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_mensagem_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_mensagem_vue_vue_type_template_id_a7e7fd58__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/mensagem.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_mensagem_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_mensagem_vue_vue_type_template_id_a7e7fd58__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/mensagem.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62992,13 +63105,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _noticia_vue_vue_type_template_id_27065e28__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./noticia.vue?vue&type=template&id=27065e28 */ "./resources/js/admin/pages/noticia.vue?vue&type=template&id=27065e28");
 /* harmony import */ var _noticia_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./noticia.vue?vue&type=script&lang=js */ "./resources/js/admin/pages/noticia.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_noticia_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_noticia_vue_vue_type_template_id_27065e28__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/noticia.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_noticia_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_noticia_vue_vue_type_template_id_27065e28__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/noticia.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -63020,13 +63133,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _pagina_vue_vue_type_template_id_2ad10522__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pagina.vue?vue&type=template&id=2ad10522 */ "./resources/js/admin/pages/pagina.vue?vue&type=template&id=2ad10522");
 /* harmony import */ var _pagina_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pagina.vue?vue&type=script&lang=js */ "./resources/js/admin/pages/pagina.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_StarSites_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_pagina_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_pagina_vue_vue_type_template_id_2ad10522__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/pagina.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_murillojesus_projects_ColegioDomBoscoSorocab_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_pagina_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_pagina_vue_vue_type_template_id_2ad10522__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/admin/pages/pagina.vue"]])
 /* hot reload */
 if (false) {}
 

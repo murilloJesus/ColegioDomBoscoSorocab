@@ -29,7 +29,7 @@
 
                                     <a
                                         href="#"
-                                        class="image featured image-content image-educacao-infantil"
+                                        class="image featured ease-image-content image-educacao-infantil-2"
                                     ></a>
 
                                     <section>
@@ -53,7 +53,7 @@
 
                                     <a
                                         href="#"
-                                        class="image featured image-content image-educacao-fundamental-inicial"
+                                        class="image featured ease-image-content image-educacao-fundamental-inicial-2"
                                     ></a>
 
                                     <section>
@@ -75,7 +75,7 @@
 
                                     <a
                                         href="#"
-                                        class="image featured image-content image-educacao-fundamental-final"
+                                        class="image featured ease-image-content image-educacao-fundamental-final-2"
                                     ></a>
 
                                     <section>

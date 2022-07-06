@@ -15,7 +15,6 @@ class AddCategoryForNews extends Migration
     {
         Schema::table('news', function (Blueprint $table) {
             $table->text('categories');
-            $table->dropColumn('group_id');
         });
     }
 

@@ -157,7 +157,7 @@
     .image-gallery {
         width: 100%;
         height: 450px;
-        background-color: #04070e;
+        background-color: #fff;
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
@@ -183,7 +183,7 @@
         width: auto;
         padding: 16px;
         margin-top: -50px;
-        color: white;
+        color: #04070e;
         font-weight: bold;
         font-size: 30px;
         border-radius: 0 3px 3px 0;
@@ -201,12 +201,12 @@
     /* On hover, add a black background color with a little bit see-through */
     .prev:hover,
     .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(255, 255, 255, 0.8);
     }
 
     /* Number text (1/3 etc) */
     .numbertext {
-        color: #f2f2f2;
+        color: #04070e;
         font-size: 12px;
         padding: 8px 12px;
         position: absolute;
@@ -217,9 +217,9 @@
     .caption-container {
         min-height: 10px;
         text-align: center;
-        background-color: #04070e;
+        background-color: #fff;
         padding: 2px 16px;
-        color: white;
+        color: #04070e;
     }
 
     .caption-container p {

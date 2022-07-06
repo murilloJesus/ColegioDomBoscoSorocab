@@ -25,8 +25,7 @@
                             <li><a href="/segmentos#infantil">Ensino Infantil</a></li>
                             <li><a href="/segmentos#fundamental-I">Ensino Fundamental I</a></li>
                             <li><a href="/segmentos#fundamental-II">Ensino Fundamental II</a></li>
-                            <li><a href="/segmentos#integral-e-bilingue">Integral e Bílingue</a></li>
-                            <li><a href="/segmentos#extracurriculares">Cursos Extracurriculares</a>
+                            <li><a href="/segmentos#integral-e-bilingue">Integral</a></li>
                                 {{-- <ul>
                                     <li><a href="/segmentos#extracurriculares">Ballet</a></li>
                                     <li><a href="/segmentos#extracurriculares">Bi-Bot</a></li>

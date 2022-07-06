@@ -28,7 +28,7 @@
 
                                 <a
                                     href="#"
-                                    class="image featured image-content image-educacao-infantil"
+                                    class="image featured ease-image-content image-educacao-infantil"
                                 ></a>
 
                                 <section>
@@ -49,7 +49,7 @@
 
                                 <a
                                     href="#"
-                                    class="image featured image-content image-educacao-fundamental-inicial"
+                                    class="image featured ease-image-content image-educacao-fundamental-inicial"
                                 ></a>
 
                                 <section>
@@ -70,7 +70,7 @@
 
                                 <a
                                     href="#"
-                                    class="image featured image-content image-educacao-fundamental-final"
+                                    class="image featured ease-image-content image-educacao-fundamental-final"
                                 ></a>
 
                                 <section>
@@ -85,50 +85,13 @@
                                 <div id="integral-e-bilingue" class="anchoring"></div>
 
                                 <header>
-                                    <h3>Período Integral e Ensino Bilíngue</h3>
-                                    {{-- <p>False.</p> --}}
+                                    <h3>Período Integral</h3>
                                 </header>
 
-                                {{-- <a
-                                    style="background-image: url('/public/images/segmentos/segmento_fundamental_2.png')"
-                                    href="#"
-                                    class="image featured image-content"
-                                ></a> --}}
-
                                 <section>
-                                    <p>
-                                        Para ampliar a oportunidade de exposição das crianças à língua inglesa, o Período Integral e Bilíngue é a opção que mais se aproxima dos padrões internacionais.
-                                    </p>
-                                    <p>
-                                        O objetivo deste projeto é reduzir as lacunas na educação básica escolar brasileira no que diz respeito à língua inglesa, tornando-a um elemento de formação permanente para os nossos alunos.
-                                    </p>
-                                </section>
-
-                                <div id="extracurriculares" class="anchoring"></div>
-
-                                <a
-                                    href="#"
-                                    class="image featured image-content-extra image-educacao-extra"
-                                ></a>
-
-                                <header>
-                                    <h3>Cursos Extracurriculares</h3>
-                                    {{-- <p>False.</p> --}}
-                                </header>
-
-                                {{-- <a
-                                    style="background-image: url('/public/images/segmentos/segmento_fundamental_2.png')"
-                                    href="#"
-                                    class="image featured image-content"
-                                ></a> --}}
-
-                                <section>
-                                    <p>
-                                        O aluno podem frequentar os cursos extracurriculares de sua preferência no período inverso à aula, no qual desenvolvem suas capacidades e habilidades, com participação de professores capacitados.
-                                    </p>
-                                    <p>
-                                        As atividades extracurriculares visam produzir conhecimento que contribuam para o desenvolvimento social, cultural e artístico do aluno.
-                                    </p>
+                                    <p>O período Integral é uma opção, para os pais que trabalham o dia todo. </p>
+                                    <p>Nesse segmento os alunos cursam as disciplinas curriculares em um período e no outro realizam atividades complementares através de Oficinas (como dança, teatro, música, iniciação científica, artes manuais, culinária) além de um momento para realizar as Atividades de Revisão e Reforço dos conteúdos aprendidos.</p>
+                                    <p>O Colégio tem o objetivo de tornar-se Bilingue e para tanto inseriu o Inglês desde o 1º ano do Fundamental I, e no decorrer da formação os alunos são inseridos na Cultura Inglesa para,  posteriormente, ingressarem na conversação do Inglês.</p>
                                 </section>
 
                             </article>

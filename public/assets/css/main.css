@@ -3240,6 +3240,13 @@ input, select, textarea {
         background-position-y: -250px;
     }
 
+    .ease-image-content {
+        min-height: 250px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
     .image-content-colegio {
         min-height: 250px;
         background-repeat: no-repeat;
@@ -3268,19 +3275,27 @@ input, select, textarea {
     }
 
     .image-educacao-infantil {
-        background-image: url('/public/images/proposta-pedagogica/educacao-infantil.jpeg');
+        background-image: url('/public/images/educacao_infantil/grande.png');
     }
 
     .image-educacao-fundamental-inicial {
-        background-image: url('/public/images/proposta-pedagogica/fundamental-1.jpeg');
+        background-image: url('/public/images/ensino_fundamental_1/grande.png');
     }
 
     .image-educacao-fundamental-final {
-        background-image: url('/public/images/proposta-pedagogica/fundamental-2.jpeg');
+        background-image: url('/public/images/ensino_fundamental_2/grande.png');
     }
 
-    .image-educacao-extra {
-        background-image: url('/public/images/segmentos/extra.png');
+    .image-educacao-infantil-2 {
+        background-image: url('/public/images/educacao_infantil/2grande.png');
+    }
+
+    .image-educacao-fundamental-inicial-2 {
+        background-image: url('/public/images/ensino_fundamental_1/2grande.png');
+    }
+
+    .image-educacao-fundamental-final-2 {
+        background-image: url('/public/images/ensino_fundamental_2/2grande.png');
     }
 
     .image-historia {
@@ -3295,8 +3310,37 @@ input, select, textarea {
         background-image: url('/public/images/historia/premiacao.png');
     }
 
+    .image-maps {
+        background-image: url('/public/images/mapaescola.png');
+    }
+
+
 
     @media (min-width:100px) {
+        .image-educacao-infantil {
+            background-image: url('/public/images/educacao_infantil/mobile.png');
+        }
+
+        .image-educacao-fundamental-inicial {
+            background-image: url('/public/images/ensino_fundamental_1/mobile.png');
+        }
+
+        .image-educacao-fundamental-final {
+            background-image: url('/public/images/ensino_fundamental_2/mobile.png');
+        }
+
+        .image-educacao-infantil-2 {
+            background-image: url('/public/images/educacao_infantil/2mobile.png');
+        }
+
+        .image-educacao-fundamental-inicial-2 {
+            background-image: url('/public/images/ensino_fundamental_1/2mobile.png');
+        }
+
+        .image-educacao-fundamental-final-2 {
+            background-image: url('/public/images/ensino_fundamental_2/2mobile.png');
+        }
+
         .image-content {
             background-position-y: 0px;
         }
@@ -3315,6 +3359,30 @@ input, select, textarea {
     }
 
     @media (min-width:576px) {
+        .image-educacao-infantil {
+            background-image: url('/public/images/educacao_infantil/tabletv.png');
+        }
+
+        .image-educacao-fundamental-inicial {
+            background-image: url('/public/images/ensino_fundamental_1/tabletv.png');
+        }
+
+        .image-educacao-fundamental-final {
+            background-image: url('/public/images/ensino_fundamental_2/tabletv.png');
+        }
+
+        .image-educacao-infantil-2 {
+            background-image: url('/public/images/educacao_infantil/2tabletv.png');
+        }
+
+        .image-educacao-fundamental-inicial-2 {
+            background-image: url('/public/images/ensino_fundamental_1/2tabletv.png');
+        }
+
+        .image-educacao-fundamental-final-2 {
+            background-image: url('/public/images/ensino_fundamental_2/2tabletv.png');
+        }
+
         .image-content {
             background-position-y: -90px;
         }
@@ -3338,6 +3406,30 @@ input, select, textarea {
     }
 
     @media (min-width:992px) {
+        .image-educacao-infantil {
+            background-image: url('/public/images/educacao_infantil/tableth.png');
+        }
+
+        .image-educacao-fundamental-inicial {
+            background-image: url('/public/images/ensino_fundamental_1/tableth.png');
+        }
+
+        .image-educacao-fundamental-final {
+            background-image: url('/public/images/ensino_fundamental_2/tableth.png');
+        }
+
+        .image-educacao-infantil-2 {
+            background-image: url('/public/images/educacao_infantil/2tableth.png');
+        }
+
+        .image-educacao-fundamental-inicial-2 {
+            background-image: url('/public/images/ensino_fundamental_1/2tableth.png');
+        }
+
+        .image-educacao-fundamental-final-2 {
+            background-image: url('/public/images/ensino_fundamental_2/2tableth.png');
+        }
+
         .image-content {
             background-position-y: -50px;
         }
@@ -3352,6 +3444,31 @@ input, select, textarea {
     }
 
     @media (min-width: 1200px) {
+        .image-educacao-infantil {
+            background-image: url('/public/images/educacao_infantil/medio.png');
+        }
+
+        .image-educacao-fundamental-inicial {
+            background-image: url('/public/images/ensino_fundamental_1/medio.png');
+        }
+
+        .image-educacao-fundamental-final {
+            background-image: url('/public/images/ensino_fundamental_2/medio.png');
+        }
+
+        .image-educacao-infantil-2 {
+            background-image: url('/public/images/educacao_infantil/2medio.png');
+        }
+
+        .image-educacao-fundamental-inicial-2 {
+            background-image: url('/public/images/ensino_fundamental_1/2medio.png');
+        }
+
+        .image-educacao-fundamental-final-2 {
+            background-image: url('/public/images/ensino_fundamental_2/2medio.png');
+        }
+
+
         .image-content {
             background-position-y: -250px;
         }

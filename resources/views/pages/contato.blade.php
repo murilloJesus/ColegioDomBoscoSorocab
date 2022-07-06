@@ -60,4 +60,19 @@
     </div>
 </section>
 
+<header id="header">
+    <div class="logo container">
+        <div>
+            <p>Visite!</p>
+        </div>
+    </div>
+</header>
+
+<section id="contato">
+    <br>
+    <div class="container">
+        <a target="_blank" href="https://www.google.com/maps/place/Col%C3%A9gio+Dom+Bosco+Sorocaba/@-23.5113344,-47.5166556,15z/data=!4m5!3m4!1s0x0:0xcead8d2beee86f7a!8m2!3d-23.5113396!4d-47.5166518" class="image featured ease-image-content image-maps"></a>
+    </div>
+</section>
+
 @endsection

@@ -77,7 +77,7 @@
                     {
                         name: "Ensino Infantil",
                         desc: "Despertar, envolver, descobrir.",
-                        classe: "image-content image-educacao-infantil",
+                        classe: "ease-image-content image-educacao-infantil",
                         href: 'segmento-infantil',
                         text: [
                             `A Educação Infantil é uma fase muito importante na formação do aluno. Brincar é a principal tarefa dos pequenos, pois é na brincadeira que descobrem o mundo à sua volta, comunicam-se e se conectam em um ambiente social.`,
@@ -87,7 +87,7 @@
                     {
                         name: "Fundamental I",
                         desc: "Autonomia, observação e desenvolver.",
-                        classe: "image-content image-educacao-fundamental-inicial",
+                        classe: "ease-image-content image-educacao-fundamental-inicial",
                         href: 'segmento-funtamental-I',
                         text: [
                             `Nos Anos Iniciais do Ensino Fundamental (1º ao 5º ano), os estudantes aprendem usando a criatividade e a imaginação. Respeitar o tempo e as características de cada aluno é essencial.`,
@@ -97,7 +97,7 @@
                     {
                         name: "Fundamental II",
                         desc: "Independência, reflexão e raciocínio.",
-                        classe: "image-content image-educacao-fundamental-final",
+                        classe: "ease-image-content image-educacao-fundamental-final",
                         href: 'segmento-funtamental-II',
                         text: [
                             `É no período dos Anos Finais em que os alunos passam por grandes mudanças físicas, emocionais e psicológicas.`,
@@ -105,25 +105,15 @@
                         ]
                     },
                     {
-                        name: "Período Integral e Ensino Bilíngue",
+                        name: "Período Integral",
                         desc: false,
                         classe: false,
                         href: 'segmento-integral-bilingue',
                         text: [
-                            `Para ampliar a oportunidade de exposição das crianças à língua inglesa, o Período Integral e Bilíngue é a opção que mais se aproxima dos padrões internacionais.`,
-                            `O objetivo deste projeto é reduzir as lacunas na educação básica escolar brasileira no que diz respeito à língua inglesa, tornando-a um elemento de formação permanente para os nossos alunos.`
+                            `O período Integral é uma opção, para os pais que trabalham o dia todo.`,
+                            `Nesse segmento os alunos cursam as disciplinas curriculares em um período e no outro realizam atividades complementares através de Oficinas (como dança, teatro, música, iniciação científica, artes manuais, culinária) além de um momento para realizar as Atividades de Revisão e Reforço dos conteúdos aprendidos.`
                         ]
-                    },
-                    {
-                        name: "Cursos Extracurriculares",
-                        desc: false,
-                        classe: "image-content-extra image-educacao-extra",
-                        href: 'segmento-extracurriculares',
-                        text: [
-                            `O aluno podem frequentar os cursos extracurriculares de sua preferência no período inverso à aula, no qual desenvolvem suas capacidades e habilidades, com participação de professores capacitados.`,
-                            `As atividades extracurriculares visam produzir conhecimento que contribuam para o desenvolvimento social, cultural e artístico do aluno.`
-                        ]
-                    },
+                    }
 
                 ]
             }
