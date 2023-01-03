@@ -10,66 +10,85 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-12 col-12-medium">
-            <div class="content">
 
-                <!-- Featured Post -->
-                <article class="box post">
-                    <header>
-                        <h3><a href="#">{{opened.name}}</a></h3>
-                        <!-- <p>With a smaller subtitle that attempts to elaborate</p> -->
-                        <!-- <ul class="meta">
-                                <li class="icon fa-clock">15 minutes ago</li>
-                                <li class="icon fa-comments"><a href="#">8</a></li>
-                            </ul> -->
-                    </header>
+    <!-- Button trigger modal -->
+    <button type="button" id="launchModal" data-bs-toggle="modal" data-bs-target="#modal"></button>
 
-                    <div class="container">
-                        <div class="caption-container">
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-12-medium">
+                            <div class="content">
 
-                        </div>
+                                <!-- Featured Post -->
+                                <article class="box post">
+                                    <header>
+                                        <h3><a href="#">{{opened.name}}</a></h3>
+                                        <!-- <p>With a smaller subtitle that attempts to elaborate</p> -->
+                                        <!-- <ul class="meta">
+                                        <li class="icon fa-clock">15 minutes ago</li>
+                                        <li class="icon fa-comments"><a href="#">8</a></li>
+                                    </ul> -->
+                                    </header>
 
-                        <div class="mySlides">
-                            <div class="numbertext">{{img_index + 1}} / {{paginator.total_images}}</div>
-                            <div class="image-gallery" :style="`background-image: url('/public/${selected.source}')`">
+                                    <div class="container">
+                                        <div class="caption-container">
 
-                            </div>
-                        </div>
+                                        </div>
 
-                        <a class="prev" @click="move(-1)">❮</a>
-                        <a class="next" @click="move(1)">❯</a>
+                                        <div class="mySlides">
+                                            <div class="numbertext">{{img_index + 1}} / {{paginator.total_images}}</div>
+                                            <div class="image-gallery"
+                                                :style="`background-image: url('/public/${selected.source}')`">
 
-                        <div class="caption-container">
-                            <!-- <p id="caption"> {{selected.name}} </p> -->
-                        </div>
+                                            </div>
+                                        </div>
 
-                        <div class="column-container">
-                            <div
-                                class="column"
-                                v-for="(item, index) in images"
-                                :key="index"
-                                @click="moveTo(item)"
-                                :class="img_index == paginator.index_atual + index ? 'active' : ''"
-                                :alt="item.name"
-                                :style="{backgroundImage: `url('/public/${item.source}')`}">
+                                        <a class="prev" @click="move(-1)">❮</a>
+                                        <a class="next" @click="move(1)">❯</a>
+
+                                        <div class="caption-container">
+                                            <!-- <p id="caption"> {{selected.name}} </p> -->
+                                        </div>
+
+                                        <div class="column-container">
+                                            <div class="column" v-for="(item, index) in images" :key="index"
+                                                @click="moveTo(item)"
+                                                :class="img_index == paginator.index_atual + index ? 'active' : ''"
+                                                :alt="item.name"
+                                                :style="{backgroundImage: `url('/public/${item.source}')`}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
                             </div>
                         </div>
                     </div>
-                </article>
-
+                </div>
             </div>
         </div>
     </div>
+
 
 </template>
 
 <script>
     import axios from 'axios'
     import infraestrutura from './../data/galery/infraestrutura.json'
+    import modal from '../admin/componentes/modal.vue'
 
     export default {
         name: "Galeria",
+        components: {
+            modal
+        },
         data: () => {
             return {
                 gallery_index: 0,
@@ -77,7 +96,7 @@
                 size_of_galery: $(document).width() > 980 ? 6 : 4,
                 galeries: [
                     infraestrutura
-                ]
+                ],
             }
         },
         async mounted() {
@@ -86,8 +105,8 @@
                     data
                 }) => {
                     this.galeries = [
-                        infraestrutura,
-                        ...data
+                        ...data,
+                        infraestrutura
                     ]
                 })
         },
@@ -112,6 +131,7 @@
             changeGalery(index) {
                 this.gallery_index = index
                 this.img_index = 0
+                $("#launchModal").click()
             }
         },
         computed: {
@@ -248,7 +268,7 @@
         cursor: pointer;
     }
 
-    .column:hover{
+    .column:hover {
         opacity: 1;
     }
 
@@ -263,7 +283,7 @@
         border: 2px solid #F71;
     }
 
-    section.box{
+    section.box {
         padding: 0 0 2em 0 !important;
     }
 
@@ -293,6 +313,22 @@
 
     section.box {
         cursor: pointer;
+    }
+
+    #launchModal {
+        display: none;
+    }
+
+    .modal-header {
+        border-bottom: none !important
+    }
+
+    .modal-body {
+        margin-top: -100px !important;
+    }
+
+    .btn-close {
+        z-index: 999;
     }
 
     @media screen and (max-width: 980px) {

@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use Illuminate\Http\Request;
 use DateTime;
 use Illuminate\Filesystem\FilesystemAdapter;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 use ZipArchive;
@@ -141,15 +139,9 @@ class GalleryController extends Controller
     private function getGalerias()
     {
         $galerias = [];
-
-        $json_galeries = json_decode(file_get_contents(storage_path() . "data/galerias.json"), true);
-
         foreach ($this->storage->allDirectories($this->private_path) as $dir ) {
-            $nome = $this->getNome($dir);
-
             $galerias[] = [
-                "name" => $nome,
-                "indice" => $this->getIndice($nome, $json_galeries),
+                "name" => $this->getNome($dir),
                 "path" => $dir,
                 "background" => $this->backgroundImage($dir),
                 "images" => $this->getImages($dir)
@@ -157,12 +149,6 @@ class GalleryController extends Controller
         }
 
         return $galerias;
-    }
-
-    private function getIndice($nome, $json){
-        return  Arr::first($json, function ($value, $key) use ($nome) {
-            return $value >= $nome;
-        }, ['indice' => 999])->indice;
     }
 
     private function getImages($galeria)
@@ -212,11 +198,5 @@ class GalleryController extends Controller
         $json = Collection::make($galerias)
                     ->toJson(JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         return Storage::put('data/galerias.json', $json);
-    }
-
-    public function repliceJSON(Request $request){
-        $json = $request->all();
-        Storage::put('data/galerias.json', $json);
-        return 'hello';
     }
 }

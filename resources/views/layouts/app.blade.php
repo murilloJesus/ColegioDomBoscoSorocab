@@ -124,5 +124,26 @@
         <!-- main JS
             ============================================ -->
         <script src="/public/admin/js/main.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2KKJC19FS"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-L2KKJC19FS');
+        </script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10941047320"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-10941047320');
+        </script>
+
+
 </body>
 </html>
