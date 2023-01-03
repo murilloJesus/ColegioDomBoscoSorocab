@@ -16,7 +16,9 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="form-group">
                                         <div class="nk-int-st">
-                                            <input type="text" class="form-control input-sm" placeholder="Indice" v-model="item.indice">
+                                            <input type="text" class="form-control input-sm" placeholder="Indice"
+                                            :value="item.indice"
+                                            @blur="event => item.indice = event.target.value">
                                         </div>
                                     </div>
                                 </div>
@@ -51,10 +53,28 @@
         },
         methods: {
             destroy(id) {
-                this.controller.sendDestroy(id)
-                    .then(() => {
-                        this.controller.getData()
-                    })
+                let t = this
+                    swal({
+                        title: "Tem certeza?",
+                        text: "Você está prestes a remover um item!",
+                        type: "warning",
+                        showCancelButton: true,
+                        confirmButtonText: "Sim, remova.",
+                        cancelButtonText: "Não, cancele!",
+                    }).then(async function(isConfirm){
+                        if (isConfirm) {
+                            let res = await t.controller.sendDestroy(id)
+                            if(res){
+                                swal("Removido!", null, "success")
+                                t.controller.getData()
+                            }else{
+                                swal("Erro!", "Nao foi possivel concluir a solicitação.", "error")
+                            }
+
+                        }
+                    });
+
+
             }
         },
         computed: {
@@ -72,5 +92,7 @@
 </script>
 
 <style>
-
+    .form-actions{
+        z-index: 999;
+    }
 </style>

@@ -54,8 +54,8 @@ export default {
                         text: "Você está prestes a remover um item!",
                         type: "warning",
                         showCancelButton: true,
-                        confirmButtonText: "Sim, remova!",
-                        cancelButtonText: "Não, cancele.",
+                        confirmButtonText: "Sim, remova.",
+                        cancelButtonText: "Não, cancele!",
                     }).then(async function(isConfirm){
                         if (isConfirm) {
                             let res = await t.controller.sendDestroy(id)

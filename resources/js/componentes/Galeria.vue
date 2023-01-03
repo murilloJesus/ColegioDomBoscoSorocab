@@ -1,7 +1,7 @@
 <template>
     <!-- Galeria -->
     <div class="row">
-        <div v-for="(item, index) in galeries" :key="index" class="col-2 col-4-medium col-6-small">
+        <div v-for="(item, index) in sorted_galeries" :key="index" class="col-2 col-4-medium col-6-small">
             <!-- Feature -->
             <section class="box feature" @click="changeGalery(index)">
                 <div class="image featured" :style="`background-image: url('/public/${item.background.path}')`"></div>
@@ -135,6 +135,9 @@
             }
         },
         computed: {
+            sorted_galeries(){
+                return this.galeries.sort((val1, val2) => val1.indice > val2.indice)
+            },
             opened() {
                 return this.galeries[this.gallery_index]
             },

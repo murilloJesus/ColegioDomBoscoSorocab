@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use Illuminate\Http\Request;
 use DateTime;
 use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Support\Collection;
@@ -15,11 +16,13 @@ class GalleryController extends Controller
     private FilesystemAdapter $storage;
     private $private_path = "/images/galerias/";
     private $directories;
+    private $json;
 
     public function __construct()
     {
         $this->storage = Storage::disk('local');
         $this->directories = $this->storage->allDirectories($this->private_path);
+        $this->json = json_decode(Storage::get('data/galerias.json'));
     }
 
     /**
@@ -27,17 +30,16 @@ class GalleryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $dir =  $this->directories;
+    public function index(){
 
         $retorno = [];
 
-        foreach ($dir as $key) {
+        foreach ($this->json as $key => $value) {
             $retorno[] = [
-                "path" => $key,
-                "name" => str_replace("images/galerias/", '', $key),
-                "image" => $this->backgroundImage($key)
+                "path" => $value->path,
+                "name" => $value->name,
+                "image" => $value->background,
+                "indice" => isset($value->indice) ? $value->indice : 999
             ];
         }
 
@@ -59,7 +61,7 @@ class GalleryController extends Controller
         if($res === TRUE){// OK
             $galeria =  $zip->extractTo(storage_path("app$this->private_path"));
             if($galeria){
-                $this->saveJSON();
+                $this->saveJSON($this->getGalerias());
                 return $galeria;
             }
         }else{
@@ -116,10 +118,30 @@ class GalleryController extends Controller
         $galeria = $this->storage->deleteDirectory($this->directories[$id]);
 
         if($galeria){
-            $this->saveJSON();
+            $this->saveJSON($this->getGalerias());
             return $galeria;
         }
     }
+
+    public function repliceJSON(Request $request)
+    {
+        $indices = $request->toArray();
+        $json = $this->json;
+
+        foreach ($indices as $key => $value) {
+            foreach ($json as $chave => $valor) {
+                if($valor->name == $key){
+                    $json[$chave]->indice = $value;
+                    break;
+                }
+            }
+        }
+
+        $this->saveJSON($json);
+
+    }
+
+
 
     private function backgroundImage($directory)
     {
@@ -139,12 +161,17 @@ class GalleryController extends Controller
     private function getGalerias()
     {
         $galerias = [];
+        $json = $this->json;
+
         foreach ($this->storage->allDirectories($this->private_path) as $dir ) {
+            $nome = $this->getNome($dir);
+
             $galerias[] = [
-                "name" => $this->getNome($dir),
+                "name" => $nome,
                 "path" => $dir,
                 "background" => $this->backgroundImage($dir),
-                "images" => $this->getImages($dir)
+                "images" => $this->getImages($dir),
+                "indice" => $this->getIndice($nome, $json)
             ];
         }
 
@@ -163,6 +190,19 @@ class GalleryController extends Controller
         }
 
         return $images;
+    }
+
+    public function getIndice($nome, $json)
+    {
+
+        foreach ($json as $chave => $valor) {
+            if($valor->name == $nome){
+                return $json[$chave]->indice;
+                break;
+            }
+        }
+
+        return 999;
     }
 
     private function getNome($path, $type = 'dir')
@@ -190,11 +230,8 @@ class GalleryController extends Controller
      *
      * @return void
      */
-    public function saveJSON()
+    public function saveJSON($galerias)
     {
-
-        $galerias = $this->getGalerias();
-
         $json = Collection::make($galerias)
                     ->toJson(JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         return Storage::put('data/galerias.json', $json);
