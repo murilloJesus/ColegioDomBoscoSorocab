@@ -139,6 +139,8 @@ class GalleryController extends Controller
 
         $this->saveJSON($json);
 
+        return -1;
+
     }
 
 

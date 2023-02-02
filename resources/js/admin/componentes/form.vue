@@ -10,7 +10,7 @@
                     ><i class="notika-icon notika-close"></i></button>
                     <button
                         v-show="hasUnsavedData"
-                        @click="save"
+                        @click="save(configs.save)"
                         data-toggle="tooltip" data-placement="top" title="" data-original-title="Salvar"
                         class="btn btn-gray gray-icon-notika btn-reco-mg btn-button-mg waves-effect"
                     ><i class="notika-icon notika-up-arrow"></i></button>
@@ -38,6 +38,12 @@
             forModal: {
                 type: Boolean,
                 defaut: false
+            },
+            configs: {
+                type: Object,
+                default: {
+                    save: true,
+                }
             }
         },
         inject: ['save', 'reset', 'finish'],

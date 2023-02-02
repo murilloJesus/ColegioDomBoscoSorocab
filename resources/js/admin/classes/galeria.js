@@ -18,8 +18,6 @@ class Galeria extends Api {
     }
 
     store(){
-        console.log(this.getFieldset())
-
         return {
             method: 'post',
             url: `${this.route}${this.resources}/sort`,

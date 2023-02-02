@@ -116,7 +116,8 @@ class Api {
             res = await axios(this.store())
         }
 
-        if(res) {
+
+        if(res.data != '-1') {
             this.finishData()
         }
 

@@ -1,5 +1,5 @@
 <template>
-    <formulario :controller="controller">
+    <formulario :controller="controller" :configs="formConfigs">
         <galeria v-show="component == 'galeria'" :controller="controller"></galeria>
     </formulario>
 </template>
@@ -12,7 +12,8 @@ export default {
     extends: Base,
     data: () => {
         return {
-            controller: new Galeria()
+            controller: new Galeria(),
+            formConfigs: {save: false}
         }
     },
     computed: {

@@ -22577,6 +22577,12 @@ __webpack_require__.r(__webpack_exports__);
     forModal: {
       type: Boolean,
       defaut: false
+    },
+    configs: {
+      type: Object,
+      "default": {
+        save: true
+      }
     }
   },
   inject: ['save', 'reset', 'finish'],
@@ -23647,7 +23653,10 @@ __webpack_require__.r(__webpack_exports__);
   "extends": _base__WEBPACK_IMPORTED_MODULE_1__["default"],
   data: function data() {
     return {
-      controller: new _classes_galeria_js__WEBPACK_IMPORTED_MODULE_0__["default"]()
+      controller: new _classes_galeria_js__WEBPACK_IMPORTED_MODULE_0__["default"](),
+      formConfigs: {
+        save: false
+      }
     };
   },
   computed: {
@@ -23920,8 +23929,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "data-original-title": "Resetar",
     "class": "btn btn-gray gray-icon-notika btn-reco-mg btn-button-mg waves-effect"
   }, _hoisted_6), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[1] || (_cache[1] = function () {
-      return $options.save && $options.save.apply($options, arguments);
+    onClick: _cache[1] || (_cache[1] = function ($event) {
+      return $options.save($props.configs.save);
     }),
     "data-toggle": "tooltip",
     "data-placement": "top",
@@ -25203,7 +25212,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_formulario = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("formulario");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_formulario, {
-    controller: _ctx.controller
+    controller: _ctx.controller,
+    configs: _ctx.formConfigs
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_galeria, {
@@ -25217,7 +25227,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["controller"]);
+  , ["controller", "configs"]);
 }
 
 /***/ }),
@@ -26093,7 +26103,7 @@ var Api = /*#__PURE__*/function () {
                 res = _context3.sent;
 
               case 11:
-                if (res) {
+                if (res.data != '-1') {
                   this.finishData();
                 }
 
@@ -26520,7 +26530,6 @@ var Galeria = /*#__PURE__*/function (_Api) {
   }, {
     key: "store",
     value: function store() {
-      console.log(this.getFieldset());
       return {
         method: 'post',
         url: "".concat(this.route).concat(this.resources, "/sort"),
