@@ -18,6 +18,14 @@ use Illuminate\Support\Facades\Artisan;
 |
 */
 
+Route::get('/register', function() {
+    return abort(404);
+});
+
+Route::post('/register', function() {
+    return abort(404);
+});
+
  //Clear route cache
  Route::get('/route-cache', function() {
     Artisan::call('route:cache');
@@ -48,11 +56,6 @@ Route::get('/optimize-clear', function() {
     return 'Cache optimized';
 });
 
-Route::get('/register', function() {
-    return abort(404);
-});
-
-Auth::routes();
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('administrador')->group( function () {
 
