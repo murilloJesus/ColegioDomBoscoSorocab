@@ -48,11 +48,11 @@ Route::get('/optimize-clear', function() {
     return 'Cache optimized';
 });
 
-Auth::routes([
-    'register' => false,
-    'reset' => false,
-    'verify' => false
-]);
+Route::get('/register', function() {
+    return abort(404);
+});
+
+Auth::routes();
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('administrador')->group( function () {
 
